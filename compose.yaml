@@ -1,0 +1,9 @@
+services: 
+
+  myapp:
+    build: 
+      context: ./myapp
+    image: frontend_service:1.0     # Specify the Image Name
+    ports:
+      - 8080:8080
+    command: npm run serve

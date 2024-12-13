@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Aerospace",
+    "path": "aerospace",
+    "icon": "mdi-airplane"
+  },
+  {
+    "name": "Algorithms",
+    "path": "algorithms",
+    "icon": "mdi-script"
+  },
+  {
+    "name": "Computer Science",
+    "path": "computer-science",
+    "icon": "mdi-laptop"
+  },
+  {
+    "name": "Engineering",
+    "path": "engineering",
+    "icon": "mdi-tools"
+  },
+  {
+    "name": "Fluid Mechanics",
+    "path": "fluids",
+    "icon": "mdi-water"
+  },
+  {
+    "name": "Machine Learning",
+    "path": "machine-learning",
+    "icon": "mdi-bookshelf"
+  },
+  {
+    "name": "Math",
+    "path": "math",
+    "icon": "mdi-calculator"       
+  },
+  {
+    "name": "Music",
+    "path": "music",
+    "icon": "mdi-music"
+  },
+  {
+    "name": "Structures",
+    "path": "structures",
+    "icon": "mdi-bridge"
+  },
+  {
+    "name": "Miscellaneous",
+    "path": "misc",
+    "icon": "mdi-folder"
+  }
+]
