@@ -1,20 +1,24 @@
-FROM node:19-alpine
+# Stage 1: Build VuePress content
+FROM node:20 AS vuepress-builder
 
-COPY package.json /myapp/
-
-WORKDIR /myapp
-
-RUN npm install -g @vue/cli
+WORKDIR /myapp/vuepress
+COPY vuepress/package.json ./
 RUN npm install
 
-COPY scripts /myapp/scripts
+COPY vuepress/ ./
+RUN npx vuepress build .
+
+# Stage 2: Build Main Application
+FROM node:20 AS vue-builder
+
+WORKDIR /myapp
+COPY package.json ./
+RUN npm install
+
 COPY public /myapp/public
 COPY src /myapp/src
 
-RUN node scripts/process-markdown.js
-RUN node scripts/extract-meta.js
-RUN node scripts/create-directory.js
-
-EXPOSE 8080
+COPY --from=vuepress-builder /myapp/vuepress/.vuepress/dist ./public/blog
+RUN npm run build
 
 CMD ["npm", "run", "serve"]
