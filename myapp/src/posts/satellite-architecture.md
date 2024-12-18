@@ -9,6 +9,7 @@ date: "2024-12-06"
 Finally we're getting to stuff that I work with. There's a lot to know when it comes to satellites, so in this post we're just going to stick to the basics. Before we design any hardware, first we need to understand our mission objective. Once that's determined, we'll be able to select an appropriate orbit. The orbit is very important because that decides our operating environment (for example, solar intensity, exposure to radiation, available communication stations, etc).
 
 # Orbits
+<v-divider></v-divider>
 
 In this post we'll focus on Earth Orbits (in constrast to interplanetary missions). For the most part these can be roughly categorized by their altitude, eccentricity, and inclination.
 
@@ -28,6 +29,8 @@ Orbits will high inclination are typically called "polar" (i.e. they fly over th
 
 
 # Hardware
+
+<v-divider></v-divider>
 
 Regardless of where you go, almost every satellite is going to have some form of each of the following.
 
