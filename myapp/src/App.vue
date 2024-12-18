@@ -12,15 +12,6 @@
           <router-view />
         </v-container>
       </v-main>
-
-      <!--
-      <v-footer 
-        app 
-        class="d-flex justify-center align-center indigo"
-        style="background-color: beige;">
-        <span>&copy; 2024 Ludav-Notes Hosted on AWS</span>
-      </v-footer>
-      -->
       
     </v-app>
 </template>
@@ -30,19 +21,9 @@ import NavDrawer from './components/NavDrawer.vue';
 
 export default {
   name: 'App',
-  data() {
-    return {
-      message: 'Hello, Vue!',
-    };
-  },
   components: {
     NavDrawer
   },
-  methods: {
-    updateMessage() {
-      this.message = 'You clicked the button!';
-    }
-  }
 };
 </script>
 

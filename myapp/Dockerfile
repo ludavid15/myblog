@@ -1,20 +1,15 @@
 FROM node:19-alpine
 
 COPY package.json /myapp/
-
 WORKDIR /myapp
-
-RUN npm install -g @vue/cli
 RUN npm install
 
 COPY scripts /myapp/scripts
 COPY public /myapp/public
 COPY src /myapp/src
+COPY index.html /myapp/
+COPY vite.config.js /myapp/
 
-RUN node scripts/process-markdown.js
-RUN node scripts/extract-meta.js
-RUN node scripts/create-directory.js
+EXPOSE 5173
 
-EXPOSE 8080
-
-CMD ["npm", "run", "serve"]
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]

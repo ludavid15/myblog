@@ -5,5 +5,5 @@ services:
       context: ./myapp
     image: frontend_service:1.0     # Specify the Image Name
     ports:
-      - 8080:8080
-    command: npm run serve
+      - 5173:5173
+    command: npm run dev -- --host 0.0.0.0

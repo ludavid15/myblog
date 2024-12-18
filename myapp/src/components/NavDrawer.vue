@@ -6,49 +6,19 @@
   floating
   class="bg-secondary"
   :width="350">
-    <v-list v-model:opened="openedTopics" density="compact">
 
+    <v-list v-model:opened="openedTopics" density="compact">
       <v-list-item
       prepend-icon="mdi-home"
       :to="{ name: 'Home'}">
         Home
       </v-list-item>
+
       <v-list-item 
       prepend-icon="mdi-account"
       :to="{ name: 'About'}">
         About Me
       </v-list-item>
-
-      <!-- Iterate through Topics -->
-      <v-list-group
-        v-for="topic in topics"
-        :key="topic.name"
-        :value="topic.name"
-        >
-
-        <!-- Group Header -->
-        <template v-slot:activator="{ props }">
-          <v-list-item
-            v-bind="props"
-            :prepend-icon="topic.icon"
-            :title="topic.name"
-            :class="{ 'group-expanded': openedTopics.includes(topic.name) }"
-          ></v-list-item>
-        </template>
-
-        <!-- Sub-items (Posts) -->
-        <v-list-item
-          v-for="post in topic.posts"
-          :key="post.title"
-          :to="{
-                  name: 'blog-post', // Identifies the route by name
-                  params: { topic_path: topic.path, post_path: post.path }, // Pass params for dynamic path
-                  query: { meta: JSON.stringify(post) } // Pass additional metadata as query
-                }"
-          >
-          <v-list-item-title style="padding-left: 10px;"> {{ post.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list-group>
     </v-list>
   </v-navigation-drawer>
 
@@ -64,20 +34,8 @@ export default {
     return {
       drawer: "true",
       openedTopics: [], // Tracks which topics are expanded
-      topics: [],
     };
   },
-  async created() {
-    try {
-      const response = await fetch('/posts_directory.json'); 
-      if (!response.ok) {
-        throw new Error('Failed to load topics.json');
-      }
-      this.topics = await response.json();; // Save fetched data to topics
-    } catch (error) {
-      console.error('Error fetching topics:', error);
-    }   
-  }
 };
 </script>
 
