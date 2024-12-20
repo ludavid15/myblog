@@ -10,6 +10,8 @@ COPY src /myapp/src
 COPY index.html /myapp/
 COPY vite.config.js /myapp/
 
+RUN node scripts/extract-headings.js
+
 EXPOSE 5173
 
 CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]

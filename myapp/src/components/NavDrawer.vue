@@ -7,13 +7,14 @@
   class="bg-secondary"
   :width="350">
 
-    <v-list density="compact">
+    <v-list v-model:opened="openedTopics" density="compact">
+
+      <!-- PermaLinks -->
       <v-list-item
       prepend-icon="mdi-home"
       :to="{ name: 'Home'}">
         Home
       </v-list-item>
-
       <v-list-item 
       prepend-icon="mdi-account"
       :to="{ name: 'About'}">
@@ -24,17 +25,39 @@
       <v-divider class="my-2"></v-divider>
       <v-list-subheader class="text-h6 text-white">Blog Posts</v-list-subheader>
       <v-divider class="my-2"></v-divider>
-
-      <!-- Dynamic Blog Links -->
-      <v-list-item
-        v-for="(post, index) in posts"
-        :key="index"
-        :to="`/post/${post.slug}`"
+      
+      <!-- Blog Posts -->
+      <v-list-group
+        v-for="(data, topicName) in groupedPosts"
+        :key="topicName"
+        :value="topicName"
       >
-        <v-list-item-title>{{ post.title }}</v-list-item-title>
-      </v-list-item>
+        <!-- Activator: Topic with Icon -->
+        <template v-slot:activator="{ props }">
+          <v-list-item
+            v-bind="props"
+            :prepend-icon="data.icon"
+            :title="topicName"
+            :class="{ 'group-expanded': openedTopics.includes(topicName) }"
+          ></v-list-item>
+        </template>
 
+        <!-- Posts under each topic -->
+        <v-list-item
+          v-for="(post, index) in data.posts"
+          :key="index"
+          :to="`/posts/${post.slug}`"
+        >
+          <v-list-item-title style="padding-left: 10px;">{{ post.title }}</v-list-item-title>
+        </v-list-item>
+
+        <!-- Show 'No posts' if topic has no content -->
+        <v-list-item v-if="data.posts.length === 0" disabled>
+            <v-list-item-title style="padding-left: 10px;">No posts available</v-list-item-title>
+        </v-list-item>
+      </v-list-group>
     </v-list>
+    
   </v-navigation-drawer>
 
   <v-app-bar flat app class="bg-background">
@@ -44,29 +67,49 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
+import topicsData from "@/data/topics.json";
 
 const posts = ref([]);
 const drawer = ref(false);
+const openedTopics = ref([]);
 
-// Load markdown files and extract frontmatter
+// Load posts dynamically
 const loadPosts = async () => {
-  const markdownFiles = import.meta.glob('/src/posts/*.md');
-
-  const postEntries = await Promise.all(
-    Object.entries(markdownFiles).map(async ([filePath, loadFile]) => {
-      const module = await loadFile(); // Dynamically load the markdown file
-      const slug = filePath.split('/').pop().replace('.md', ''); // Extract slug from file name
-
-      // Extract frontmatter (title)
-      const title = module.frontmatter?.title || slug; // Fallback to slug if no title is found
-
-      return { slug, title };
-    })
-  );
-
-  posts.value = postEntries;
+  const modules = import.meta.glob("/src/posts/*.md", { eager: true });
+  const loadedPosts = Object.keys(modules).map((key) => {
+    const content = modules[key];
+    return {
+      title: content.frontmatter.title || "Untitled",
+      topic: content.frontmatter.topic || "Miscellaneous", // Default topic
+      slug: key.replace(/^\/src\/posts\//, "").replace(/\.md$/, ""),
+    };
+  });
+  posts.value = loadedPosts;
 };
+
+
+// Group posts under predefined topics
+const groupedPosts = computed(() => {
+  const grouped = {};
+
+  // Initialize all topics from the JSON with an empty array
+  topicsData.forEach((topic) => {
+    grouped[topic.name] = { posts: [], icon: topic.icon, path: topic.path };
+  });
+
+  // Place posts under the correct topic
+  posts.value.forEach((post) => {
+    const topic = topicsData.find((t) => t.name === post.topic);
+    if (topic) {
+      grouped[topic.name].posts.push(post);
+    } else {
+      grouped["Miscellaneous"].posts.push(post); // Fallback for unmatched topics
+    }
+  });
+
+  return grouped;
+});
 
 // Fetch posts on mount
 onMounted(() => {
@@ -74,6 +117,9 @@ onMounted(() => {
 });
 
 </script>
+
+
+
 
 <style>
 .custom-title {

@@ -3,9 +3,9 @@
     <v-row>
       <v-col>
         <h1>About Me</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Details Pending!</p>
 
-        <test />
+
         
       </v-col>
     </v-row>
@@ -13,11 +13,4 @@
 </template>
 
 <script>
-import test from '@/posts/test.md';
-
-export default {
-  components: {
-    test,
-  },
-}
 </script>
