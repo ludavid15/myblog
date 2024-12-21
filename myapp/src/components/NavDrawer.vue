@@ -5,7 +5,7 @@
   permanent
   floating
   :location="$vuetify.display.mobile ? 'bottom' : 'left'"
-  class="bg-secondary"
+  class="bg-secondary d-flex flex-column"
   :width="$vuetify.display.mobile ? undefined : 350">
 
     <v-list v-model:opened="openedTopics" density="compact">
@@ -61,7 +61,14 @@
         </v-list-item>
       </v-list-group>
     </v-list>
-    
+
+    <!-- Note at the Bottom -->
+    <div class="version-note pa-4 text-left bg-secondary">
+      <p class="text-body-small text-caption">
+        Website Version 1.01
+      </p>
+    </div>
+
   </v-navigation-drawer>
 
   <v-app-bar flat app class="bg-background">
@@ -126,4 +133,9 @@ const handleNavClick = () => {
 .group-expanded .v-list-item-title {
   font-weight: bold !important;
 } 
+.version-note {
+  position: absolute;
+  bottom: 0;
+  width: 96%;
+}
 </style>
