@@ -1,10 +1,10 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col cols="12">
+      <v-col cols="12" xl="10">
 
         <div v-if="frontmatter && frontmatter.title">
-          <v-breadcrumbs :items="['home', 'blogs', route.params.slug]"></v-breadcrumbs>
+          <v-breadcrumbs :items="['home', 'posts', route.params.slug]"></v-breadcrumbs>
           <div div class="text-h3 px-1"> 
             {{ frontmatter.title }}
           </div>
@@ -15,21 +15,24 @@
           </div>
         </div>
 
-        <div class="blog-layout">
+        <v-row class="blog-layout">
           <!-- Primary Content -->
-          <div class="content">
+          <v-col cols="12" md="8" lg="9" class="content">
             <div ref="content" class="markdown-content">
               <v-container class="pa-1">
                 <component class="markdown-content" :is="postContent" />
               </v-container>
             </div>
-          </div>
+          </v-col>
 
-          <aside class="toc-container">
-            <Contents :headings="headings"/>
-          </aside>
-        </div>
-    
+          <!-- Table of Contents -->
+          <v-col cols="12" md="4" lg="3" class="d-none d-md-block toc-container">
+            <Contents :headings="headings" />
+          </v-col>
+        </v-row>
+
+        <BackToTopButton />
+        
       </v-col>
     </v-row>
   </v-container>
@@ -40,6 +43,7 @@ import { ref, watch, onMounted} from 'vue';
 import { useRoute } from 'vue-router';
 import Contents from '@/components/Contents.vue';
 import headingsData from '@/data/headings.json';
+import BackToTopButton from '@/components/BackToTop.vue';
 
 // Refs and route
 const route = useRoute();
@@ -91,15 +95,18 @@ onMounted(() => {
 <style>
 .blog-layout {
   display: flex;
-  gap: 50px; /* Space between content and ToC */
+  flex-direction: row;
+  gap: 20px; /* Space between content and ToC */
 }
+
 .content {
-  flex: 1;  /* Primary content takes up remaining space */
+  flex: 1; /* Content takes up available space */
 }
+
 .toc-container {
-  width: 250px; /* Fixed width for ToC */
+  width: 250px; /* Fixed width for the ToC */
   position: sticky;
-  top: 80px; /* Sticky behavior */
+  top: 80px; /* Sticky ToC position */
   align-self: flex-start;
 }
 
@@ -113,6 +120,14 @@ onMounted(() => {
 }
 .markdown-content p {
     margin-bottom: 1.1rem;
+}
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  scroll-margin-top: 80px; /* Adjust this value to match the app-bar height */
 }
 </style>
 

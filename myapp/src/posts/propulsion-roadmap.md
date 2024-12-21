@@ -59,9 +59,9 @@ Along with gravity, the weak nuclear force, and strong nuclear force, electromag
 
 Propulsion systems under this umbrella subdivide into two categories:
 
-1. **Electrostatic** thrusters create a static electric field and accelerate particles from high field potential to low field potential. Gridded ion thrusters and electrosprays use this method.
+1.**Electrostatic** thrusters create a static electric field and accelerate particles from high field potential to low field potential. Gridded ion thrusters and electrosprays use this method.
 
-2. **Electromagnetic** thrusters create a combined electromagnetic field. Hall thrusters use this method.
+2.**Electromagnetic** thrusters create a combined electromagnetic field. Hall thrusters use this method.
 
 # Nozzle Propulsion
 

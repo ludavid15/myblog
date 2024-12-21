@@ -9,7 +9,7 @@ date: "2024-12-10"
 With better computers, engineers have increasingly turned to model based systems engineering, or MBSE as a solution to the engineering process. After all, things like CAD, CFD, and FEM have enabled us to model complex physics, so why not model a project? 
 
 
-## Background
+# Introduction
 
 Before jumping into MBSE, I want to preface by saying that the key to understanding MBSE is to first understand databases. At the core of systems engineering is an understanding that all elements of the design are related, and systems engineering is an attempt to track and manage those relationships. 
 

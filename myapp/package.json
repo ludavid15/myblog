@@ -18,7 +18,8 @@
         "@mdi/font": "^7.3.0",
         "gray-matter": "4.0.3",
         "markdown-it": "14.1.0",
-        "markdown-it-anchor": "9.2.0"
+        "markdown-it-anchor": "9.2.0",
+        "markdown-it-mathjax3": "4.3.2"
     },
     "devDependencies": {
       "vite" : "4.5.0",

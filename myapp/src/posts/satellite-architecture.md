@@ -3,12 +3,16 @@ title: "Satellite Architecture"
 topic: "Aerospace"
 path: "satellite-architecture"
 author: "David Lu"
-date: "2024-12-06"
+date: "2024-12-20"
+preview: "A high level overview of satellites and their subsystems."
 ---
+
 
 Finally we're getting to stuff that I work with. There's a lot to know when it comes to satellites, so in this post we're just going to stick to the basics. Before we design any hardware, first we need to understand our mission objective. Once that's determined, we'll be able to select an appropriate orbit. The orbit is very important because that decides our operating environment (for example, solar intensity, exposure to radiation, available communication stations, etc).
 
-# Orbits
+
+# Orbits and Missions
+
 <v-divider></v-divider>
 
 In this post we'll focus on Earth Orbits (in constrast to interplanetary missions). For the most part these can be roughly categorized by their altitude, eccentricity, and inclination.
@@ -93,11 +97,17 @@ For Earth orbiting satellites, your primary source of power is almost always goi
 Thermal gets tricky in space, because there's no convection or conduction, only radiation. This means that spacecraft are often subjected to enormous temperature ranges (-100 to 100 deg celsius is not a bad estimate). Heaters are essential to prevent things from freezing, while radiators are just as important to prevent things from overheating. For any given piece of hardware, there's usually an operating temperature range, and a survival temperature range. And then on the structural side of things, you may need to think about your coefficients of thermal expansion. This can be a primary source for structural stress.
 
 
-## Launch Vehicle Interfacing
+# Launch Vehicle Interfacing
+
+<v-divider></v-divider>
+
 
 An equally important piece of your design is your launch vehicle interface. After all, the LV is what takes you into space. Do you have special environmental needs while you're in the fairing? Can you survive the g's during launch? How will you ensure a clean separation? Also, most launch fairings prevent transmission of comm signals between your spacecraft and ground. This means you'll have to route data to the launch vehicle's own communications system if you want telemetry during launch. 
 
-## Systems Engineering
+# Systems Engineering
+
+<v-divider></v-divider>
+
 
 In the real world, no task is performed in isolation. A lot of supporting infrastructure goes a long way towards making programs safe, reliable, and effective. A satellite is no different. In addition to hardware to perform the basic functions, we also need hardware to support them. This can look like a number of things:
 
@@ -111,11 +121,16 @@ In the real world, no task is performed in isolation. A lot of supporting infras
 These considerations can also drive a lot on your final design, but will need to be balanced by the amount of risk you can accept. 
 
 
-## Ground Systems
+# Ground Systems
+
+<v-divider></v-divider>
+
 
 Not to be overlooked is the all important ground system. It's perhaps not as glamorous, but ground systems are way easier to manage and update than a satellite. This means that oftentimes, the heavy lifting is performed on the ground rather than on the spacecraft. 
 
-## Conclusion
+# Conclusion
+
+<v-divider></v-divider>
 
 For a more in-depth discussion of satellites, you can check out SMAD (Space Mission Analysis and Design). It's known in the aerospace community as the bible of spacecraft design. 
 

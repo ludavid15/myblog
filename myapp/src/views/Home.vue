@@ -16,19 +16,67 @@
         
         <h2>Recent Articles</h2>
         <v-divider :thickness="5" class="mb-4"></v-divider>
-
+      </v-col>
+    </v-row> 
+        
+    <v-row justify="center">
+      <v-col cols="10">
+        <v-row>
+          <v-col v-for="post in posts" :key="post.slug" cols="12" sm="4">
+            <v-card 
+              class="d-flex flex-column fill-height" 
+              >
+              <v-card-title>{{ post.title }}</v-card-title>
+              <v-card-subtitle>{{ new Date(post.date).toLocaleDateString() }}</v-card-subtitle>
+              <v-card-text class="flex-grow-1">
+                {{ post.preview }}
+              </v-card-text>
+              <v-spacer></v-spacer>
+              <v-card-actions>
+                <v-btn :to="`/posts/${post.slug}`" color="primary">Read More</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
-<script>
-export default {
-  name: 'HomeView',
-  data() {
-    return {
-      topics: [],
-    }
-  },
-}
+<script setup>
+import { ref, onMounted } from 'vue';
+
+// Reactive variable to store posts
+const posts = ref([]);
+
+// Function to load and sort blog posts
+const loadPosts = async () => {
+  const modules = import.meta.glob('/src/posts/*.md', { eager: true });
+
+  const loadedPosts = Object.keys(modules)
+    .map((key) => {
+      const content = modules[key];
+      const fullPreview = content.frontmatter?.preview || 'No preview available.';
+      const trimmedPreview = fullPreview.length > 100 
+        ? fullPreview.substring(0, 100) + '...' 
+        : fullPreview; // Trim preview to 100 characters
+
+      return {
+        title: content.frontmatter?.title || 'Untitled',
+        date: content.frontmatter?.date || '1970-01-01',
+        preview: trimmedPreview,
+        slug: key.replace(/^\/src\/posts\//, '').replace(/\.md$/, ''),
+      };
+    })
+    .filter((post) => post.date) // Ensure posts with valid dates
+    .sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort by date descending
+
+  posts.value = loadedPosts.slice(0, 3); // Get the 3 most recent posts
+};
+
+
+// Load posts on component mount
+onMounted(() => {
+  loadPosts();
+});
 </script>

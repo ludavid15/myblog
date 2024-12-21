@@ -1,6 +1,8 @@
 <template>
   <div class="toc">
-    <div class="text-h6">Table of Contents</div>
+    <v-card variant="tonal">
+      <v-card-text class="text-h6">Table of Contents</v-card-text>
+    </v-card>
     
     <div class="toc-list-container">
       <v-list 
@@ -11,6 +13,7 @@
           :key="heading.text"
           link
           @click="scrollToHeading(heading.text)"
+          :style="{ paddingLeft: `${(parseInt(heading.level.replace('h', '')) - 1) * 12}px` }"
         >
           <v-list-item-title class="text-caption-grey-darken-3">{{ heading.text }}</v-list-item-title>
         </v-list-item>
@@ -31,11 +34,13 @@ const scrollToHeading = (text) => {
   const targetElement = document.getElementById(id);
 
   if (targetElement) {
+    // Smooth scroll to element
     targetElement.scrollIntoView({
       behavior: 'smooth',
-      block: 'start', // Align to the top
+      block: 'start',
     });
   }
+  
 };
 </script>
 
@@ -58,7 +63,7 @@ const scrollToHeading = (text) => {
   bottom: 15px;
   left: 0;
   width: 4px;
-  background-color: #3a3a3a; /* Light gray divider line */
+  background-color: #5c5c5c; /* Light gray divider line */
   border-radius: 2px; 
 }
 .dense-list-item {
@@ -70,9 +75,5 @@ const scrollToHeading = (text) => {
   text-decoration: none;
   color: #333;
   font-size: 0.9rem;
-}
-.toc-link:hover {
-  text-decoration: underline;
-  color: #1976d2; /* Highlight color on hover */
 }
 </style>
