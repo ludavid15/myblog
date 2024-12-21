@@ -4,20 +4,23 @@
   v-model="drawer" 
   permanent
   floating
+  :location="$vuetify.display.mobile ? 'bottom' : 'left'"
   class="bg-secondary"
-  :width="350">
+  :width="$vuetify.display.mobile ? undefined : 350">
 
     <v-list v-model:opened="openedTopics" density="compact">
 
       <!-- PermaLinks -->
       <v-list-item
       prepend-icon="mdi-home"
-      :to="{ name: 'Home'}">
+      :to="{ name: 'Home'}"
+      @click="handleNavClick">
         Home
       </v-list-item>
       <v-list-item 
       prepend-icon="mdi-account"
-      :to="{ name: 'About'}">
+      :to="{ name: 'About'}"
+      @click="handleNavClick">
         About Me
       </v-list-item>
 
@@ -47,6 +50,7 @@
           v-for="(post, index) in data.posts"
           :key="index"
           :to="`/posts/${post.slug}`"
+          @click="handleNavClick"
         >
           <v-list-item-title style="padding-left: 10px;">{{ post.title }}</v-list-item-title>
         </v-list-item>
@@ -68,11 +72,12 @@
 
 <script setup>
 import { ref, computed } from 'vue';
+import { useDisplay } from 'vuetify';
 import topicsData from "@/data/topics.json";
 import blogFrontmatter from "@/data/blog-frontmatter.json"
 
 const posts = ref(blogFrontmatter); // Load directly from JSON
-const drawer = ref(false);
+const drawer = ref(null);
 const openedTopics = ref([]);
 
 // Group posts under predefined topics
@@ -96,6 +101,16 @@ const groupedPosts = computed(() => {
 
   return grouped;
 });
+
+// Use Vuetify's useDisplay composable to detect screen size
+const { smAndDown } = useDisplay();
+
+// Function to handle navigation link clicks
+const handleNavClick = () => {
+  if (smAndDown.value) {
+    drawer.value = false; // Close the drawer on small screens
+  }
+};
 
 </script>
 

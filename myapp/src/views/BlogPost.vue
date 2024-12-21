@@ -17,7 +17,7 @@
 
         <v-row class="blog-layout">
           <!-- Primary Content -->
-          <v-col cols="12" md="8" lg="9" class="content">
+          <v-col cols="12" lg="9" class="content">
             <div ref="content" class="markdown-content">
               <v-container class="pa-1">
                 <component class="markdown-content" :is="postContent" />
@@ -26,7 +26,7 @@
           </v-col>
 
           <!-- Table of Contents -->
-          <v-col cols="12" md="4" lg="3" class="d-none d-md-block toc-container">
+          <v-col cols="12" lg="3" class="d-none d-lg-block toc-container">
             <Contents :headings="headings" />
           </v-col>
         </v-row>

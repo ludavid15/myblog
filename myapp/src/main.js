@@ -15,6 +15,9 @@ import router from './router'
 const vuetify = createVuetify({
   components,
   directives,
+  display: {
+    mobileBreakpoint: 'md',
+  },
   theme: {
     defaultTheme: 'myCustomTheme',
     themes: {
