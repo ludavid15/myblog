@@ -44,39 +44,16 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-
-// Reactive variable to store posts
-const posts = ref([]);
-
-// Function to load and sort blog posts
-const loadPosts = async () => {
-  const modules = import.meta.glob('/src/posts/*.md', { eager: true });
-
-  const loadedPosts = Object.keys(modules)
-    .map((key) => {
-      const content = modules[key];
-      const fullPreview = content.frontmatter?.preview || 'No preview available.';
-      const trimmedPreview = fullPreview.length > 100 
-        ? fullPreview.substring(0, 100) + '...' 
-        : fullPreview; // Trim preview to 100 characters
-
-      return {
-        title: content.frontmatter?.title || 'Untitled',
-        date: content.frontmatter?.date || '1970-01-01',
-        preview: trimmedPreview,
-        slug: key.replace(/^\/src\/posts\//, '').replace(/\.md$/, ''),
-      };
-    })
-    .filter((post) => post.date) // Ensure posts with valid dates
-    .sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort by date descending
-
-  posts.value = loadedPosts.slice(0, 3); // Get the 3 most recent posts
-};
+import { computed } from 'vue'
+import blogFrontmatter from '@/data/blog-frontmatter.json';
 
 
-// Load posts on component mount
-onMounted(() => {
-  loadPosts();
+// Computed property to get and sort the recent blog posts
+const posts = computed(() => {
+  return blogFrontmatter
+    .filter((post) => post.date) // Ensure posts have valid dates
+    .sort((a, b) => new Date(b.date) - new Date(a.date)) // Sort by date descending
+    .slice(0, 3); // Get the 3 most recent posts
 });
+
 </script>

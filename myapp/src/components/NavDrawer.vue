@@ -67,27 +67,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue';
+import { ref, computed } from 'vue';
 import topicsData from "@/data/topics.json";
+import blogFrontmatter from "@/data/blog-frontmatter.json"
 
-const posts = ref([]);
+const posts = ref(blogFrontmatter); // Load directly from JSON
 const drawer = ref(false);
 const openedTopics = ref([]);
-
-// Load posts dynamically
-const loadPosts = async () => {
-  const modules = import.meta.glob("/src/posts/*.md", { eager: true });
-  const loadedPosts = Object.keys(modules).map((key) => {
-    const content = modules[key];
-    return {
-      title: content.frontmatter.title || "Untitled",
-      topic: content.frontmatter.topic || "Miscellaneous", // Default topic
-      slug: key.replace(/^\/src\/posts\//, "").replace(/\.md$/, ""),
-    };
-  });
-  posts.value = loadedPosts;
-};
-
 
 // Group posts under predefined topics
 const groupedPosts = computed(() => {
@@ -111,14 +97,7 @@ const groupedPosts = computed(() => {
   return grouped;
 });
 
-// Fetch posts on mount
-onMounted(() => {
-  loadPosts();
-});
-
 </script>
-
-
 
 
 <style>

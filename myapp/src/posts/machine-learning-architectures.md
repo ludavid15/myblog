@@ -40,8 +40,7 @@ For data classification, there typically needs to be as many dimensions as indep
 ## Feed Forward Neural Networks
 
 Networks are function approximators. Each node consists of any number of inputs and any number of outputs, but is itself a simple activation function (relu, sigmoid, tangent, etc.) These functions generally produce an output in the range of 0 to 1 or -1 to 1. For each node, there are a series of weights and offsets to be calculated/tuned by the learning process.
- 
-![deep neural net](../images/dnn.png){: .center-image }
+
 
 The benefit of deep nets is that they can separate non-linear shapes, at the downside of long computation times and unreliable convergence of results. Also, results depend a lot on how error is measured, the function of each node, etc. 
 
@@ -111,8 +110,6 @@ An overfit model is also said to have high **variance**. A tell-tale sign of hig
 ### Receiver Operator Characteristic Curve
 
 The R.O.C plots the probability of correct classification vs the probability of false positive. In an ideal case, the area under the curve will be equal to 1. A random guesser achieves a straight line on this plot, so a classifier needs to beat this result. Placement along the curve is also important, and changes depending on the application.	
-
-![roc curve](../images/roc.png){: .center-image }
 
 
 ### Embeddings
@@ -250,8 +247,6 @@ An attention model is basically any model which includes an "attention parameter
 
 A basic implementation of attention might look like this. 
 
-![Attention Model](../images/attentionmodel.png){: .center-image } 
-
 Where **a** is the activation output from a bi-directional RNN, and **S** is the state output from a forward only RNN. The input to each block **S** will be called the *context*, which is computed as the sum of attention weighted activations.
 
 $$c^{<1>} = \sum_{t=1} \alpha^{<1,t>} a^{<t>}$$
@@ -295,7 +290,6 @@ $$q^{<3>} = W^Q x^{<3>}$$
 
 Next, we would like to take the inner product of every query and key pair. This is akin to asking the question, "how relevant is this word towards the meaning of this other word?" (see how this is a type of *attention*?). These query "answers" are first softmaxed, and then multiplied by each value to compute the total "self attention" of that word. 
 
-![Self Attention](../images/transformer.jpg){: .center-image }
 
 The next concept to discuss is **multi-head attention**. Basically, we are recomputing the self-attention parameter for each word, but now with different weight matrices which determine q, K, and V. This is tricky, but the idea is that each "head" is asking a different relational question (e.g. what, when, how, why, etc.). Having multiple "heads" allows for a richer representation of the sentence.
 

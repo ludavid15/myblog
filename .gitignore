@@ -1,0 +1,9 @@
+# Ignore everything in the dist folder
+dist/*
+
+# Keep the dist folder
+!dist/
+
+# Specifically ignore assets and index.html within dist
+dist/assets/
+dist/index.html

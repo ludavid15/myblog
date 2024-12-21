@@ -1,9 +1,19 @@
 services: 
+  vue-build:
+    build:
+      context: ./myapp
+      dockerfile: Dockerfile
+    volumes: 
+      - ./myapp/dist:/myapp/dist
+    command: npm run build
 
-  myapp:
+  vue-server:
     build: 
       context: ./myapp
-    image: frontend_service:1.0     # Specify the Image Name
+      dockerfile: Dockerfile
+    image: my-blog:1.0     # Specify the Image Name
     ports:
       - 5173:5173
+    depends_on:
+      - vue-build
     command: npm run dev -- --host 0.0.0.0

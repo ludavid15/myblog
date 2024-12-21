@@ -35,5 +35,3 @@ export default defineConfig({
     },
   },
 });
-
-console.log("✅ vite-plugin-md and other plugins are configured!");

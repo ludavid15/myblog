@@ -11,6 +11,8 @@ COPY index.html /myapp/
 COPY vite.config.js /myapp/
 
 RUN node scripts/extract-headings.js
+RUN node scripts/extract-frontmatter.js
+RUN npm run build
 
 EXPOSE 5173
 
