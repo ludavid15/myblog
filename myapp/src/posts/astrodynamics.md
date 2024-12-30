@@ -18,6 +18,8 @@ As good a place to start as any. These are more a set of observations than a the
 
 # 2D Orbits
 
+<v-divider></v-divider>
+
 The two-dimensional orbital frame is also known as the perifocal frame (i.e. periapsis and apoapsis vectors are in the plane). We also assume that one body is significantly larger than the other. Given θ as the true anomaly of your orbit, the orbital radius from a focus point is:
 
 $$r=\ \frac{h^2}{\mu}\frac{1}{1+e\cos(\theta)}$$
@@ -77,6 +79,8 @@ The correct answer is, unintuitively, to slow down. By slowing down, we lower ou
 
 # Thinking in 3D
 
+<v-divider></v-divider>
+
 Although the orbital plane (perifocal frame) is two-dimensional, the plane itself lives in a three dimensional universe. To define this plane, we need to define a few variables.
 
 ### Reference Frame
@@ -97,6 +101,8 @@ The argument of periapsis determines the orientation of the ellipse **within** t
 
 
 # Lagrange Points
+
+<v-divider></v-divider>
 
 A lagrange point is a stable orbit position where the gravitional pull and centrifugal force from two other bodies is at an equilibrium. In a three-body system, there are 5 lagrange points. 
 

@@ -13,6 +13,8 @@ First, let's define a few terms. A **fault** is when something doesn't perform a
 
 # Failure Rate
 
+<v-divider></v-divider>
+
 Let's say you perform some testing on 10 units for 100 hours each. By the end of that testing, 4 units failed, at [35, 47, 32, 41] hours. What would be the failure rate? Well, you'd divide the number of failures (in this case 4) by the total number of cycles that were run across all 10 units. This means the sum of 35 + 47 + 32 + 41, but also 6(100), which is the time that the other six units ran successfully without any failure. 
 
 $$Failure Rate (\lambda) = \frac{Number of Failures}{Operating Time} = Failures Per Hour$$
@@ -36,6 +38,8 @@ Besides just how often a part may fail, we're also interested in how long is tak
 
 # Availability
 
+<v-divider></v-divider>
+
 Now that we've discussed the mean time between failure and the mean time to recover, we can combine these values into a new metric known as *availability*. You can think of this like a measure of the "down time". Officially, availability is defined as the percentage of time which a system is ready/operational under normal circumstances. The availability is calculated as a fraction:
 
 $$A(t) = \frac{MTBF}{MTBF + MTTR}$$
@@ -44,6 +48,8 @@ The above value is unitless, but you could multiply this value by 8760 for examp
 
 
 # Reliability
+
+<v-divider></v-divider>
 
 If we know the failure rate, how can we answer the question: What is my probability of success after (t) amount of time? We should expect that as time increases, this probability should go down. 
 
@@ -65,6 +71,8 @@ $$R_p = R_a + R_b - R_a*R_b$$
 Taking these two, we can combine more complex systems to calculate a net reliability. We can also calculate coupled probabilities using [Bayes Theorem](/notes/bayes).
 
 # Failure Modes and Effects Analysis
+
+<v-divider></v-divider>
 
 Also known FMEA, or sometimes FMECA, this type of analysis aims to understand the ways in which parts fail, and any effects that failure would cause. It helps inform us where the highest risks are, and allows us to plan our risk mitigation strategy. High risk items can be those which fail often, or those that that have very severe consequences, or both!
 

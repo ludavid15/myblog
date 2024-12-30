@@ -21,10 +21,13 @@
         
     <v-row justify="center">
       <v-col cols="10">
-        <v-row>
-          <v-col v-for="post in posts" :key="post.slug" cols="12" sm="4">
+        <v-row v-for="post in posts" :key="post.slug" >
+          <v-col>
             <v-card 
-              class="d-flex flex-column fill-height" 
+              class="d-flex flex-column fill-height"
+              variant="tonal"
+              hover
+              :to="`/posts/${post.slug}`"
               >
               <v-card-title>{{ post.title }}</v-card-title>
               <v-card-subtitle>{{ new Date(post.date).toLocaleDateString() }}</v-card-subtitle>
@@ -32,9 +35,6 @@
                 {{ post.preview }}
               </v-card-text>
               <v-spacer></v-spacer>
-              <v-card-actions>
-                <v-btn :to="`/posts/${post.slug}`" color="primary">Read More</v-btn>
-              </v-card-actions>
             </v-card>
           </v-col>
         </v-row>

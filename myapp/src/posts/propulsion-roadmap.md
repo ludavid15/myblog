@@ -35,6 +35,8 @@ As with most things in life, very little is free. Since the goal is to produce t
 
 # Mechanical Propulsion
 
+<v-divider></v-divider>
+
 This group covers any type of system that captures momentum from the environment, and includes sails and propellers. 
 
 Sails (whether on the ocean or in space) have large surface areas so that when a particle collides with the surface, the particle's momentum is transferred to the sail. 
@@ -55,6 +57,8 @@ Propeller driven propulsion system are further classified by *how power is suppl
 
 # Electromagnetic Propulsion
 
+<v-divider></v-divider>
+
 Along with gravity, the weak nuclear force, and strong nuclear force, electromagnetism is one of the four fundamental interactions of the universe. In other words, it doesn't get more general than this. The concept is pretty simple - use electric and magnetic fields to accerate charged particles. Unfortunately, electromagnetism is weird, and this makes things complicated. 
 
 Propulsion systems under this umbrella subdivide into two categories:
@@ -63,7 +67,9 @@ Propulsion systems under this umbrella subdivide into two categories:
 
 2.**Electromagnetic** thrusters create a combined electromagnetic field. Hall thrusters use this method.
 
-# Nozzle Propulsion
+# Nozzles
+
+<v-divider></v-divider>
 
 If you've ever put your thumb over the end of a hose and observed the flow of water increasing in velocity, you've seen a nozzle. Nozzles work by constricting the area through which a fluid can pass. 
 
@@ -93,7 +99,7 @@ Alternatively, if two conducting pieces are placed very close to one another and
 
 > An **arcjet** is a nozzle based propulsion system which adds heat to a fluid by an electric discharge. 
 
-## Radiation (Nuclear)
+## Nuclear
 
 Though the word "radiation" may invoke images of nuclear power plants and dangerous x-rays, scientifically speaking radiation simply refers to the transfer of heat through a wave or particle. If you've studied heat transfer, you'll know that radiation via electromagnetic waves is a fundamental mode of heat transfer. Radiation can also exist through particles, such as with the alpha and beta radiation you get when atoms experience radioactive decay. 
 
@@ -109,6 +115,8 @@ In aircraft applications, nuclear systems have been proposed for high endurance 
 
 
 # Combustion
+
+<v-divider></v-divider>
 
 And finally we've gotten to the biggest bucket of all - combustion based propulsion. That thing which powers our cars and cooks our food, turns out to be pretty reliable for adding heat to fluids. 
 
@@ -184,6 +192,8 @@ A short addendum to the rockets category is **monopropellant** engines.
 > **Monopropellant engine** - these do not technically use combustion, but instead rely on an incredibly exothermic chemical decomposition reaction. Hydrazine (NH4) is a popular choice. 
 
 # Summary
+
+<v-divider></v-divider>
 
 And there you have it! If you've followed along all this way, we've gone over about 20 different propulsion systems, ranging from tiny electrosprays to enormous liquid rocket engines. Hopefully you've gained a better understanding for the fundamental principles that drive propulsion technology. 
 

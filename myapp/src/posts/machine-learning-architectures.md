@@ -13,7 +13,9 @@ This post lays a stronger mathematical foundation for machine learning, but if y
 
 # Part 1 - Basic Architectures
 
-> On the linear algrebra post, we've talked a lot about what we can do with matrices, and we've done this because many problems can be solved without reaching for a neural network that has millions of weights which need to be optimized. Just something to keep in mind! 
+<v-divider></v-divider>
+
+On the linear algrebra post, we've talked a lot about what we can do with matrices, and we've done this because many problems can be solved without reaching for a neural network that has millions of weights which need to be optimized. Just something to keep in mind! 
 
 ## Linear Regression
 
@@ -151,6 +153,8 @@ And finally, we initialize E with random variables, and allow the algorithm to t
 
 # Part 2 - Deep Learning Architectures
 
+<v-divider></v-divider>
+
 Deep learning algorithms are more powerful, but messier, versions of their linear algebra counterparts. A lot of optimization and more complex architectures are used to learn more abstract behaviors. A few common deep learning architectures are:
 
 1. Feedforward NN's
@@ -192,7 +196,7 @@ There are two flavors of autoencoders:
 * Variational autoencoders use probability distributions instead of discrete variables, and are effective for generating new content. Read more about them [here](/notes/vae)
 
 
-## Restricted Boltzmann Machine (RBM)
+## Restricted Boltzmann Machine
 
 A restricted Boltzmann machine has two layers - a visible layer, and a hidden layer. Every node between the two layers are connected, but none of the nodes within a layer are connected.
 
@@ -203,7 +207,7 @@ The general idea behind a RBM is that there are hidden triggers which result in 
 One advantage to unsupervised learning with an RBM is that results can be obtained with only a few examples. Today, training is performed using an algorithm called **constrastive divergence**, which overcomes some of the scaling issues with RBM's. 
 
 
-## Recurrent Neural Networks (RNN)
+## Recurrent Neural Networks
 
 Before we jump into an RNN, consider a simple sentence generation program, which predicts the next word based only on the last word it encountered. Maybe the output looks something like this:
 
@@ -276,9 +280,9 @@ CNN’s are an effective tool for processing very large images, that would take 
 
 You can continue reading about convolutional neural networks [here](/notes/cnn)!
 
-## Transformer Network (2017)
+## Transformer Network
 
-A transformer network is a CNN inspired, attention-based approach to natural language processing. In a transformer network, we do away with the recursive component all together, and instead play a game of "word association". 
+Introduced in 2017, a transformer network is a CNN inspired, attention-based approach to natural language processing. In a transformer network, we do away with the recursive component all together, and instead play a game of "word association". 
 
 To begin, let's define a term called **self-attention**. This is an attention based representation of a word. In contrast to embedding vectors which are static, these are context specific. For example, in a sentence containing the words *company*, *phone*, and *technology*, we would guess that the world **apple** is unlikely to refer to a fruit.
 

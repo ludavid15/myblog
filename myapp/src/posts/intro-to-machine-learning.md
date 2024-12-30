@@ -27,6 +27,8 @@ In this post, we'll talk about:
 
 # Supervised Learning
 
+<v-divider></v-divider>
+
 When we know the type of output we want, but need to learn the function that will get us there, we use supervised learning. As the name implies, this method absolutely requires having a labeled dataset. If your problem doesn't readily accept labels, this strategy will probably fall short. Try instead to identify if *parts* of the solution involve identification. 
 
 Supervised learning can be implemented with many architectures, and are usually associated with questions like:
@@ -34,6 +36,8 @@ Supervised learning can be implemented with many architectures, and are usually 
 2. What comes next?
 
 # Unsupervised Learning
+
+<v-divider></v-divider>
 
 In contrast to supervised learning, there is no "label" in supervised learning. This means that instead we are asking questions like:
 1. How are these alike?
@@ -74,12 +78,16 @@ Or in an unsupervised case, independent component analysis and autoencoders achi
 
 # Reinforcement Learning
 
+<v-divider></v-divider>
+
 Improvement through natural selection is the general idea of reinforcement learning. For some problems, success is measured by a distant goal, or by some cumulative performance. In these cases, it doesn't make sense to define individual state variables. Here is where reinforcement learning comes in. 
 
 The example usually given is a video game. Intermediate objects or states don't result in a direct payoff - which means there isn't really a gradient over which to opimize. Instead, we can only reinforce behaviors that resulted in good results. 
 
 
 # Knowledge Base or Symbolic AI
+
+<v-divider></v-divider>
 
 Although other algorithms perform well enough (i.e. the output is good), they don't gain any real "understanding" about what they're doing, at least, not in the same capacity as you or me. And when something does goes wrong, it's extremely difficult to identify the cause, especially when you're dealing with NN's that can have millions of weights. 
 

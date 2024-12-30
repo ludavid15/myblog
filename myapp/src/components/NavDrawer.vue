@@ -52,7 +52,11 @@
           :to="`/posts/${post.slug}`"
           @click="handleNavClick"
         >
-          <v-list-item-title style="padding-left: 10px;">{{ post.title }}</v-list-item-title>
+          <v-list-item-title 
+            class="text-body-2"
+            style="padding-left: 10px;">
+            {{ post.title }}
+          </v-list-item-title>
         </v-list-item>
 
         <!-- Show 'No posts' if topic has no content -->
@@ -62,18 +66,29 @@
       </v-list-group>
     </v-list>
 
+
+
     <!-- Note at the Bottom -->
-    <div class="version-note pa-4 text-left bg-secondary">
-      <p class="text-body-small text-caption">
-        Website Version 1.01
-      </p>
+    <div class="version-note pa-4 text-left" :style="{ backgroundColor: 'transparent' }">
+      <v-chip variant="elevated" elevation='7' :style="{ backgroundColor: '#bdbc9f', color:'black'}">
+        Website Version 1.02
+      </v-chip>
     </div>
 
   </v-navigation-drawer>
 
-  <v-app-bar flat app class="bg-background">
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+  <v-app-bar flat app :style="{ background: '#bdbc9f' }">
+    <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+    <a href="/" style="text-decoration: none; display: flex; align-items: center; min-width: 120px;">
+      <v-img 
+        src="/open-book.png" 
+        alt="App logo" 
+        max-width="30" 
+        max-height="30" 
+        style="margin-left: 12px;" 
+      ></v-img>
       <v-app-bar-title class="custom-title">Notes</v-app-bar-title>
+    </a>
   </v-app-bar>
 </template>
 
@@ -125,7 +140,8 @@ const handleNavClick = () => {
 <style>
 .custom-title {
   font-family: 'Poppins', serif; /* Replace with your desired font */
-  color: #484b39; /* Optional: customize color */
+  color: #282923; /* Optional: customize color */
+  padding-left: 12px;
 }
 .group-expanded  {
   color: rgb(201, 178, 76);
@@ -136,6 +152,5 @@ const handleNavClick = () => {
 .version-note {
   position: absolute;
   bottom: 0;
-  width: 96%;
 }
 </style>

@@ -11,6 +11,8 @@ With better computers, engineers have increasingly turned to model based systems
 
 # Introduction
 
+<v-divider></v-divider>
+
 Before jumping into MBSE, I want to preface by saying that the key to understanding MBSE is to first understand databases. At the core of systems engineering is an understanding that all elements of the design are related, and systems engineering is an attempt to track and manage those relationships. 
 
 I think databases provide a good foundation because they teach you to think about relationships. Just like how knowing Micrsoft Word doesn't make you a great writer, the tools of MBSE don't make you a great systems engineer if you don't have a solid understanding of systems. 
@@ -29,6 +31,8 @@ So that's the first important concept of MBSE - this idea of the model as a seri
 
 
 # The Model
+
+<v-divider></v-divider>
 
 What aspects of a system can we model? Here's a list.
 
@@ -64,6 +68,8 @@ Definitions explain the words we create to group stuff together. If many pieces 
 
 
 # DoDAF
+
+<v-divider></v-divider>
 
 The Department of Defense Architecture Framework is an effort to generalize how we explain complex systems. Before getting into what DodAF is, let's be clear that DoDAF is not necessarily model based systems engineering. DoDAF only defines a set of "viewpoints", with each viewpoint showing a different aspect of the system. For example, systems viewpoint 4 (SV4) shows functional flow diagrams, while SV1's show a high level overview of the physical elements. 
 
@@ -107,6 +113,8 @@ The Data information viewpoint breaks down the heirarchy of data. Like functions
 
 
 # Relationships
+
+<v-divider></v-divider>
 
 A key element of systems modeling is the *relationship* between two elements. Here are a few, presented in no particular order:
 

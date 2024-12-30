@@ -1,23 +1,31 @@
 <template>
   <div class="toc">
-    <v-card variant="tonal">
-      <v-card-text class="text-h6">Table of Contents</v-card-text>
-    </v-card>
+    <v-list 
+      variant="tonal"
+      density="compact"
+      class="bg-background"
+      :style="{ margin: '0' }">
+      <v-list-item rounded="sm" :style="{ marginBottom: '0' }">
+        Table of Contents
+      </v-list-item>
+    </v-list>
     
     <div class="toc-list-container">
-      <v-list 
-        density="compact"
-        class="bg-background">
+      <v-list density="compact" class="bg-background">
         <v-list-item
           v-for="heading in headings"
           :key="heading.text"
           link
+          rounded="lg"
           @click="scrollToHeading(heading.text)"
-          :style="{ paddingLeft: `${(parseInt(heading.level.replace('h', '')) - 1) * 12}px` }"
+          :style="{ height: `30px`, minHeight: '25px', paddingY: '0px', paddingLeft: `${6 + (parseInt(heading.level.replace('h', '')) - 1) * 12}px` }"
         >
-          <v-list-item-title class="text-caption-grey-darken-3">{{ heading.text }}</v-list-item-title>
+          <v-list-item-title :style="{lineHeight: '1.2'}" class="toc-list-item">
+            {{ heading.text }}
+          </v-list-item-title>
         </v-list-item>
       </v-list>
+
     </div>
 
   </div>
@@ -66,14 +74,10 @@ const scrollToHeading = (text) => {
   background-color: #5c5c5c; /* Light gray divider line */
   border-radius: 2px; 
 }
-.dense-list-item {
-  min-height: 35px !important; /* Reduce item height */
-  padding: 2px 0 !important; /* Tighten padding vertically */
-  line-height: 1.2; /* Adjust line height */
+.toc-title {
+  font-size: 0.9rem; /* Adjust size for the title */
 }
-.toc-link {
-  text-decoration: none;
-  color: #333;
-  font-size: 0.9rem;
+.toc-list-item {
+  font-size: 0.8rem; /* Adjust size for list items */
 }
 </style>

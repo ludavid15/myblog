@@ -14,6 +14,8 @@ For example, if you wanted to get from point A to point B, the fastest way to do
 
 # Mathematics
 
+<v-divider></v-divider>
+
 An optimization problem is generally stated as follows:
 
 $$f\left(x\right)\rightarrow min,\ \ \ \ x\in R^n$$
@@ -59,7 +61,7 @@ $$q^Th\left(x^\ast\right)=0$$
 
 In addition to the above, all constraints must be met, the Lagrange multipliers cannot all be zero, and qo is either 0 or 1. In the case where all constraints are linearly independent, we can know that qo takes the value of one. This unique scenario leads to the KKT conditions.
 
-## Karush Khan Tucker (KKT) Necessary Conditions
+## Karush Khan Tucker Necessary Conditions
 Identical to the FJ necessary conditions, with the exception that $$q_o$$ is taken to be equal to 1. This is most often the case. Note that for KKT to apply, the constraints must be linearly independent of one another (LICQ – Linear Independence of Constraints Qualification). The conditions become:
 
 $$\nabla f\left(x\right)+\sum_{i=1}^{m}{p_i\nabla g_i\left(x\right)}+\sum_{i=1}^{l}{q_i\nabla h_i\left(x\right)}=0$$
@@ -77,6 +79,9 @@ The hessian of a function is the second order derivative. It takes the form of a
 $$\nabla^2f=\left[\begin{matrix}\frac{\partial^2f}{\partial x_{11}^2}&\cdots&\frac{\partial^2f}{\partial x_{1n}^2}\\\vdots&\ddots&\vdots\\\frac{\partial^2f}{\partial x_{n1}^2}&\cdots&\frac{\partial^2f}{\partial x_{nn}^2}\\\end{matrix}\right]$$
 
 # Finite Dimension Optimization Algorithms
+
+<v-divider></v-divider>
+
 ### Line Search
 
 Line search algorithms look for the minimum function value for a given search direction. Once a minimum is found, a new search direction is selected, and the line search is repeated. The first direction is typically the steepest descent direction, or the negative of the gradient. 
@@ -123,6 +128,9 @@ This is an alternative to the line search method and helps account for non-posit
 Penalty methods provide a way to use unconstrained optimization techniques for constrained optimization problems. While straightforward, penalty methods have poor numerical performance and are generally not used anymore. Sequential quadratic programming is a better way to solve constrained optimization problems. 
 
 # Sequential Quadratic Programming
+
+<v-divider></v-divider>
+
 SQP is the current state of the art method for solving constrained continuously differentiable optimization problems. The general problem that it solves is:
 
 Minimize:	
@@ -155,11 +163,15 @@ Algorithmic differentiation, or sometimes known as automatic differentiation is 
 
 # Gradient Free Methods
 
+<v-divider></v-divider>
+
 These methods avoid the calculation of a gradient. For this reason, they are more robust to non-continuous objective functions and constraints. Unfortunately, this also means that gradient free methods scale very poorly for problems of very many variables. There are a multitude of different gradient free algorithms, but two of the most popular are the genetic algorithm and Nelder-mead methods. 
 
 Nelder-mead is a simplex method, where a simplex is defined as an N dimensional polyhedron formed form triangles. In 2D, it is a triangle, in 3D it is a tetrahedron, etc. 
 
 # Metaheuristics
+
+<v-divider></v-divider>
 
 Refers generally to a class of optimization methods that are designed to perform “well enough”. These typically can provide good solutions, but in a limited capacity and does not guarantee a perfect solution. 
 

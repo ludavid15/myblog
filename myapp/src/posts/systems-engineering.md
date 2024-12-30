@@ -12,6 +12,8 @@ This is the balance to be struck in the world of systems engineering. Systems en
 
 # Requirements
 
+<v-divider></v-divider>
+
 Requirements have been the backbone of aerospace systems engineering for a few decades now. The basic idea is that we write down a complete list of everything our project needs to do, and then break them down piece by piece. The idea is sound, but the execution gets messy very quickly, and is more art than science. 
 
 Let's consider an example. Say we are trying to design a rocketship to Mars. We might define a few high level requirements that read:
@@ -130,6 +132,8 @@ Another requirement pitfall is to neglect the goal and jump right into an implem
 
 # Design Reviews
 
+<v-divider></v-divider>
+
 Design reviews are checkpoints, meant to ensure that a certain level of maturity has been reached across the board before moving on to the next stage of work. Experts and or customers external to the design team are the ones who perform the review. 
 
 Beyond this high level objective however, reviews can take many forms. The review process for something like the 10 billion dollar James Webb Space Telescope is going to be very different from the review process for a cubesat. 
@@ -146,14 +150,18 @@ In short, your CDR is the last checkpoint before moving on to fabrication, integ
 
 # Operations
 
+<v-divider></v-divider>
+
 This is the domain that I work in. Some engineers design hardware, but someone has to figure out how it's all going to work together. The operations design or functional architecture of a program outlines *how* something will be done. This could be for the benefit of a designer, an operator, or even a computer. Depending on the user, this can also be detailed to different resolutions, ranging from the abstract, to the very specific (like individual command messages). 
 
 
 # Other Domains
 
+<v-divider></v-divider>
+
 In this post I've mostly talked about requirements, but systems engineering can cover a broad range of specialties. They are all brought together because they apply to the entire project and require lots of integrated thinking. These can include:
 
-1. Reliability & Availability
+1. [Reliability & Availability](posts/reliability)
 2. Fault Management
 3. Safety & Security
 3. Contamination Control
