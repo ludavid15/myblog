@@ -110,6 +110,7 @@ onMounted(() => {
   align-self: flex-start;
 }
 
+/* Styling for Markdown Text */
 .markdown-content ol,
 .markdown-content ul {
     padding-left: 1.5rem;
@@ -128,6 +129,13 @@ onMounted(() => {
 .markdown-content h5,
 .markdown-content h6 {
   scroll-margin-top: 80px; /* Adjust this value to match the app-bar height */
+}
+
+/* Styling for Code Blocks */
+pre {     
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
 }
 </style>
 

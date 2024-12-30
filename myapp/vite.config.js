@@ -4,6 +4,7 @@ import Markdown from 'vite-plugin-md';
 import { code, meta, link } from 'md-powerpack';
 import anchor from 'markdown-it-anchor';
 import mathjax3 from 'markdown-it-mathjax3';
+import Prism from 'markdown-it-prism';
 
 export default defineConfig({
   plugins: [
@@ -13,6 +14,7 @@ export default defineConfig({
       markdownItSetup(md) {
         // Add markdown-it-anchor with configuration
         md.use( mathjax3 );
+        md.use(Prism);
         md.use( anchor, {
                 permalink: false, // Add anchor links
                 slugify: (str) =>

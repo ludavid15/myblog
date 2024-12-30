@@ -12,6 +12,8 @@ That physical thing in question being acoustic waves traveling through the air. 
 
 # Mathematical Setup
 
+<v-divider></v-divider>
+
 To build a bridge between music theory and physics, let us begin with intervals. If we define the note **A** at 1 hz and then double the frequency to 2 hz, the resulting note is defined in our musical langauge as being 1 octave higher. 
 
 In western music, two notes that are an octave apart are considered the same "note". For this reason, they recieve the same label, although a number is sometimes used to indicate how high the note is. However, not all musical languages may recognize the concept of an octave, and after all, why should they? Even though we say two notes an octave apart are the same, they clearly are not - one is much higher in pitch than the other. Be careful to remember that the language we have shapes our perspective of the world. 

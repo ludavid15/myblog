@@ -51,7 +51,11 @@ Fairly straightfoward, we need to track the hardware, physical connectors, and p
 
 Verbs. Things that happen. You could say that function is the first thing we choose. Hardware is designed to meet a function, not the other way around.
 
-> Ok technically this isn't always true, as in the case of heritage systems. 
+<v-card variant="tonal" class="mb-5">
+    <v-card-text>
+    Ok technically this isn't always true, as in the case of heritage systems. 
+    </v-card-text>
+</v-card>
 
 Functions could be high level, like "launch satellite", or low level like "compute checksum".  
 
@@ -75,17 +79,37 @@ The Department of Defense Architecture Framework is an effort to generalize how 
 
 Consider an analogy - in CAD, we build 3D shapes. When we try to represent them on a 2D screen, we must choose a viewing angle and projection, but there are likely some standard views that everyone expects. Maybe a cross section to show the internal structure, or a profile view if it's a flat plate. DoDAF (and in fact any system diagram) follows the same idea. 
 
-| DoDAF Views   | Explanation
-|--             |--
-| SV-1          | High level hardware overview
-| SV-2          | Detailed hardware overview
-| SV-4          | Functional flow diagram
-| SV-6          | Resource flow matrix
-| SV-10b        | States and Modes transitions
-| SV-10c        | Sequence Diagrams
-| DIV-1         | Conceptual Data Model
-| DIV-2         | Logical Data Model
-| DIV-3         | Physical Data Model
+
+<v-card class="mb-5">
+    <v-table density="compact">
+        <thead>
+            <tr>
+                <th>DoDAF Views</th>
+                <th>Explanation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>SV-1</td>
+                <td>High level hardware overview</td></tr>
+            <tr><td>SV-2</td>
+                <td>Detailed hardware overview</td></tr>
+            <tr><td>SV-4</td>
+                <td>Functional flow diagram</td></tr>
+            <tr><td>SV-6</td>
+                <td>Resource flow matrix</td></tr>
+            <tr><td>SV-10b</td>
+                <td>States and Modes transitions</td></tr>
+            <tr><td>SV-10c</td>
+                <td>Sequence Diagrams</td></tr>
+            <tr><td>DIV-1</td>
+                <td>Conceptual Data Model</td></tr>
+            <tr><td>DIV-2</td>
+                <td>Logical Data Model</td></tr>
+            <tr><td>DIV-3</td>
+                <td>Physical Data Model</td></tr>
+        </tbody>
+    </v-table>
+</v-card>
 
 
 ### SV-4

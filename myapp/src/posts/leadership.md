@@ -81,11 +81,36 @@ The worst result is that the proces becomes a crutch, because the team no longer
 
 Long term sustainability is built on good habits, but how can you change a team's behavior to adopt healthier habits? The book *Influencer* by Grenny, Patterson, Maxfield, McMillan, and Switzler offers an explanation. In the book, the authors highlight six different considerations when it comes to influencing how people behave, organized in a matrix like this:
 
-|           | Motivation            | Ability
-|-          |-                      |-
-| Personal  | Personal Motivation   | Personal ability
-| Social    | Social Motivation     | Team ability 
-| Structural| Economic Motivation   | Access to resources/space
+<v-card>
+    <v-table density="compact">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Motivation</th>
+                <th>Ability</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Personal</td>
+                <td>Personal Motivation</td>
+                <td>Personal Ability</td>
+            </tr>
+            <tr>
+                <td>Social</td>
+                <td>Social Motivation</td>
+                <td>Team Ability</td>
+            </tr>
+            <tr>
+                <td>Structural</td>
+                <td>Economic Motivation</td>
+                <td>Resources/Space</td>
+            </tr>
+        </tbody>
+    </v-table>
+</v-card>
+
+<v-spacer></v-spacer>
 
 I won't get into details on each, but I think it's important to remember that there are multiple dimensions to motivation. If you've pursued one dimension without seeing results, consider if there are other aspects which are resisting. A few takeaways I want to highlight:
 
@@ -93,7 +118,9 @@ I won't get into details on each, but I think it's important to remember that th
 2. Many tasks require teamwork, and that may require a certain amount of social capital. This is an example of social or team ability. 
 
 
-## Talent
+# Talent
+
+<v-divider></v-divider>
 
 There's two perspectives on the distribution of talent in the world. The first is that talent follows a normal distribution, where the majority of people fall towards the middle. In such a world, the largest benefits are reaped by "moving the middle". If you can slightly improve/support the average worker, your total output will go up, simply because of the numbers. 
 

@@ -23,9 +23,9 @@ To start, let's review the most basic type of machine learning problem - linear 
 
 $$h(x) = b + \theta_1x_1 + ... + \theta_nx_n = b + \sum_{i=1}^{n}theta_1x_i$$
 
-Where $$h$$ is the model, $b$ is an offset, and the $$\theta$$'s are the weights to be learned. 
+Where $h$ is the model, $b$ is an offset, and the $\theta$'s are the weights to be learned. 
 
-Sometimes, the weights are represented by the character $$w$$, which makes sense. 
+Sometimes, the weights are represented by the character $w$, which makes sense. 
 
 ## K-Means Clustering
 
@@ -42,7 +42,6 @@ For data classification, there typically needs to be as many dimensions as indep
 ## Feed Forward Neural Networks
 
 Networks are function approximators. Each node consists of any number of inputs and any number of outputs, but is itself a simple activation function (relu, sigmoid, tangent, etc.) These functions generally produce an output in the range of 0 to 1 or -1 to 1. For each node, there are a series of weights and offsets to be calculated/tuned by the learning process.
-
 
 The benefit of deep nets is that they can separate non-linear shapes, at the downside of long computation times and unreliable convergence of results. Also, results depend a lot on how error is measured, the function of each node, etc. 
 
@@ -83,21 +82,41 @@ A classification task has many potential outputs (e.g. apple, pear, strawberry).
 
 Although the final output node needs a very specific activation function depending on the task, on hidden nodes, the ReLU or tanh function is almost always better than the sigmoid function. 
 
-| Rectified Linear Unit (Relu)
-|-
-| Unlike the tanh or sigmoid function which approaches a slope of zero at the extremes, ReLU maintains a constant slope, which usually allows machine learning algorithms to converge faster. Sometimes, algorithms use a slightly modified version called "leaky" ReLU, where the slope is slightly positive (rather than zero) for negative values. This is another feature designed to help the optimization converge more quickly. 
 
-| Tanh
-|-
-| Hyperbolic tangent. Unlike Relu or Sigmoid, this function ranges from -1 to 1. 
+<v-card>
+    <v-card-title>Rectified Linear Unit (Relu)</v-card-title>
+    <v-card-text>
+    Unlike the tanh or sigmoid function which approaches a slope of zero at the extremes, ReLU maintains a constant slope, which usually allows machine learning algorithms to converge faster. Sometimes, algorithms use a slightly modified version called "leaky" ReLU, where the slope is slightly positive (rather than zero) for negative values. This is another feature designed to help the optimization converge more quickly. 
+    </v-card-text>
+</v-card>
 
-| Softmax
-|-
-| The Softmax functions converts a vector of numbers into a vector of probabilities which sum to one. (Good for a final layer when making predictions)
+<v-spacer></v-spacer>
 
-| Sigmoid
-|-
-| The sigmoid function ranges from 0 to 1
+<v-card>
+    <v-card-title>Tanh</v-card-title>
+    <v-card-text>
+    Hyperbolic tangent. Unlike Relu or Sigmoid, this function ranges from -1 to 1. 
+    </v-card-text>
+</v-card>
+
+<v-spacer></v-spacer>
+
+<v-card>
+    <v-card-title>Softmax</v-card-title>
+    <v-card-text>
+    The Softmax functions converts a vector of numbers into a vector of probabilities which sum to one. (Good for a final layer when making predictions).
+    </v-card-text>
+</v-card>
+
+<v-spacer></v-spacer>
+
+<v-card>
+    <v-card-title>Sigmoid</v-card-title>
+    <v-card-text>
+    The sigmoid function ranges from 0 to 1.
+    </v-card-text>
+</v-card>
+
 
 $$h(x) = \frac{1}{1-e^{-x}}$$
 
@@ -123,7 +142,7 @@ To solve this problem, we can use *embeddings* to represent distinct items. An e
 In practice, these dimensions are not defined by us, but identified through an algorithm (duh!) and don't always reflect concepts we know. To create embedding vectors for each label, first let's define some variables:
 
 
-```
+```python
 O_i     #one-hot vector representing word [i]
 E       #embedding matrix of shape (n,m)
 ```
@@ -134,14 +153,14 @@ $$e_i = E \cdot O_i$$
 
 Next let's frame the problem statement which will yield the embedding matric E. Given some context, we'd like to predict a target word to fit that context. 
 
-```
-Inputs = e_1, e_2, e_3, ... e_7     //context
-Outputs = e_t                       //target
+```python
+Inputs = e_1, e_2, e_3, ... e_7     # context
+Outputs = e_t                       # target
 ```
 
 The input and output can be connected using a basic feed forward network, maybe something like this 
 
-```
+```python
 layer1 = Dense(100, 70, ReLU)
 layer2 = Softmax
 ```
@@ -182,7 +201,7 @@ $$z_{norm} = \frac{z-\mu}{\sqrt{\sigma^2 + \epsilon}}$$
 
 $$\tilde{z} = \gamma z_{norm} + \beta$$
 
-Where $$\mu$$ and $$\sigma$$ are our normalization parameters, applied to an output *z*. The epsilon is used to stabilize our fraction and avoid dividing by zero when $$\sigma$$ is very small. Finally, $$\gamma$$ and $$\beta$$ are trainable weights. This scaled value, $$\tilde{z}$$ is what gets passed into the activation layer. Notice that if we use $$\beta$$ in this context, we don't actually need *b* later.
+Where $\mu$ and $\sigma$ are our normalization parameters, applied to an output *z*. The epsilon is used to stabilize our fraction and avoid dividing by zero when $\sigma$ is very small. Finally, $\gamma$ and $\beta$ are trainable weights. This scaled value, $\tilde{z}$ is what gets passed into the activation layer. Notice that if we use $\beta$ in this context, we don't actually need *b* later.
 
 $$a = ReLU(w\tilde{z}+b)$$
 
@@ -193,7 +212,7 @@ An autoencoders is a form of unsupervised learning. The goal is to compress and 
 
 There are two flavors of autoencoders:
 * Regularized autoencoders, or sometimes called sparse autoencoders, are effective for classification tasks. 
-* Variational autoencoders use probability distributions instead of discrete variables, and are effective for generating new content. Read more about them [here](/notes/vae)
+* Variational autoencoders use probability distributions instead of discrete variables, and are effective for generating new content. Read more about them [here](/posts/variational-autoencoder)
 
 
 ## Restricted Boltzmann Machine
@@ -211,7 +230,7 @@ One advantage to unsupervised learning with an RBM is that results can be obtain
 
 Before we jump into an RNN, consider a simple sentence generation program, which predicts the next word based only on the last word it encountered. Maybe the output looks something like this:
 
-```
+```python
 > he drinks f("drinks")
 > he drinks water f("water")
 > he drinks water park f("park")
@@ -223,7 +242,7 @@ A recurrent neural networks is structured such that the output of a hidden layer
 
 The output layer of an RNN is usually just the input layer but shifted by one step. Think about it with this example: If the sequence to be predicted by the RNN is ABCD, then for every step of the sequence, a trained RNN would generate:
 
-```
+```python
 y(A) = AB
 y(AB) = ABC
 y(ABC) = ABCD
@@ -231,16 +250,19 @@ y(ABC) = ABCD
 
 See how the input sequence can also act as the labeled output used in a supervised learning algorithm? 
 
-<p class="message">
-Long-Short Term Memory is the preferred training algorithm for RNN's. This helps reduce amplification or minimization due to recursion (e.g. 2 * 2 * 2 grows very quickly, while 0.5 * 0.5 * 0.5 shrinks very quickly). LSTM's also solve the issue of long term memory. Even though a basic RNN should "in theory" be able to remember information from long ago, in practice they are unable to. 
-</p>
+<v-card variant="tonal" class="mb-5">
+    <v-card-text>
+    Long-Short Term Memory is the preferred training algorithm for RNN's. This helps reduce amplification or minimization due to recursion (e.g. 2 * 2 * 2 grows very quickly, while 0.5 * 0.5 * 0.5 shrinks very quickly). LSTM's also solve the issue of long term memory. Even though a basic RNN should "in theory" be able to remember information from long ago, in practice they are unable to. 
+    </v-card-text>
+</v-card>
+
 
 Also note, RNN's can be bi-directional! This is good for natural language processing applications, where a word later in the sentence could be relevant to a word earlier in the sentence. The downside to a bi-directional RNN is that the complete sequence is required before an output can be created. This can be a problem for real-time applications. 
 
 
 ## Long Short Term Memory
 
-For this topic, I recommend reading colah's blog post on [understanding LSTM's](https://colah.github.io/posts/2015-08-Understanding-LSTMs/){:target="_blank"}{:rel="noopener noreferrer"}. He explains it much better than I can, plus he's got pictures to go along with. 
+For this topic, I recommend reading colah's blog post on [understanding LSTM's](https://colah.github.io/posts/2015-08-Understanding-LSTMs/). He explains it much better than I can, plus he's got pictures to go along with. 
 
 But in summary, within an LSTM there are two additional variables called the hidden state, and the cell state, which are used to carry long term, and short term signals respectively. A series of gates, like a forget gate and an update gate, determine how much these signals are modified at each step.  
 
@@ -257,7 +279,7 @@ $$c^{<1>} = \sum_{t=1} \alpha^{<1,t>} a^{<t>}$$
 
 Since alpha is a weighting term, it also makes sense to make sure the vector of alphas will sum to one, like with a softmax function. Now that's all set up, the only remaining question is how to actually compute each attention parameter. Turns out, this can be done by training a small neural network. 
 
-```
+```python
 Input = S_t_prev, a_t
 Output = e_t
 model = Dense(2, 1)
@@ -278,7 +300,7 @@ CNN’s are an effective tool for processing very large images, that would take 
 1. Parameter sharing - only a few filters of all the same parameters are used everywhere.
 2. Low connectivity - not every pixel depends on every other pixel, only its neighbors.
 
-You can continue reading about convolutional neural networks [here](/notes/cnn)!
+You can continue reading about convolutional neural networks [here](/posts/convolutional-neural-network)!
 
 ## Transformer Network
 
@@ -311,3 +333,13 @@ Or to express it another way, the goal is to encode the sequence learned by one 
 
 A generative adversarial model, or GAN, is a method to train a generative modeling algorithm. GAN's consist of two parts - a generative model to create plausible examples, and a supervised learning/classifier that tries to distinguish the fake ones from the real ones. They are trained against one another (hence adversarial), until the classifier is no longer able to distinguish between the two. 
 
+
+<style>
+pre.language-python {
+  padding: 16px;
+  border-radius: 8px;
+}
+.lang-display {  /* Hides the language label in code blocks */
+  display: none !important;
+}
+</style>
