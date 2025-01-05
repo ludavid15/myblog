@@ -1,6 +1,6 @@
 ---
 title: "Path Planning"
-topic: "Algorithms"
+topic: "Dynamics and Controls"
 path: "path-planning"
 author: "David Lu"
 date: "2024-12-10"

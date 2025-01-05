@@ -23,9 +23,13 @@ Returning to asynchronous for a moment, one failure mode that may arise is for t
 
 ## ML-STD 1553
 
-A traffic control protocol for managing information traffic from multiple sources on a shared physical line. 1553 requires a controlling bus computer (BC) and an addresses for each terminal. The underlying constraint of 1553 is that traffic is never parrallel. In other words, each terminal takes turns using the line, and ignores any information on the line while not actively in use. On any given 1553 line, there can be up to 31 *remote terminals* (RTs), each with their own *subaddresses*. For more information, check out the full post on [1553B](/notes/1553B/).
+A traffic control protocol for managing information traffic from multiple sources on a shared physical line. 1553 requires a controlling bus computer (BC) and an addresses for each terminal. The underlying constraint of 1553 is that traffic is never parrallel. In other words, each terminal takes turns using the line, and ignores any information on the line while not actively in use. On any given 1553 line, there can be up to 31 *remote terminals* (RTs), each with their own *subaddresses*. For more information, check out the full post on [1553B](/posts/1553B/). 
 
-> Being an older protocol, 1553 only has a bandwidth of around 1 Mbps
+<v-card variant="tonal">
+  <v-card-text>
+    Being an older protocol, 1553 only has a bandwidth of around 1 Mbps.
+  </v-card-text>
+</v-card>
 
 
 ## Ethernet
@@ -56,10 +60,19 @@ This stands for low voltage differential signaling, and works the same as RS-422
 
 ### Miscellaneous Definitions
 
-| Name      | Definition
-|-          |-
-|Bi-Level   |Consisting of two states (i.e. 0 and 1). In constrast to *analog*.
-|Serial communication | Commmunication that consists of sending data one bit at a time. 
+<v-card variant="tonal" class="mb-5 mt-5">
+    <v-card-title>Bi-Level Communication</v-card-title>
+    <v-card-text>
+    Consisting of two states (i.e. 0 and 1). In constrast to *analog*.
+    </v-card-text>
+</v-card>
+
+<v-card variant="tonal" class="mb-5">
+    <v-card-title>Serial Communication</v-card-title>
+    <v-card-text>
+    Commmunication that consists of sending data one bit at a time. 
+    </v-card-text>
+</v-card>
 
 
 # Hardware
@@ -74,13 +87,11 @@ Often abbreviated to just TWTA, this is a device used for amplifying radio signa
 
 ## Waveguide
 
-A waveguide is used to move an electromagnetic signal (usually microwaves). It restricts transmission to just one direction, so there is very little loss along the path. 
-
-A great and easy to understand description of how waveguides work can be found [here](https://www.pa3fwm.nl/technotes/tn21-how-does-a-waveguide-work.html).
+A waveguide is used to move an electromagnetic signal (usually microwaves). It restricts transmission to just one direction, so there is very little loss along the path. A great and easy to understand description of how waveguides work can be found [here](https://www.pa3fwm.nl/technotes/tn21-how-does-a-waveguide-work.html).
 
 The basic idea is that waves are "bouncing" in a zig zag pattern from wall to wall. This allows the signal to satisfy the required boundary conditions. The specific angle and phase of this "bounce" is unique and depends on the frequency of the signal and the width of the waveguide. For every waveguide, there is a *cut-off frequency*. Signals below this frequency (i.e. longer wavelengths) cannot propogate through that waveguide. 
 
-> In order for this bounce to take place, a waveguide must be at least half a wavelength wide. The lower end of Microwaves have a wavelength of 1m, so you can imagine that construction becomes increasingly problematic if we continue to drop the frequency. For lower frequencies, there are coax cables.
+In order for this bounce to take place, a waveguide must be at least half a wavelength wide. The lower end of Microwaves have a wavelength of 1m, so you can imagine that construction becomes increasingly problematic if we continue to drop the frequency. For lower frequencies, there are coax cables.
 
 ## Coax-Cable
 

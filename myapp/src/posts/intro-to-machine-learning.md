@@ -13,18 +13,6 @@ For any machine learning algorithm, we should be able to identify three distinct
 2. **Cost function**, which we minimize by using different
 3. **Optimization techniques**.
 
-
-### Table of Contents
-
-In this post, we'll talk about:
-
-1. Supervised Learning
-2. Unsupervised Learning
-3. Representation Learning
-4. Reinforcement Learning
-5. Knowledge Based/Symbolic AI
-
-
 # Supervised Learning
 
 <v-divider></v-divider>
@@ -55,6 +43,8 @@ A really cool outcome we get from unsupervised learning is the ability to genera
 
 # Representation Learning or Feature Learning
 
+<v-divider></v-divider>
+
 The goal of representation learning is to identify patterns in your data. This can be achieved both with supervised or unsupervised methods. 
 
 Why? Because *patterns* are useful for questions like:
@@ -63,17 +53,13 @@ Why? Because *patterns* are useful for questions like:
 And questions like:
 1. How are these alike? (Unsupervised learning)
 
-It turns out that in many machine learning algorithms, we create tools to identify and track patterns anyway. Hence, representation learning can be both supervised or unsupervised learning. 
+It turns out that in many machine learning algorithms, we create tools to identify and track patterns anyway. Hence, representation learning can be both supervised or unsupervised learning. Here's an example. We wish to write a program to classify flowers. Using a clustering approach, we might make measurements of the flower color or petal size and shape. K-means clustering would return the averages for each class. While we do find the averages, the properties were pre-defined. 
 
-Here's an example. We wish to write a program to classify flowers. Using a clustering approach, we might make measurements of the flower color or petal size and shape. K-means clustering would return the averages for each class. While we do find the averages, the properties were pre-defined. 
+If we linearized the pixels of each image (n by m), we'd end up performing clustering in ($n \times m$) space, which is computationally expensive. 
 
-If we linearized the pixels of each image (n by m), we'd end up performing clustering in ($$n \times m$$) space, which is computationally expensive. 
+So how can we get a machine to learn features? Well, when we perform supervised learning with something like a deep neural net, the last hidden layer before the output can actually be a set of features. Or in an unsupervised case, independent component analysis and autoencoders achieve this goal by looking for ways to represent the most original information in the fewest variables. The singular value decomposition and eigenvalues are two ways to do this. 
 
-So how can we get a machine to learn features? Well, when we perform supervised learning with something like a deep neural net, the last hidden layer before the output can actually be a set of features. 
-
-Or in an unsupervised case, independent component analysis and autoencoders achieve this goal by looking for ways to represent the most original information in the fewest variables. The singular value decomposition and eigenvalues are two ways to do this. 
-
-> Consider the example of rotations. A rotation matrix in 3D is a 3x3 matrix, for a total of nine variables. But it turns out that any rotation in 3D can be represented by only three Euler angles (Roll Pitch Yaw). If we have those three numbers, we can follow a specific set of rules to reconstruct the original object. In this way, the Euler angles can be thought of as "features" of the rotation matrix. 
+Consider the example of rotations. A rotation matrix in 3D is a 3x3 matrix, for a total of nine variables. But it turns out that any rotation in 3D can be represented by only three Euler angles (Roll Pitch Yaw). If we have those three numbers, we can follow a specific set of rules to reconstruct the original object. In this way, the Euler angles can be thought of as "features" of the rotation matrix. 
 
 
 # Reinforcement Learning

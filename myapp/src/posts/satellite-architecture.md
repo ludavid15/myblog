@@ -53,7 +53,11 @@ Also worth thinking about is the [OSI Model](https://en.wikipedia.org/wiki/OSI_m
 
 The propulsion system provides Delta-V capacity to your satellite. This could be used initially for getting into your orbit, but also after the fact for maintaining your orbit, or for emergency collision avoidance maneuvers. 
 
-Why do orbits need to be maintained? Well, atmospheric drag for one. But also the Earth isn't perfectly spherical and this causes orbits to drift over time (called precession).
+<v-card variant="tonal">
+  <v-card-text>
+   Why do orbits need to be maintained? Well, atmospheric drag for one. But also the Earth isn't perfectly spherical and this causes orbits to drift over time (called precession).
+  </v-card-text>
+</v-card>
 
 Depending on your design, propulsion thrusters are usually classified in two ways: either as primary thrusters, which provide delta-V, or as attitude control thrusters. The latter needs less thrust, but are used more, so a higher specific impulse would be good. The efficiency and demands on your propulsion system will dictate the amount of propellent that needs to be carried. The weight of propellant will make up a significant piece of your mass budget. 
 
@@ -101,13 +105,11 @@ Thermal gets tricky in space, because there's no convection or conduction, only 
 
 <v-divider></v-divider>
 
-
 An equally important piece of your design is your launch vehicle interface. After all, the LV is what takes you into space. Do you have special environmental needs while you're in the fairing? Can you survive the g's during launch? How will you ensure a clean separation? Also, most launch fairings prevent transmission of comm signals between your spacecraft and ground. This means you'll have to route data to the launch vehicle's own communications system if you want telemetry during launch. 
 
 # Systems Engineering
 
 <v-divider></v-divider>
-
 
 In the real world, no task is performed in isolation. A lot of supporting infrastructure goes a long way towards making programs safe, reliable, and effective. A satellite is no different. In addition to hardware to perform the basic functions, we also need hardware to support them. This can look like a number of things:
 
@@ -124,7 +126,6 @@ These considerations can also drive a lot on your final design, but will need to
 # Ground Systems
 
 <v-divider></v-divider>
-
 
 Not to be overlooked is the all important ground system. It's perhaps not as glamorous, but ground systems are way easier to manage and update than a satellite. This means that oftentimes, the heavy lifting is performed on the ground rather than on the spacecraft. 
 

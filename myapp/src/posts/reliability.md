@@ -33,6 +33,8 @@ $$\lambda = \frac{1}{\theta}$$
 
 # Mean Time to Recovery
 
+<v-divider></v-divider>
+
 Besides just how often a part may fail, we're also interested in how long is takes to fix these failures. This leads us to the mean time to recovery. This is the average time it takes to restore normal operations after a failure has occured. 
 
 
@@ -68,7 +70,7 @@ If they are in parallel, we add them and then subtract the product:
 
 $$R_p = R_a + R_b - R_a*R_b$$
 
-Taking these two, we can combine more complex systems to calculate a net reliability. We can also calculate coupled probabilities using [Bayes Theorem](/notes/bayes).
+Taking these two, we can combine more complex systems to calculate a net reliability. We can also calculate coupled probabilities using [Bayes Theorem](/posts/bayes).
 
 # Failure Modes and Effects Analysis
 

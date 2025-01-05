@@ -42,31 +42,29 @@ What aspects of a system can we model? Here's a list.
 4. Heirarchies/Definitions
 
 
-### Physical Configuration
+## Physical Configuration
 
 Fairly straightfoward, we need to track the hardware, physical connectors, and physical properties (shape, weight, thermal resistence, etc.). If our project was a sentence, the physical configuration would be the nouns. Physical configuration could also include more analytical properties as well, such as failure modes and reliability. In an operational context, it could also mean the states and modes. 
 
 
-### Function/Behavior
+## Function/Behavior
 
-Verbs. Things that happen. You could say that function is the first thing we choose. Hardware is designed to meet a function, not the other way around.
+Verbs. Things that happen. You could say that function is the first thing we choose. Hardware is designed to meet a function, not the other way around. 
 
 <v-card variant="tonal" class="mb-5">
     <v-card-text>
-    Ok technically this isn't always true, as in the case of heritage systems. 
+    Ok technically this isn't always true, as in the case of heritage systems. In this case, part of the goal is to use pre-existing hardware so to minimize cost or risk. 
     </v-card-text>
 </v-card>
 
 Functions could be high level, like "launch satellite", or low level like "compute checksum".  
 
-### Interactions
+## Interactions
 
-Interactions can be very abstract, but are also very important. A function might include an interaction, (i.e. a satellite interacts with a ground station by sending telemetry), but a physical configuration might also include an interaction (i.e. the baseplate on a satellite draws heat away from the electronics). 
-
-And inherent to interactions is data and information. What information is tranferred? How is information formatted? Where does information go?
+Interactions can be very abstract, but are also very important. A function might include an interaction, (i.e. a satellite interacts with a ground station by sending telemetry), but a physical configuration might also include an interaction (i.e. the baseplate on a satellite draws heat away from the electronics). And inherent to interactions is data and information. What information is tranferred? How is information formatted? Where does information go?
 
 
-### Definitions
+## Definitions
 
 Definitions explain the words we create to group stuff together. If many pieces of hardware work together to provide telemetry, we might designate a "telemetry subsystem". These abstractions are an important part of communicating complex ideas, but can also get messy. Definitions are applicable to any of the three prior groupings: hardware, functions, and interactions. 
 
@@ -133,14 +131,19 @@ This is a sequence diagram. In contrast to the SV-4, an SV-10c is not primarily 
 
 The Data information viewpoint breaks down the heirarchy of data. Like functions, we can think of data both in the abstract, or by implementation. For instance, the attitude of a spacecraft is abstract (DIV-1). A set of quaternions stored into memory is an implementation (DIV-2). Whether those quaternions are stored with any identifying bit headers, or in little or big Endian is physical (DIV-3).
 
-> CAMEO gives us many tools for representing data. Exchange Elements are the default unit, and can be further refined with Signals. For instance, an exchange element might be created called "Power Command", which refines into two signals "Power On" and "Power Off".
+<v-alert
+    border="start"
+    border-color="secondary"
+    elevation="2">
+    CAMEO gives us many tools for representing data. Exchange Elements are the default unit, and can be further refined with Signals. For instance, an exchange element might be created called "Power Command", which refines into two signals "Power On" and "Power Off".
+</v-alert>
 
 
 # Relationships
 
 <v-divider></v-divider>
 
-A key element of systems modeling is the *relationship* between two elements. Here are a few, presented in no particular order:
+A key element of systems modeling is the *relationship* between two elements. It is after all, a relational database. Here are a few, presented in no particular order:
 
 ### Composition
 
@@ -152,7 +155,7 @@ An aggregration is also a strong relationship, meaning something like "is made u
 
 ### Generalization
 
-A generalization is a weak relationship, meaning "is a type of". For example, a camry and a civic are both types of cars. Element which are specializations of a generalization will *inherit* the properties of the generalization. If all cars have 4 wheels, then a camry and a civic will also have 4 wheels. 
+A generalization is a weak relationship, meaning "is a type of". For example, a camry and a civic are both types of cars. You can say that a car is generalization of a civic. Or vice versa, you could say that a civic is a specialization of a car. Elements which are specializations of a generalization will *inherit* the properties of the generalization. If all cars have 4 wheels, then a camry and a civic will also have 4 wheels. 
 
 ### Association
 

@@ -5,7 +5,7 @@
   permanent
   floating
   :location="$vuetify.display.mobile ? 'bottom' : 'left'"
-  class="bg-secondary d-flex flex-column"
+  class="bg-secondary"
   :width="$vuetify.display.mobile ? undefined : 350">
 
     <v-list v-model:opened="openedTopics" density="compact">
@@ -71,7 +71,7 @@
     <!-- Chip at the Bottom -->
     <div class="version-note pa-4 text-left" :style="{ backgroundColor: 'transparent' }">
       <v-chip variant="elevated" elevation='7' :style="{ backgroundColor: '#bdbc9f', color:'black'}">
-        Website Version 1.03
+        Website Version 1.04
       </v-chip>
     </div>
 

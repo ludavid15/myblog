@@ -27,11 +27,12 @@ Other ideas that we have come up with, but cannot achieve yet:
 
 Although not explicitly stated, all relevant propulsion systems work with **fluids**. 
 
-> What is a good measure for efficiency?
-
-<p class=message>
-As with most things in life, very little is free. Since the goal is to produce thrust, a common measure of effiency is how much thrust gets produced per unit weight of expendable mass. Naturally, this is not so good a quantifier for something like a battery powered quadcopter, but for anything that must carry fuel or propellent, thrust per mass flow is usually what is meant by "efficiency". 
-</p>
+<v-alert
+    border="start"
+    border-color="secondary"
+    elevation="2">
+    As with most things in life, very little is free. Since the goal is to produce thrust, a common measure of effiency is how much thrust gets produced per unit weight of expendable mass. Naturally, this is not so good a quantifier for something like a battery powered quadcopter, but for anything that must carry fuel or propellent, thrust per mass flow is usually what is meant by "efficiency". 
+</v-alert>
 
 # Mechanical Propulsion
 

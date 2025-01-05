@@ -2,7 +2,7 @@
   <v-container>
     <v-row justify="center">
       <v-col cols="10" >
-        <h1 class="text-h3 font-weight-light mb-8">Welcome to my Website!</h1>
+        <h1 class="text-h3 font-weight-light my-8">Welcome to my Website!</h1>
         <p class="text-h6 mb-4">
           This is my blog where I write about things I've learned. It serves as a sort of record 
           of things I've done as time inevitably erodes my memory. It's also a handy reference in

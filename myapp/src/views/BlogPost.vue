@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-import { ref, watch, onMounted} from 'vue';
+import { ref, watch, onMounted, markRaw } from 'vue';
 import { useRoute } from 'vue-router';
 import Contents from '@/components/Contents.vue';
 import headingsData from '@/data/headings.json';
@@ -62,7 +62,7 @@ const loadMarkdown = async (slug) => {
 
     if (markdownFiles[filePath]) {
       const module = await markdownFiles[filePath]();
-      postContent.value = module.default;
+      postContent.value = markRaw(module.default);
       frontmatter.value = module.frontmatter || {}
       headings.value = headingsData[`${slug}.md`] || [];
     } else {
@@ -113,11 +113,11 @@ onMounted(() => {
 /* Styling for Markdown Text */
 .markdown-content ol,
 .markdown-content ul {
-    padding-left: 1.5rem;
+    padding-left: 2.5rem;
     margin-bottom: 1.1rem;
 }
 .markdown-content li {
-    list-style-position: inside;
+    list-style-position: outside;
 }
 .markdown-content p {
     margin-bottom: 1.1rem;
@@ -128,7 +128,27 @@ onMounted(() => {
 .markdown-content h4,
 .markdown-content h5,
 .markdown-content h6 {
-  scroll-margin-top: 80px; /* Adjust this value to match the app-bar height */
+  scroll-margin-top: 80px; /* Adjust to match the app-bar height */
+  font-family: 'Roboto', sans-serif;
+}
+.markdown-content h1 {
+  font-size: 1.8em; 
+  font-weight: 500;
+}
+.markdown-content h2 {
+  font-size: 1.5em; 
+  font-weight: 500;
+}
+.markdown-content h3 {
+  font-size: 1.25em; 
+  font-weight: 500;
+}
+
+/* Styling for Inline Code Blocks */
+.markdown-content code {
+    background: #f5f2f0; /* Match your Prism theme background */
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
 }
 
 /* Styling for Code Blocks */

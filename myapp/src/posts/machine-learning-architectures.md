@@ -6,16 +6,16 @@ author: "David Lu"
 date: "2024-12-10"
 ---
 
-At its core, machine learning is a **statistical science**, and like statistics, a great deal of care must be taken when formatting and analyzing data. They way we chose to quantify abstract topics and/or measure error will have a significant impact on the quality of our result. 
+At its core, machine learning is a **statistical science**, and like statistics, a great deal of care must be taken when formatting and analyzing data. They way we chose to quantify abstract topics and/or measure error will have a significant impact on the quality of our result. In other words, garbage in equals garbage out. 
 
-This post lays a stronger mathematical foundation for machine learning, but if you are just looking for a high level overview of what machine learning is, I recommend reading the machine learning introduction post. For a discussion of machine learning as a wandering exploration of linear algrebra, see the post on linear algebra. In fact, I'd recommend starting on that page first! Matrices are the bedrock of machine learning.
+This post lays a stronger mathematical foundation for machine learning, but if you are just looking for a high level overview of what machine learning is, I recommend reading the [machine learning introduction post](/posts/intro-to-machine-learning). For a discussion of machine learning as a wandering exploration of linear algrebra, see the post on linear algebra. In fact, I'd recommend starting on that page first! Matrices are the bedrock of machine learning.
 
 
 # Part 1 - Basic Architectures
 
 <v-divider></v-divider>
 
-On the linear algrebra post, we've talked a lot about what we can do with matrices, and we've done this because many problems can be solved without reaching for a neural network that has millions of weights which need to be optimized. Just something to keep in mind! 
+On the linear algrebra post, we talked a lot about what we can do with matrices, and we've done this because many problems can be solved without reaching for a neural network that has millions of weights which need to be optimized. If you can frame your problem as a least squares problem, it'll be easier to solve and faster to troubleshoot. Just something to keep in mind! 
 
 ## Linear Regression
 
@@ -83,7 +83,7 @@ A classification task has many potential outputs (e.g. apple, pear, strawberry).
 Although the final output node needs a very specific activation function depending on the task, on hidden nodes, the ReLU or tanh function is almost always better than the sigmoid function. 
 
 
-<v-card>
+<v-card variant="tonal">
     <v-card-title>Rectified Linear Unit (Relu)</v-card-title>
     <v-card-text>
     Unlike the tanh or sigmoid function which approaches a slope of zero at the extremes, ReLU maintains a constant slope, which usually allows machine learning algorithms to converge faster. Sometimes, algorithms use a slightly modified version called "leaky" ReLU, where the slope is slightly positive (rather than zero) for negative values. This is another feature designed to help the optimization converge more quickly. 
@@ -92,7 +92,7 @@ Although the final output node needs a very specific activation function dependi
 
 <v-spacer></v-spacer>
 
-<v-card>
+<v-card variant="tonal">
     <v-card-title>Tanh</v-card-title>
     <v-card-text>
     Hyperbolic tangent. Unlike Relu or Sigmoid, this function ranges from -1 to 1. 
@@ -101,7 +101,7 @@ Although the final output node needs a very specific activation function dependi
 
 <v-spacer></v-spacer>
 
-<v-card>
+<v-card variant="tonal">
     <v-card-title>Softmax</v-card-title>
     <v-card-text>
     The Softmax functions converts a vector of numbers into a vector of probabilities which sum to one. (Good for a final layer when making predictions).
@@ -110,7 +110,7 @@ Although the final output node needs a very specific activation function dependi
 
 <v-spacer></v-spacer>
 
-<v-card>
+<v-card variant="tonal">
     <v-card-title>Sigmoid</v-card-title>
     <v-card-text>
     The sigmoid function ranges from 0 to 1.
@@ -221,7 +221,11 @@ A restricted Boltzmann machine has two layers - a visible layer, and a hidden la
 
 The general idea behind a RBM is that there are hidden triggers which result in the data we see. The weights tie each cause (hidden layer) to each effect (visible layer). These result in probabilities, so we just have to tune our weights until the predicted probability of each event matches the probability distribution we see in our training data!
 
-> The words "trigger" and "result-in" are here to illustrate the idea, but in reality no causal relationship is being proven here! A more accurate version would be to say that there are hidden "indicators" which "correlate to" the data we see.  
+<v-card variant="tonal" class="mb-5">
+    <v-card-text>
+    The words "trigger" and "result-in" are here to illustrate the idea, but in reality no causal relationship is being proven here! A more accurate version would be to say that there are hidden "indicators" which "correlate to" the data we see.  
+    </v-card-text>
+</v-card>
 
 One advantage to unsupervised learning with an RBM is that results can be obtained with only a few examples. Today, training is performed using an algorithm called **constrastive divergence**, which overcomes some of the scaling issues with RBM's. 
 
@@ -291,7 +295,11 @@ Keeping in mind that the output `e_t` needs to be passed through a softmax befor
 
 The principle of a CNN is that a smaller matrix (aka, kernel, feature detector, filter), is passed over (i.e. convolved ) with the raw data. This is repeated over and over, and eventually passed through a fully connected layer (like in regular Neural Networks). 
 
-> In a sense, convolutional networks juxtapose recurrent networks. Where RNN’s are deep, CNNs are shallow.
+<v-card variant="tonal" class="mb-5">
+    <v-card-text>
+    In a sense, convolutional networks juxtapose recurrent networks. Where RNN’s are deep, CNNs are shallow.
+    </v-card-text>
+</v-card>
 
 The key to CNN’s is the kernel matrix. Different kernels can be trained to identify different “features” from the data, ranging from the very basic (e.g. an edge or a corner), to more advanced objects (e.g. an eye or a nose), and finally to the most high level (e.g. a face).
 
@@ -304,9 +312,9 @@ You can continue reading about convolutional neural networks [here](/posts/convo
 
 ## Transformer Network
 
-Introduced in 2017, a transformer network is a CNN inspired, attention-based approach to natural language processing. In a transformer network, we do away with the recursive component all together, and instead play a game of "word association". 
+Introduced in 2017, a transformer network is a CNN inspired, attention-based approach to natural language processing. In a transformer network, we do away with the recursive component all together, and instead play a game of "word association". Transformer networks are the underlying architecture in current state of the art AI's, such as ChatGPT. 
 
-To begin, let's define a term called **self-attention**. This is an attention based representation of a word. In contrast to embedding vectors which are static, these are context specific. For example, in a sentence containing the words *company*, *phone*, and *technology*, we would guess that the world **apple** is unlikely to refer to a fruit.
+To begin, let's define a term called **self-attention**. This is an attention based representation of a word. In contrast to embedding vectors which are static, these are context specific. For example, in a sentence containing the words *company*, *phone*, and *technology*, we would guess that the world **apple** is unlikely to refer to a fruit, but rather the company. 
 
 We'll make this a function of three parameters, q (query), K (Key), and V (Value). These are computed with a weight matrix and your input word.
 
@@ -315,7 +323,6 @@ $$A(q, K, V) = softmax\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
 $$q^{<3>} = W^Q x^{<3>}$$
 
 Next, we would like to take the inner product of every query and key pair. This is akin to asking the question, "how relevant is this word towards the meaning of this other word?" (see how this is a type of *attention*?). These query "answers" are first softmaxed, and then multiplied by each value to compute the total "self attention" of that word. 
-
 
 The next concept to discuss is **multi-head attention**. Basically, we are recomputing the self-attention parameter for each word, but now with different weight matrices which determine q, K, and V. This is tricky, but the idea is that each "head" is asking a different relational question (e.g. what, when, how, why, etc.). Having multiple "heads" allows for a richer representation of the sentence.
 

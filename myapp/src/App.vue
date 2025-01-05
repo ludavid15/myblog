@@ -4,7 +4,7 @@
       style="min-height: 100vh; background-color: #EEE8D0;">
 
       <!-- Sidebar (NavDrawer) -->
-      <NavDrawer class="shrink-0"/>
+      <NavDrawer/>
 
       <!-- Main Content -->
       <v-main class="d-flex justify-center">

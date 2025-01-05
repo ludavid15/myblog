@@ -8,13 +8,19 @@ import Prism from 'markdown-it-prism';
 
 export default defineConfig({
   plugins: [
-    vue({ include: [/\.vue$/, /\.md$/] }),
+    vue({ 
+      include: [/\.vue$/, /\.md$/],
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.startsWith('mjx-'), // Ignore MathJax tags
+        },
+      },
+    }),
     Markdown({
-      builders: [code(), meta(), link()], // Keep your existing builders
+      builders: [code(), meta(), link()], 
       markdownItSetup(md) {
-        // Add markdown-it-anchor with configuration
         md.use( mathjax3 );
-        md.use(Prism);
+        md.use( Prism );
         md.use( anchor, {
                 permalink: false, // Add anchor links
                 slugify: (str) =>

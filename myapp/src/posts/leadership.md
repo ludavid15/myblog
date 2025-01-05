@@ -28,7 +28,6 @@ Structures and processes establish accountability, ensure reliable processes, an
 In contrast to stability is creativity. Creative change represents the actions to enable innovation and create new opportunities.
 
 
-
 # How to Lead
 
 <v-divider></v-divider>
@@ -59,7 +58,7 @@ All that said, this advice is depends on that individual having the desire to un
 
 There can be a lot of frustration when working on a team, but at the end of the day, I think the following quote holds true: 
 
-> *"Go alone to go fast. Go together to go far"*
+*"Go alone to go fast. Go together to go far"*
 
 In other words, it's worth taking the time to teach or communicate. Although the sentiment of this quote is nice, the real world is more complex. Factor in finances, and there's a limit to how much time and money you can actually spend on education. Importantly, how much education you can afford is a problem to figure out before hiring and setting project deadlines. 
 
@@ -68,7 +67,7 @@ In other words, it's worth taking the time to teach or communicate. Although the
 
 My senior year at UCLA, I took over as AIAA president and I made some sweeping overhauls in our club processes. Some traditions really were due for an upgrade, but all this change had the side effect of slowing us down in other unforseen ways. The whole experience made me appreciate the usefulness of tradition. Like habits, they carry some amount of momentum, and (for better or for worse) help push things along. 
 
-> A good leader needs to create stability for execution, but too much stability stifles innovation.
+*A good leader needs to create stability for execution, but too much stability stifles innovation.*
 
 In industry, traditions look like processes, and based on what I understand, processes are a way to delegate work. This usually happens when someone with more expertise must rely on someone with less expertise. Creating a process helps ensure that those who do the work don't miss anything important. This is also a form of leadership, and one of the leadership archetypes.
 
@@ -112,10 +111,10 @@ Long term sustainability is built on good habits, but how can you change a team'
 
 <v-spacer></v-spacer>
 
-I won't get into details on each, but I think it's important to remember that there are multiple dimensions to motivation. If you've pursued one dimension without seeing results, consider if there are other aspects which are resisting. A few takeaways I want to highlight:
+It's important to remember that there are multiple dimensions to motivation. If you've pursued one dimension without seeing results, consider if there are other aspects which are resisting. Let's dive into a few example cases:
 
-1. You can motivate individuals, but it won't be very effective if they are recieving pushback from their social circle. Both people *and* teams need to be aligned.
-2. Many tasks require teamwork, and that may require a certain amount of social capital. This is an example of social or team ability. 
+1. Individual motivators are different from social motivators. Individual motivators are intrinsic factors that drive an individual's behavior based on their own goals, values, and desires. These are things like curiosity, personal achievement, etc. In contrast, social motivation is based on the influence of social networks, cultural norms, or peer pressure. These are things like camaraderie, accountability, etc. In the long run, personal motivators tend to be more effective and sustainable, but social motivators can drive change more quickly. 
+2. Social/team ability describes how well people work together. It is people's ability to cooperate, share, and support each other. This could be in the form of mentorship programs, knowledge sharing resources, or even just a good culture. On large and complex projects, having talented and capable individuals is not enough if they cannot function together as a team. 
 
 
 # Talent

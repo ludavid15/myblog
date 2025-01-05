@@ -5,14 +5,14 @@
     "icon": "mdi-airplane"
   },
   {
-    "name": "Algorithms",
-    "path": "algorithms",
-    "icon": "mdi-script"
-  },
-  {
     "name": "Computer Science",
     "path": "computer-science",
     "icon": "mdi-laptop"
+  },
+  {
+    "name": "Dynamics and Controls",
+    "path": "dynamics",
+    "icon": "mdi-speedometer"
   },
   {
     "name": "Engineering",
@@ -27,7 +27,7 @@
   {
     "name": "Machine Learning",
     "path": "machine-learning",
-    "icon": "mdi-bookshelf"
+    "icon": "mdi-robot"
   },
   {
     "name": "Math",

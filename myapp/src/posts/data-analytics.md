@@ -10,6 +10,8 @@ In contrast to data *science*, which designs and explores the models and algorit
 
 # The Lifecyce of Data. 
 
+<v-divider></v-divider>
+
 Why do we discuss the lifestyle of data? Because data analytics is not just about obtaining results, it's about collecting, managing, and then closing out a process. 
 
 1. Plan
@@ -22,6 +24,8 @@ Why do we discuss the lifestyle of data? Because data analytics is not just abou
 Each step comes with its own unique set of challenges. For example, how do you collect and store data securely? How do you use is ethically? How can you account for bias?
 
 # Setting up the Problem
+
+<v-divider></v-divider>
 
 The best results come from a well defined question. This means it should be:
 
@@ -43,6 +47,8 @@ Different objectives may lead to different problem setups and approaches. The be
 
 # Types of Data
 
+<v-divider></v-divider>
+
 1. Nominal vs Ordinal 
     1. Nominal - Choices/responses that don’t have a particular order (i.e. yes/no/maybe)
     2. Ordinal - Data that has an associated order (i.e. a scale or ranking).
@@ -55,6 +61,8 @@ Different objectives may lead to different problem setups and approaches. The be
 
 ## Data Modeling
 
+<v-divider></v-divider>
+
 These types of data modeling are actually pretty universal. The DoD Architecture Framework (DoDAF) also includes the following three models, known as a DIV-1, 2, and 3 respectively. 
 
 1. **Conceptual data modeling** gives a high-level view of the data structure, such as how data interacts across an organization. For example, a conceptual data model may be used to define the business requirements for a new database. A conceptual data model doesn't contain technical details. 
@@ -63,6 +71,8 @@ These types of data modeling are actually pretty universal. The DoD Architecture
 
 
 # Data Integrity
+
+<v-divider></v-divider>
 
 Data integrity is something to keep in mind through the entire data analysis process. Data with integrity means that is accurate, complete, consistent, and trust-worthy. 
 
@@ -87,9 +97,13 @@ Speaking from personal experience, another easy to miss aspect of data integrity
 
 # Analysis
 
+<v-divider></v-divider>
+
 This is a bit tough to describe, because the analysis you perform is going to be different depending on your application. But in general, you'll have a few toolsets you can use. For smaller databases, excel is perfectly sufficient. For anything larger, you'll want to look at SQL, R, or some other coding language such as Python. Personally, I like using Python with the Pandas library. 
 
 # Visualization
+
+<v-divider></v-divider>
 
 Once you've analyzed your data and drawn conclusions, the next step is to turn your insights into actions, which will require you to communicate your ideas. 
 

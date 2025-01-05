@@ -1,6 +1,6 @@
 ---
-title: "Optimization Fundamentals"
-topic: "Algorithms"
+title: "Introduction to Optimization"
+topic: "Machine Learning"
 path: "optimization"
 author: "David Lu"
 date: "2024-12-10"
@@ -62,7 +62,7 @@ $$q^Th\left(x^\ast\right)=0$$
 In addition to the above, all constraints must be met, the Lagrange multipliers cannot all be zero, and qo is either 0 or 1. In the case where all constraints are linearly independent, we can know that qo takes the value of one. This unique scenario leads to the KKT conditions.
 
 ## Karush Khan Tucker Necessary Conditions
-Identical to the FJ necessary conditions, with the exception that $$q_o$$ is taken to be equal to 1. This is most often the case. Note that for KKT to apply, the constraints must be linearly independent of one another (LICQ – Linear Independence of Constraints Qualification). The conditions become:
+Identical to the FJ necessary conditions, with the exception that $q_o$ is taken to be equal to 1. This is most often the case. Note that for KKT to apply, the constraints must be linearly independent of one another (LICQ – Linear Independence of Constraints Qualification). The conditions become:
 
 $$\nabla f\left(x\right)+\sum_{i=1}^{m}{p_i\nabla g_i\left(x\right)}+\sum_{i=1}^{l}{q_i\nabla h_i\left(x\right)}=0$$
 

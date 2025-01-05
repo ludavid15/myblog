@@ -24,9 +24,7 @@ The two-dimensional orbital frame is also known as the perifocal frame (i.e. per
 
 $$r=\ \frac{h^2}{\mu}\frac{1}{1+e\cos(\theta)}$$
 
-Where µ is the gravitational parameter of the larger body being orbited. Standard values for objects in our solar system can be found [here](https://en.wikipedia.org/wiki/Standard_gravitational_parameter).
-
-For each orbit, we can also define the specific angular momentum $\vec{h}$:
+Where µ is the gravitational parameter of the larger body being orbited. Standard values for objects in our solar system can be found [here](https://en.wikipedia.org/wiki/Standard_gravitational_parameter). For each orbit, we can also define the specific angular momentum $\vec{h}$:
 
 $$\vec{h}=\vec{r}\times\vec{v}$$
 
@@ -54,9 +52,9 @@ $$\frac{v^2}{2}-\frac{\mu}{r}=-\frac{\mu}{2a}=\varepsilon$$
 
 This equation shows us that velocity and radius are inversely related. In other words, we move fastest at periapsis, and slowest at apoapsis. Or, if we hold radius constant, increasing velocity increases the semi-major axis. 
 
-### Orbital Period
+## Orbital Period
 
-The orbital period is the total time is takes to complete a single revolution
+The orbital period is the total time is takes to complete a single revolution.
 
 $$\left(T\right)=2\pi\sqrt{\frac{a^3}{\mu}}$$
 
@@ -66,11 +64,9 @@ $$V=\ \sqrt{\frac{\mu}{r_1}}$$
 
 ### Retrograde & Prograde
 
-A prograde orbit means that we move in the same direction as the rotation of the planet/star we're around. This is also the easier orbit to launch into, in terms of fuel cost.
+A prograde orbit means that we move in the same direction as the rotation of the planet/star we're around. This is also the easier orbit to launch into, in terms of fuel cost. Retrograde is the opposite, where the orbital motion and rotation of the central body are in different directions. 
 
-Retrograde is the opposite, where the orbital motion and rotation of the central body are in different directions. 
-
-### Catching up Example
+## Catching up Example
 
 Consider a situation in which you are trailing some target, but the two of you are in the same orbit. How do you catch up? If you increase your velocity to "catch up", you're going to increase the semi-major axis of your orbit. Now you're on a different trajectory, *and* it'll take you longer to complete a single orbit than your target. The next time around, you'll be even further behind. 
 
@@ -104,6 +100,4 @@ The argument of periapsis determines the orientation of the ellipse **within** t
 
 <v-divider></v-divider>
 
-A lagrange point is a stable orbit position where the gravitional pull and centrifugal force from two other bodies is at an equilibrium. In a three-body system, there are 5 lagrange points. 
-
-> The James Webb Space Telescope is at the Earth-Sun Lagrange point L2!
+A lagrange point is a stable orbit position where the gravitional pull and centrifugal force from two other bodies is at an equilibrium. In a three-body system, there are 5 lagrange points. The James Webb Space Telescope is at the Earth-Sun Lagrange point L2!

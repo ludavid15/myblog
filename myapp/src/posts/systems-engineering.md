@@ -64,7 +64,7 @@ It's important to note that a thread owner is a function and not a title. As wit
 
 Just a few other things to watch out for when writing requirements.
 
-<v-card>
+<v-card variant="tonal">
   <v-card-title>
     1. Negatives
   </v-card-title>
@@ -75,7 +75,7 @@ Just a few other things to watch out for when writing requirements.
 
 <v-spacer></v-spacer>
 
-<v-card>
+<v-card variant="tonal">
   <v-card-title>
     2. Subjective Goals
   </v-card-title>
@@ -86,7 +86,7 @@ Just a few other things to watch out for when writing requirements.
 
 <v-spacer></v-spacer>
 
-<v-card>
+<v-card variant="tonal">
   <v-card-title>
     3. Not Including Rationale
   </v-card-title>
@@ -97,7 +97,7 @@ Just a few other things to watch out for when writing requirements.
 
 <v-spacer></v-spacer>
 
-<v-card>
+<v-card variant="tonal">
   <v-card-title>
     4. Requirements that are Constraints
   </v-card-title>
@@ -108,7 +108,7 @@ Just a few other things to watch out for when writing requirements.
 
 <v-spacer></v-spacer>
 
-<v-card>
+<v-card variant="tonal">
   <v-card-title>
     5. Multiple Parts in a Single Requirement
   </v-card-title>
@@ -119,7 +119,7 @@ Just a few other things to watch out for when writing requirements.
 
 <v-spacer></v-spacer>
 
-<v-card>
+<v-card variant="tonal">
   <v-card-title>
     6. Describing Implementation Instead of Goals
   </v-card-title>
@@ -134,9 +134,7 @@ Another requirement pitfall is to neglect the goal and jump right into an implem
 
 <v-divider></v-divider>
 
-Design reviews are checkpoints, meant to ensure that a certain level of maturity has been reached across the board before moving on to the next stage of work. Experts and or customers external to the design team are the ones who perform the review. 
-
-Beyond this high level objective however, reviews can take many forms. The review process for something like the 10 billion dollar James Webb Space Telescope is going to be very different from the review process for a cubesat. 
+Design reviews are checkpoints, meant to ensure that a certain level of maturity has been reached across the board before moving on to the next stage of work. Experts and or customers external to the design team are the ones who perform the review. Beyond this high level objective however, reviews can take many forms. The review process for something like the 10 billion dollar James Webb Space Telescope is going to be very different from the review process for a cubesat. 
 
 
 ### Preliminary Design Review (PDR)
