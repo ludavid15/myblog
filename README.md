@@ -1,6 +1,6 @@
-# Trivia Application
+# My Blog
 
-Welcome! This is the root directory of my trivia application. This README file is a notepad where I can put down my ideas and things I've learned. As such, it will be very unstructured.
+Welcome! This is the root directory of my blog. This README file is a notepad where I can put down my ideas and things I've learned. As such, it will be very unstructured.
 
 ## Architecture
 
