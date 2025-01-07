@@ -3,34 +3,46 @@
     <v-row justify="center">
       <v-col cols="12" xl="10">
 
-        <div v-if="frontmatter && frontmatter.title">
-          <v-breadcrumbs :items="['home', 'posts', route.params.slug]"></v-breadcrumbs>
-          <div div class="text-h3 px-1"> 
-            {{ frontmatter.title }}
-          </div>
-          <v-divider :thickness="5" class="ma-1"></v-divider>
-          <div v-if="frontmatter.date" 
-            class="text-subtitle-1 text-medium-emphasis px-1 my-2">
-            Last Updated: {{ frontmatter.date }}
-          </div>
-        </div>
+        <!-- Show Loading Screen -->
+        <v-row v-if="loading" class="d-flex justify-center align-center" style="height: 300px;">
+          <v-progress-circular indeterminate size="64" color="primary"></v-progress-circular>
+        </v-row>
 
-        <v-row class="blog-layout">
-          <!-- Primary Content -->
-          <v-col cols="12" lg="9" class="content">
-            <div ref="content" class="markdown-content">
-              <v-container class="pa-1">
-                <component class="markdown-content" :is="postContent" />
-              </v-container>
+        <!-- Show Content When Loaded -->
+        <v-row v-else>
+          <v-col cols="12">
+
+            <!-- Frontmatter Section -->
+            <div v-if="frontmatter && frontmatter.title" class="mb-5">
+              <v-breadcrumbs :items="['home', 'posts', route.params.slug]"></v-breadcrumbs>
+              <div div class="text-h3"> 
+                {{ frontmatter.title }}
+              </div>
+              <v-divider :thickness="5"></v-divider>
+              <div v-if="frontmatter.date" 
+                class="text-subtitle-1 text-medium-emphasis my-2">
+                Last Updated: {{ frontmatter.date }}
+              </div>
             </div>
-          </v-col>
 
-          <!-- Table of Contents -->
-          <v-col cols="12" lg="3" class="d-none d-lg-block toc-container">
-            <Contents :headings="headings" />
+            <!-- Primary Content -->
+            <v-row class="blog-layout">
+              <v-col cols="12" lg="9" class="content">
+                <v-container class="pa-0 pt-1">
+                  <component class="markdown-content" :is="postContent" />
+                </v-container>
+              </v-col>
+
+              <!-- Table of Contents -->
+              <v-col cols="12" lg="3" class="d-none d-lg-block toc-container">
+                <Contents :headings="headings" />
+              </v-col>
+            </v-row>
+
           </v-col>
         </v-row>
 
+        <!-- Scroll back to Top Button -->
         <BackToTopButton />
         
       </v-col>
@@ -50,11 +62,14 @@ const route = useRoute();
 const postContent = ref(null);
 const frontmatter = ref(null);
 const headings = ref([]);
+const loading = ref(true);
 
 // Dynamically import markdown files
 const loadMarkdown = async (slug) => {
   try {
     if (!slug) return; // Guard clause in case slug is undefined
+
+    loading.value = true;
 
     // Use import.meta.glob to dynamically load markdown files
     const markdownFiles = import.meta.glob('/src/posts/*.md');
@@ -73,6 +88,8 @@ const loadMarkdown = async (slug) => {
     console.error('Error loading markdown file:', error);
     postContent.value = null;
     frontmatter.value = null;
+  } finally {
+    loading.value = false;
   }
 };
 
@@ -156,6 +173,12 @@ pre {
   padding: 16px;
   border-radius: 8px;
   overflow-x: auto;
+}
+
+/* Styling for Tables */
+thead {
+  background-color: #6b7c64; /* Change to your desired color */
+  color: white; /* Optional: change text color */
 }
 </style>
 

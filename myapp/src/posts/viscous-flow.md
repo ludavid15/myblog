@@ -325,6 +325,8 @@ $$T_{t,2}=\frac{q}{c_p}+T_{t,1}$$
 
 A class of problems involving a large unbounded region and either excess momentum (i.e. a jet or plume) or a momentum deficit (i.e. wake). This section will be completed at a later date. 
 
-## Drag Acting on a Body in a Uniform Stream
+# Drag Acting on a Body in a Uniform Stream
+
+<v-divider></v-divider>
 
 $$D = \int{\rho u (U_{\infty}-u)}dS$$

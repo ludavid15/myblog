@@ -160,7 +160,7 @@ If you are working with a broader team, you'll want to maintain a version of eve
 
 Once your container/image is on the private repo, you should update your YAML file for Docker Compose to pull the image from that repo, instead of building it locally everytime (depending on the stage of work you are in).
 
-```
+```yaml
 services:
     my-app:
         image: myname/my-app:1.0

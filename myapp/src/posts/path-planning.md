@@ -3,7 +3,7 @@ title: "Path Planning"
 topic: "Dynamics and Controls"
 path: "path-planning"
 author: "David Lu"
-date: "2024-12-10"
+date: "2021-08-25"
 ---
 
 Across the vast field of robotics and controls, there is a common question of "how do we get from point A to point B?". Without any constraints, the answer is pretty easy - go in a straight line - but this is not very useful. So how can we formulate a more useful question? First, we'll add a safety requirement - that we'd like to make this journey while avoiding obstacles. Then we'll want to make sure we're planning a feasible route - no sharp 180's at supersonic speeds. And finally we'd like to find the best route. Maybe best means shortest, or fastest, or most efficient. With all of these requirements, the task of path planning becomes much more challenging, but most solutions fall into one of four methods. 
@@ -12,7 +12,7 @@ Across the vast field of robotics and controls, there is a common question of "h
 
 When we talk about path planning, what information actually makes up a "path"? To figure this out, imagine we are designing an autonomous driver that does everything you do. 
 
-To start, we need (x,y,z) position coordinates. This is akin to choosing which street we take, or which lane on the freeway we use. But we as drivers make more decisions than just position - we also speed up and slow down. So a path might also have velocities (x', y', z') at each position coordinate. To make these velocities happen, we apply accelerations. This quickly gets complicated, so instead of storing three velocities and three accelerations with each position, we could just index each position coordinate by time. This way, we can also calculate any order derivative!
+To start, we need (x,y,z) position coordinates. This is akin to choosing which street we take, or which lane on the freeway we use. But we as drivers make more decisions than just position - we also speed up and slow down. So a path might also have velocities (x', y', z') at each position coordinate. To make these velocities happen, we apply accelerations. This quickly gets complicated, so instead of storing three velocities and three accelerations with each position, we could just index each position coordinate by time. This way, we can also calculate any order derivative. In other words, a path will be a series of (t, x, y, z) parameters. 
 
 # Sampling Methods
 

@@ -3,7 +3,7 @@ title: "Intro to Machine Learning"
 topic: "Machine Learning"
 path: "intro-to-machine-learning"
 author: "David Lu"
-date: "2024-12-10"
+date: "2021-08-10"
 ---
 
 There is so much literature out there on machine learning that it can get pretty overwhelming. This post introduces machine learning one concept at a time, without getting into any math. Before going further, it's worth mentioning that many machine learning algorithms are built using optimization. There is almost always something to be optimized (an objective function - error, fitness, etc.), and different ways to run the optimization (genetic, linear, quadratic, etc.). Different algorithms may change the problem, but the name of the game remains the same (for example, the "learning rate" and "search step size" usually refer to the same thing!) Keep this in mind, because it helps simplify our perspective. 
@@ -17,9 +17,7 @@ For any machine learning algorithm, we should be able to identify three distinct
 
 <v-divider></v-divider>
 
-When we know the type of output we want, but need to learn the function that will get us there, we use supervised learning. As the name implies, this method absolutely requires having a labeled dataset. If your problem doesn't readily accept labels, this strategy will probably fall short. Try instead to identify if *parts* of the solution involve identification. 
-
-Supervised learning can be implemented with many architectures, and are usually associated with questions like:
+When we know the type of output we want, but need to learn the function that will get us there, we use supervised learning. As the name implies, this method absolutely requires having a labeled dataset. If your problem doesn't readily accept labels, this strategy will probably fall short. Try instead to identify if *parts* of the solution involve identification. Supervised learning can be implemented with many architectures, and are usually associated with questions like:
 1. What is this?
 2. What comes next?
 

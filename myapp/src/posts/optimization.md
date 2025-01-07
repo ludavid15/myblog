@@ -3,7 +3,7 @@ title: "Introduction to Optimization"
 topic: "Machine Learning"
 path: "optimization"
 author: "David Lu"
-date: "2024-12-10"
+date: "2021-06-10"
 ---
 
 The underlying principle of an optimization is pretty straightfoward - find the best way to do something. Best can mean fastest, safest, most efficient, shortest or thousands of other things, but the common denominator is that we are looking for the most (or least) of something. Mathematically then, this is pretty simple: we're solving for a maximum. 
@@ -182,5 +182,15 @@ These strategies make relatively few assumptions about the problem nature and ai
 3. Iterated local searches
 4. Simulated annealing
 5. Tabu search
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+*This post is written primarily from notes I took during my graduate classes at the University of Michigan.*
+
+* Martins, Joaquim R. R. A., "Multidisciplinary Design Optimization of Aerospace Systems," Advances and Trends in Optimization with Engineering Applications, SIAM, 2017, pp. 249–257. doi:10.1137/1.9781611974683.ch19
+* Martins, Joaquim R. R. A., "Engineering Design Optimization," 2021.
+* Kolmanovsky, Ilya. "Flight and Trajectory Optimization". Course taken in Winter 2020.
  
 

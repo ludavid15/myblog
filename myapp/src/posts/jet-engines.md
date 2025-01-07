@@ -164,7 +164,7 @@ $$\eta_t=\ \frac{\left(NPR\frac{P_0}{P_9}\right)^\frac{\gamma-1}{\gamma}-\left(\
 
 ## Ramjets
 
-Ramjets function like a turbojet, but do not include a turbine or compressor. Most of the original equations still apply, we just set $ \tau_c= \tau_t=1 $.
+Ramjets function like a turbojet, but do not include a turbine or compressor. Most of the original equations still apply, we just set $\tau_c= \tau_t=1$.
 
 $$Isp_{air}=\ \frac{a_0M_0}{g}\left(\sqrt{\tau_b}-1\right)$$
 

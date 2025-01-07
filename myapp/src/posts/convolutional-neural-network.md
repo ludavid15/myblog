@@ -3,7 +3,7 @@ title: "Convolutional Neural Networks"
 topic: "Machine Learning"
 path: "convolutional-neural-network"
 author: "David Lu"
-date: "2024-12-10"
+date: "2023-01-12"
 ---
 
 Convolutional neural networks are a very intuitive (and fast) type of network for image processing problems. It uses a mathematical operation called a convolution, to analyze/generalize different sections of the input.

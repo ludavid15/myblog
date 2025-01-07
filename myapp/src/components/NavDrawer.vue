@@ -71,7 +71,7 @@
     <!-- Chip at the Bottom -->
     <div class="version-note pa-4 text-left" :style="{ backgroundColor: 'transparent' }">
       <v-chip variant="elevated" elevation='7' :style="{ backgroundColor: '#bdbc9f', color:'black'}">
-        Website Version 1.04
+        Website Version 2.04
       </v-chip>
     </div>
 

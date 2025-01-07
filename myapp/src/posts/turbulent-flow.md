@@ -17,16 +17,16 @@ For two-dimensional parallel flow, the minimum critical unstable Reynold’s num
 
 The equation describing the velocity distribution of a two-dimensional disturbance propagating in the same direction as a two-dimensional parallel flow can found to be exactly:
 
-$$\left(U-c\right)\left(\phi^{\prime\prime}-\alpha^2\phi\right)-U^{\prime\prime}\phi+i\frac{\mathbit{\nu}}{\alpha}\left(\phi^{\prime\prime\prime\prime}-2\alpha^2\phi^{\prime\prime}+\alpha^4\phi\right)=\ 0$$
+$$\left(U-c\right)\left(\phi^{\prime\prime}-\alpha^2\phi\right)-U^{\prime\prime}\phi+i\frac{\nu}{\alpha}\left(\phi^{\prime\prime\prime\prime}-2\alpha^2\phi^{\prime\prime}+\alpha^4\phi\right)=\ 0$$
 
 $$\Psi\left(x,y,t\right)=\ \phi\left(y\right)exp\left(i\left[\alpha x-\beta t\right]\right)$$
 
-$$c=\sfrac{\beta}{\alpha}$$
+$$c=\frac{\beta}{\alpha}$$
 
 Where U is the velocity of the free stream, α is the wavenumber, c is the wave speed, and the frequency, ω = αc. The primes denote differentiation with respect to y. This is a fourth order linear differential equation. Disturbances must vanish at walls and an infinity. The temporal growth and spatial growth of disturbances are functions of the following form:
 
-* Temporal: $$f\left(Re,\ \alpha,\ c_r,\ c_i\right)=0$$
-* Spatial: $$g\left(Re,\ \alpha_r,\ \alpha_i,\ \omega\right)=0$$
+* Temporal: $f\left(Re,\ \alpha,\ c_r,\ c_i\right)=0$
+* Spatial: $g\left(Re,\ \alpha_r,\ \alpha_i,\ \omega\right)=0$
 
 Temporal neutral stability occurs when ci is equal to zero, while spatial neutral stability occurs for αi equal to zero. Instability begins at ci greater than zero. A full analytical solution of the Orr-Sommerfeld equation is non-trivial. In general, a non-dimensionalized version of the Orr-Sommerfeld equation can be written and can be plotted. 
  

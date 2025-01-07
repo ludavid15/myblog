@@ -3,7 +3,7 @@ title: "Variational AutoEncoder"
 topic: "Machine Learning"
 path: "variational-autoencoder"
 author: "David Lu"
-date: "2024-12-02"
+date: "2023-04-14"
 ---
 
 This post takes a deeper look at variational auto encoders (VAE). Like regular auto encoders, a VAE maps a large dimension onto a small set of latent variables, from which we can reconstruct something very close to the original input. However, unlike regular auto encoders, a VAE uses a probability distribution in the latent space. 

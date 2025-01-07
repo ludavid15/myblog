@@ -53,7 +53,7 @@ Also worth thinking about is the [OSI Model](https://en.wikipedia.org/wiki/OSI_m
 
 The propulsion system provides Delta-V capacity to your satellite. This could be used initially for getting into your orbit, but also after the fact for maintaining your orbit, or for emergency collision avoidance maneuvers. 
 
-<v-card variant="tonal">
+<v-card variant="tonal" class="mb-5">
   <v-card-text>
    Why do orbits need to be maintained? Well, atmospheric drag for one. But also the Earth isn't perfectly spherical and this causes orbits to drift over time (called precession).
   </v-card-text>
