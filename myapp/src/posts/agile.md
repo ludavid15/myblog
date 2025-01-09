@@ -4,6 +4,7 @@ topic: "Miscellaneous"
 path: "leadership"
 author: "David Lu"
 date: "2022-06-14"
+preview: "A few notes on the Agile method for engineering, based on on my own experience working on an agile team and Google's Agile Project Management class on Coursera."
 ---
 
 A few notes on the Agile method for engineering, based on on my own experience working on an agile team and Google's Agile Project Management class on Coursera.

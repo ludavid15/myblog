@@ -3,7 +3,8 @@ title: "Satellite Ground Tracks"
 topic: "Aerospace"
 path: "ground-tracks"
 author: "David Lu"
-date: "2024-12-20"
+date: "2023-04-11"
+preview: "The ground track of a satellite is its orbit projected into the surface. I'd recommend checking out the post on astrodynamics first, which gives a basic overview of how orbits work."
 ---
 
 The ground track of a satellite is its orbit projected into the surface. I'd recommend checking out the post on [astrodynamics](/posts/astrodynamics/) first, which gives a basic overview of how orbits work. 

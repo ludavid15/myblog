@@ -38,7 +38,13 @@ defineProps({
 
 // Function to scroll smoothly to the heading
 const scrollToHeading = (text) => {
-  const id = text.toLowerCase().replace(/\s+/g, '-'); // Generate the ID
+  const id = text
+    .trim()
+    .toLowerCase()
+    .replace(/[\s]+/g, '-') // Replace spaces with hyphens
+    .replace(/[^a-z0-9\-_]+/g, '') // Remove invalid characters
+    .normalize('NFKD') // Normalize Unicode to handle accents
+    .replace(/[\u0300-\u036f]/g, ''); // Remove diacritical marks
   const targetElement = document.getElementById(id);
 
   if (targetElement) {

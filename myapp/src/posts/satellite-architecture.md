@@ -3,7 +3,7 @@ title: "Satellite Architecture"
 topic: "Aerospace"
 path: "satellite-architecture"
 author: "David Lu"
-date: "2024-12-20"
+date: "2022-12-10"
 preview: "A high level overview of satellites and their subsystems."
 ---
 

@@ -3,7 +3,7 @@ title: "Twelve Tone Equal Temperament"
 topic: "Music"
 path: "twelve-tone"
 author: "David Lu"
-date: "2024-12-01"
+date: "2021-06-05"
 ---
 
 If you've taken any kind of music lesson before, chances are you were introduced to the western classical system of notation, otherwise known as twelve-tone equal temperament. In this system, each octave is subdivided into 12 notes, labeled A through G. So much of music theory is based on this system that it's easy to forget what it is - a constructed language that approximates something physical. 

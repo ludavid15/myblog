@@ -3,7 +3,8 @@ title: "Reliability"
 topic: "Engineering"
 path: "reliability"
 author: "David Lu"
-date: "2024-12-10"
+date: "2023-05-13"
+preview: "Reliability engineering aims to understand the probability of success over time. It is heavily based in probability and statistics. "
 ---
 
 Reliability engineering aims to understand the probability of success over time. It is heavily based in probability and statistics. 

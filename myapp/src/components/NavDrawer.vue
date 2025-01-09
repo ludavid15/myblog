@@ -23,6 +23,12 @@
       @click="handleNavClick">
         About Me
       </v-list-item>
+      <v-list-item 
+      prepend-icon="mdi-clock-time-eight"
+      :to="{ name: 'Timeline'}"
+      @click="handleNavClick">
+        Timeline
+      </v-list-item>
 
       <!-- Divider -->
       <v-divider class="my-2"></v-divider>

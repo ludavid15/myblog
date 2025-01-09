@@ -4,6 +4,7 @@ topic: "Machine Learning"
 path: "machine-learning-tuning"
 author: "David Lu"
 date: "2022-09-20"
+preview: "In practice, machine learning algorithsm can be tricky to setup and tune. This post discusses the different metrics you can use to evaluate your algorithm, and how to fine-tine your setup based on how those metrics perform. "
 ---
 
 

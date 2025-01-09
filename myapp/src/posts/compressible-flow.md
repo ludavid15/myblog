@@ -4,6 +4,7 @@ topic: "Fluid Mechanics"
 path: "compressible-flow"
 author: "David Lu"
 date: "2021-05-09"
+preview: "While viscous flow deals with flows that are very slow, compressible flow is for your rockets and airplanes. In this Reynold's number regime, the density of a fluid cannot assumed to be constant, but luckily we can ignore viscous effects."
 ---
 
 While viscous flow deals with flows that are very slow, compressible flow is for your rockets and airplanes. In this Reynold's number regime, the density of a fluid cannot assumed to be constant, but luckily we can ignore viscous effects. One easy way to group topics in compressible flow is into 1D compressible flow, and everything else. This is because you'll often find 1D compressible flow topics in an introductory fluid mechanics course. 

@@ -3,7 +3,8 @@ title: "Electric Propulsion"
 topic: "Aerospace"
 path: "electric-propulsion"
 author: "David Lu"
-date: "2024-12-10"
+date: "2021-05-17"
+preview: "Electric propulsion (EP) is, you guessed it, all about electric propulsion. This includes: ion thrusters, hall thrusters, resistojets, arcjets, and electrosprays."
 ---
 
 Electric propulsion (EP) is, you guessed it, all about electric propulsion. This includes: ion thrusters, hall thrusters, resistojets, arcjets, and electrosprays. Technically speaking, anything battery powered is also frequently called *electric propulsion*, but the underlying mechanism of thrust generation in these cases is often a propeller, and that's certainly an aerodynamics problem. Also worth mentioning while we're here: propulsion systems are never independent of the entire vehicle. It turns out, the power/fuel demand greatly impacts the design. Sizing appropriate solar arrays for an EP spacecraft, or sizing fuel tanks for a rocket are challenges in their own right, so we'll limit out scope in this post to analyzing thruster performance only. 
@@ -168,7 +169,7 @@ Thus, the relationship of exhaust velocity to Pin for an arcjet can be expressed
 
 $$\frac{1}{2}\dot{m}{U_{ex}}^2=\eta\int\rho\left(\vec{u}\bullet\hat{n}\right)h\left(T\right)dA<\eta h(T_c)\dot{m}$$
 
-Where \\( T_c \\) refers to the temperature long the centerline.
+Where $T_c$ refers to the temperature long the centerline.
 
 ## Derivation of Gas Resistivity
 

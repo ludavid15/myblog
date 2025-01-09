@@ -4,6 +4,7 @@ topic: "Machine Learning"
 path: "prompt-engineering"
 author: "David Lu"
 date: "2024-06-26"
+preview: "This article provides tips and tricks for prompting large-language models."
 ---
 
 # Guidelines for Prompting

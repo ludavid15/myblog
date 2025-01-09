@@ -3,7 +3,7 @@ title: "Systems Engineering"
 topic: "Engineering"
 path: "systems-engineering"
 author: "David Lu"
-date: "2024-12-06"
+date: "2024-05-16"
 ---
 
 If you've ever tried to manage a highly complex project, you know that a certain amount of organization is required. This kind of big-picture planning helps to reduce risk. However, it's important to remember that this kind of oversight ultimately serves the product. There is such a thing as too much management.

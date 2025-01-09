@@ -4,6 +4,7 @@ topic: "Dynamics and Controls"
 path: "intro-to-controls"
 author: "David Lu"
 date: "2021-06-15"
+preview: "In previous posts, we explored the field of dynamics, which taught us how to calculate the position, velocity, and acceleration of an object given a set of driving forces. The topic of control theory flips this process around, and seeks an answer to the question: what type of force will produce the desired motion?"
 ---
 
 In previous posts, we explored the field of dynamics, which taught us how to calculate the position, velocity, and acceleration of an object given a set of driving forces. The topic of control theory flips this process around, and seeks an answer to the question: what type of force will produce the desired motion? In other words, if dynamics is the study of rules, controls is the study of how we use those rules to achieve results. 

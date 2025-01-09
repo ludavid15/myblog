@@ -3,7 +3,8 @@ title: "Kinematics"
 topic: "Dynamics and Controls"
 path: "kinematics"
 author: "David Lu"
-date: "2024-12-10"
+date: "2021-05-10"
+preview: "A subset of dynamics, where forces are neglected, and we focus instead on the motion of points and rigid bodies over time."
 ---
 
 A subset of dynamics, where forces are neglected, and we focus instead on the motion of points and rigid bodies over time. At the core of this topic are a series of rules about positions, velocities, accelerations, and how to find them amid a potentially messy system of reference frames and motion constraints. 

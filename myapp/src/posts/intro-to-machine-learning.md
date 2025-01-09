@@ -4,6 +4,7 @@ topic: "Machine Learning"
 path: "intro-to-machine-learning"
 author: "David Lu"
 date: "2021-08-10"
+preview: "There is so much literature out there on machine learning that it can get pretty overwhelming. This post introduces machine learning one concept at a time, without getting into any math."
 ---
 
 There is so much literature out there on machine learning that it can get pretty overwhelming. This post introduces machine learning one concept at a time, without getting into any math. Before going further, it's worth mentioning that many machine learning algorithms are built using optimization. There is almost always something to be optimized (an objective function - error, fitness, etc.), and different ways to run the optimization (genetic, linear, quadratic, etc.). Different algorithms may change the problem, but the name of the game remains the same (for example, the "learning rate" and "search step size" usually refer to the same thing!) Keep this in mind, because it helps simplify our perspective. 

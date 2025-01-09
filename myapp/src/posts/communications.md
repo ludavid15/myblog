@@ -3,7 +3,8 @@ title: "Communications 101"
 topic: "Engineering"
 path: "communications"
 author: "David Lu"
-date: "2024-12-06"
+date: "2022-07-09"
+preview: "A random assortment of communications technology terms I've encountered over the years."
 ---
 
 A random assortment of communications technology terms I've encountered over the years. Please keep in mind that electrical engineering and signal processing is *not* one of my subjects, so take everything here with a grain of salt. 
@@ -25,7 +26,7 @@ Returning to asynchronous for a moment, one failure mode that may arise is for t
 
 A traffic control protocol for managing information traffic from multiple sources on a shared physical line. 1553 requires a controlling bus computer (BC) and an addresses for each terminal. The underlying constraint of 1553 is that traffic is never parrallel. In other words, each terminal takes turns using the line, and ignores any information on the line while not actively in use. On any given 1553 line, there can be up to 31 *remote terminals* (RTs), each with their own *subaddresses*. For more information, check out the full post on [1553B](/posts/1553B/). 
 
-<v-card variant="tonal">
+<v-card variant="tonal" class="mb-5">
   <v-card-text>
     Being an older protocol, 1553 only has a bandwidth of around 1 Mbps.
   </v-card-text>

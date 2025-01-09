@@ -4,6 +4,7 @@ topic: "Miscellaneous"
 path: "leadership"
 author: "David Lu"
 date: "2024-12-10"
+preview: "Over the years, I've had the chance to lead a number of different teams. This post is a collection of things I've learned so far, as well as my own thoughts on what makes an effective leader."
 ---
 
 Over the years, I've had the chance to lead a number of different teams. This post is a collection of things I've learned so far, as well as my own thoughts on what makes an effective leader. 
@@ -113,8 +114,13 @@ Long term sustainability is built on good habits, but how can you change a team'
 
 It's important to remember that there are multiple dimensions to motivation. If you've pursued one dimension without seeing results, consider if there are other aspects which are resisting. Let's dive into a few example cases:
 
-1. Individual motivators are different from social motivators. Individual motivators are intrinsic factors that drive an individual's behavior based on their own goals, values, and desires. These are things like curiosity, personal achievement, etc. In contrast, social motivation is based on the influence of social networks, cultural norms, or peer pressure. These are things like camaraderie, accountability, etc. In the long run, personal motivators tend to be more effective and sustainable, but social motivators can drive change more quickly. 
-2. Social/team ability describes how well people work together. It is people's ability to cooperate, share, and support each other. This could be in the form of mentorship programs, knowledge sharing resources, or even just a good culture. On large and complex projects, having talented and capable individuals is not enough if they cannot function together as a team. 
+### Personal Motivation
+
+Individual motivators are different from social motivators. Individual motivators are intrinsic factors that drive an individual's behavior based on their own goals, values, and desires. These are things like curiosity, personal achievement, etc. In contrast, social motivation is based on the influence of social networks, cultural norms, or peer pressure. These are things like camaraderie, accountability, etc. In the long run, personal motivators tend to be more effective and sustainable, but social motivators can drive change more quickly. 
+
+### Social Ability
+
+Social/team ability describes how well people work together. It is people's ability to cooperate, share, and support each other. This could be in the form of mentorship programs, knowledge sharing resources, or even just a good culture. On large and complex projects, having talented and capable individuals is not enough if they cannot function together as a team. 
 
 
 # Talent

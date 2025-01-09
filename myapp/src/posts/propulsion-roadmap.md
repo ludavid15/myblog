@@ -3,7 +3,8 @@ title: "Propulsion Roadmap"
 topic: "Aerospace"
 path: "propulsion-roadmap"
 author: "David Lu"
-date: "2024-12-10"
+date: "2021-05-18"
+preview: "When it comes to propulsion, it can be difficult to keep track of all the different classifications floating around out there. To help clear up some confusion, this section presents a roadmap - a heirarchy of propulsion systems to help you navigate this broad topic."
 ---
 
 When it comes to propulsion, it can be difficult to keep track of all the different classifications floating around out there. Props, turboprops, turbojets, ramjets, chemical rockets, nuclear rockets, Hall thrusters, and ion thrusters, just to name a few. If anything, it's a testament to our joint creativity that we've come up with so many ways to *move*. To help clear up some confusion, this section presents a roadmap - a heirarchy of propulsion systems to help you navigate this broad topic. 

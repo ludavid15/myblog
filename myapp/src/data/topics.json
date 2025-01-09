@@ -2,51 +2,61 @@
   {
     "name": "Aerospace",
     "path": "aerospace",
-    "icon": "mdi-airplane"
+    "icon": "mdi-airplane",
+    "color": "#c7522a"
   },
   {
     "name": "Computer Science",
     "path": "computer-science",
-    "icon": "mdi-laptop"
+    "icon": "mdi-laptop",
+    "color": "#c08097"
   },
   {
     "name": "Dynamics and Controls",
     "path": "dynamics",
-    "icon": "mdi-speedometer"
+    "icon": "mdi-speedometer",
+    "color": "#e5c185"
   },
   {
     "name": "Engineering",
     "path": "engineering",
-    "icon": "mdi-tools"
+    "icon": "mdi-tools",
+    "color": "#b8cdab"
   },
   {
     "name": "Fluid Mechanics",
     "path": "fluids",
-    "icon": "mdi-water"
+    "icon": "mdi-water",
+    "color": "#74a892"
   },
   {
     "name": "Machine Learning",
     "path": "machine-learning",
-    "icon": "mdi-robot"
+    "icon": "mdi-robot",
+    "color": "#4c9eb3"
   },
   {
     "name": "Math",
     "path": "math",
-    "icon": "mdi-calculator"       
+    "icon": "mdi-calculator",
+    "color": "#abbdec"      
   },
   {
     "name": "Music",
     "path": "music",
-    "icon": "mdi-music"
+    "icon": "mdi-music",
+    "color": "#667899"
   },
   {
     "name": "Structures",
     "path": "structures",
-    "icon": "mdi-bridge"
+    "icon": "mdi-bridge",
+    "color": "#58508d"
   },
   {
     "name": "Miscellaneous",
     "path": "misc",
-    "icon": "mdi-folder"
+    "icon": "mdi-folder",
+    "color": "grey"
   }
 ]

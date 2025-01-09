@@ -4,6 +4,7 @@ topic: "Computer Science"
 path: "machine-vision"
 author: "David Lu"
 date: "2021-07-26"
+preview: "Machine vision refers broadly to any imaging analysis task performed by a computer."
 ---
 
 Machine vision refers broadly to any imaging analysis task performed by a computer. Meanwhile, simultaneous localization and mapping (SLAM) is a specific domain focused on obtaining an understanding of the environment and your position within it. These two often go hand in hand (but not always!).

@@ -4,6 +4,7 @@ topic: "Machine Learning"
 path: "machine-learning-architectures"
 author: "David Lu"
 date: "2022-11-01"
+preview: "This post lays a stronger mathematical foundation for machine learning."
 ---
 
 At its core, machine learning is a **statistical science**, and like statistics, a great deal of care must be taken when formatting and analyzing data. They way we chose to quantify abstract topics and/or measure error will have a significant impact on the quality of our result. In other words, garbage in equals garbage out. 

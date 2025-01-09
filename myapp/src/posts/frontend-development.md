@@ -4,6 +4,7 @@ topic: "Computer Science"
 path: "frontend-development"
 author: "David Lu"
 date: "2024-11-22"
+preview: "This article gives a high level overview of how frontends are developed, and the tools required to do so."
 ---
 
 This article gives a high level overview of how frontends are developed, and the tools required to do so. There's a little bit of HTML and other basics here, but if you want a more in-depth discussion of Javascript/Vue/Typescript you should checkout their individual pages. 

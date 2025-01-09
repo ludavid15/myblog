@@ -3,7 +3,8 @@ title: "Finite Element Methods"
 topic: "Structures"
 path: "finite-element-methods"
 author: "David Lu"
-date: "2024-12-10"
+date: "2021-06-10"
+preview: "Finite element methods, or FEM, is a strategy for modeling complex shapes as a series of small blocks. The math of FEM is foundational for modern computational structural analysis. "
 ---
 
 Finite element methods, or FEM, is a strategy for modeling complex shapes as a series of small blocks. The math of FEM is foundational for modern computational structural analysis. 

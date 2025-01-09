@@ -4,6 +4,7 @@ topic: "Dynamics and Controls"
 path: "path-planning"
 author: "David Lu"
 date: "2021-08-25"
+preview: "Across the vast field of robotics and controls, there is a common question of how do we get from point A to point B? Without any constraints, the answer is pretty easy - go in a straight line - but this is not very useful. So how can we formulate a more useful question?"
 ---
 
 Across the vast field of robotics and controls, there is a common question of "how do we get from point A to point B?". Without any constraints, the answer is pretty easy - go in a straight line - but this is not very useful. So how can we formulate a more useful question? First, we'll add a safety requirement - that we'd like to make this journey while avoiding obstacles. Then we'll want to make sure we're planning a feasible route - no sharp 180's at supersonic speeds. And finally we'd like to find the best route. Maybe best means shortest, or fastest, or most efficient. With all of these requirements, the task of path planning becomes much more challenging, but most solutions fall into one of four methods. 

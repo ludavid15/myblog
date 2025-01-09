@@ -3,10 +3,13 @@ title: "Jet Engines"
 topic: "Aerospace"
 path: "jet-engines"
 author: "David Lu"
-date: "2024-12-20"
+date: "2021-05-06"
+preview: "Alright, let's talk about jet engines. Why are they everywhere? What's the big deal? What happened to propellers!?"
 ---
 
-Alright, let's talk about jet engines. Why are they everywhere? What's the big deal? What happened to propellers!? For the sake of simplicity, jet engines can be analyzed as a quasi 1 dimensional system. In other words we only need to consider velocities in one direction. This makes our math much easier. Also, we should define a terms first. The Thrust Specific Fuel Consumption (TSFC) is the amount of fuel consumed per unit of thrust. This is sometimes shortened to just Specific Fueld Consumption or SFC.
+Alright, let's talk about jet engines. Why are they everywhere? What's the big deal? What happened to propellers!? For the sake of simplicity, jet engines can be analyzed as a quasi 1 dimensional system. In other words we only need to consider velocities in one direction. This makes our math much easier. 
+
+Before we go further, though, it's important to define a key concept that plays a central role in understanding jet engine performance: Thrust Specific Fuel Consumption (TSFC). TSFC measures the amount of fuel consumed per unit of thrust and is sometimes referred to simply as Specific Fuel Consumption (SFC). This metric is crucial for evaluating the efficiency of a jet engine and comparing it to other propulsion systems.
 
 # Fundamentals
 

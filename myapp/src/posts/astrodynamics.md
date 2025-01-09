@@ -3,7 +3,7 @@ title: "Astrodynamics"
 topic: "Aerospace"
 path: "astrodynamics"
 author: "David Lu"
-date: "2024-12-10"
+date: "2023-04-02"
 ---
 
 Astrodynamics is a lot like any other field of dynamics, except we now have an additional equation to consider: the law of universal gravitation. This leads to some strange and counterintuitive results - like slowing down to catch up! 

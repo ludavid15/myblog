@@ -4,6 +4,7 @@ topic: "Fluid Mechanics"
 path: "turbulent-flow"
 author: "David Lu"
 date: "2021-05-08"
+preview: "In general, turbulent flow is modeled statistically. Averages values are used instead of exact ones."
 ---
 
 In general, turbulent flow is modeled statistically. Averages values are used instead of exact ones. Before laminar flow becomes fully turbulent, it experiences transition. Transition begins with flow instability. The point at which a flow trips into instability (critical point) is distinct from the point at which flow transitions fully to turbulence (transition point). 

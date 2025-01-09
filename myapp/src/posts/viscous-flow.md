@@ -4,6 +4,7 @@ topic: "Fluid Mechanics"
 path: "viscous-flow"
 author: "David Lu"
 date: "2021-05-10"
+preview: "Viscous flow is the study of how a fluid's viscosity affects its behavior. Viscous flow covers topics like boundary layers, low-speed flows, and small-scale flows. Coincidentally, the regimes in which viscous forces dominate is often incompressible, but this is not a hard and fast rule."
 ---
 
 Unlike solids, fluids deform constantly under stress (in other words, a fluid **flows**). How it flows is very much dependent on it's **viscosity**. 

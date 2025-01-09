@@ -27,8 +27,10 @@ export default defineConfig({
                   str
                     .trim()
                     .toLowerCase()
-                    .replace(/[\s]+/g, '-') // Generate IDs for headings
-                    .replace(/[^\w-]+/g, ''), // Remove invalid characters
+                    .replace(/[\s]+/g, '-') // Replace spaces with hyphens
+                    .replace(/[^a-z0-9\-_]+/g, '') // Remove invalid characters but keep hyphens and underscores
+                    .normalize('NFKD') // Normalize Unicode to handle accents
+                    .replace(/[\u0300-\u036f]/g, ''), // Remove diacritical marks
               });
       },
     }),
