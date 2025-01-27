@@ -4,6 +4,7 @@ topic: "Fluid Mechanics"
 path: "into-to-fluids"
 author: "David Lu"
 date: "2021-05-12"
+preview: "A high level perspective on what fluid mechanics is, and what the sub-disciplines are."
 ---
 
 When we talk about fluid mechanics, we aren't just talking about the second state of matter (liquid $\subset$ fluid). Fluid mechanics is the study of *flow*, which applies to both liquids and gases. Also, we're only dealing with **Newtonion fluids**. Non-newtonian fluids are weird, and I haven't studied them, so there won't be anything about them here. It's important to mention that classic fluid mechanics is treated as a subset of continuum mechanics. This is known as an engineering model - a set of assumptions we make to simplify real-life.

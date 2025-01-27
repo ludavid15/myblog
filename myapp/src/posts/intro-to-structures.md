@@ -4,6 +4,7 @@ topic: "Structures"
 path: "intro-to-structures"
 author: "David Lu"
 date: "2021-06-21"
+preview: "My notes from undergrad on structural analysis, covering basics like stress/strain and shear."
 ---
 
 In dynamics, we often make a "rigid body" assumption for all our working parts. All forces merely cause these objects to move or rotate. In reality, forces can cause pieces to deform or even break. Structural mechanics then, is the study of these deformations and failures.

@@ -4,6 +4,7 @@ topic: "Aerospace"
 path: "astrodynamics"
 author: "David Lu"
 date: "2023-04-02"
+preview: "Covers the basics of orbital mechanics. In other words, this post could be enough for a game like Kerbal, but probably wouldn't cover real-world applications."
 ---
 
 Astrodynamics is a lot like any other field of dynamics, except we now have an additional equation to consider: the law of universal gravitation. This leads to some strange and counterintuitive results - like slowing down to catch up! 

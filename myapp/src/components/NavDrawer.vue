@@ -1,12 +1,13 @@
 <template>
+
   <v-navigation-drawer 
-  app 
-  v-model="drawer" 
-  permanent
-  floating
-  :location="$vuetify.display.mobile ? 'bottom' : 'left'"
-  class="bg-secondary"
-  :width="$vuetify.display.mobile ? undefined : 350">
+    app 
+    v-model="drawer" 
+    permanent
+    floating
+    :location="$vuetify.display.mobile ? 'bottom' : 'left'"
+    class="bg-secondary"
+    :width="$vuetify.display.mobile ? undefined : 350">
 
     <v-list v-model:opened="openedTopics" density="compact">
 
@@ -24,7 +25,7 @@
         About Me
       </v-list-item>
       <v-list-item 
-      prepend-icon="mdi-clock-time-eight"
+      prepend-icon="mdi-calendar-clock"
       :to="{ name: 'Timeline'}"
       @click="handleNavClick">
         Timeline
@@ -72,12 +73,10 @@
       </v-list-group>
     </v-list>
 
-
-
     <!-- Chip at the Bottom -->
     <div class="version-note pa-4 text-left" :style="{ backgroundColor: 'transparent' }">
       <v-chip variant="elevated" elevation='7' :style="{ backgroundColor: '#bdbc9f', color:'black'}">
-        Website Version 2.04
+        Website Version 2.05
       </v-chip>
     </div>
 

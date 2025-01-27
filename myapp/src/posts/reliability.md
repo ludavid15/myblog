@@ -4,12 +4,10 @@ topic: "Engineering"
 path: "reliability"
 author: "David Lu"
 date: "2023-05-13"
-preview: "Reliability engineering aims to understand the probability of success over time. It is heavily based in probability and statistics. "
+preview: "Reliability engineering aims to understand the probability of success over time. It is heavily based in probability and statistics. I'm writing this post because this year I joined the reliability team at work. "
 ---
 
-Reliability engineering aims to understand the probability of success over time. It is heavily based in probability and statistics. 
-
-First, let's define a few terms. A **fault** is when something doesn't perform as expected, regardless of the cause. A **failure** is when something is broken, which usually results in a fault. A **failure mode** is the way in which a fault occurs. 
+Reliability engineering aims to understand the probability of success over time. It is heavily based in probability and statistics. First, let's define a few terms. A **fault** is when something doesn't perform as expected, regardless of the cause. A **failure** is when something is broken, which usually results in a fault. A **failure mode** is the way in which a fault occurs. 
 
 
 # Failure Rate

@@ -4,7 +4,7 @@ topic: "Computer Science"
 path: "into-to-vue"
 author: "David Lu"
 date: "2024-11-29"
-preview: "This a beginner's guide to making applications using Vue. Vue is a javascript framework which makes it easier to develop dynamic frontends."
+preview: "This is a beginner's guide to making applications using Vue. Vue is a javascript framework which makes it easier to develop dynamic frontends."
 ---
 
 This a beginner's guide to making applications using Vue. Vue is a javascript framework which makes it easier to develop dynamic frontends.

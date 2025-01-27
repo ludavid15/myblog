@@ -4,7 +4,7 @@ topic: "Computer Science"
 path: "machine-vision"
 author: "David Lu"
 date: "2021-07-26"
-preview: "Machine vision refers broadly to any imaging analysis task performed by a computer."
+preview: "Machine vision refers broadly to any imaging analysis task performed by a computer. This articles covers some of the basics that I picked up from my time at Michigan."
 ---
 
 Machine vision refers broadly to any imaging analysis task performed by a computer. Meanwhile, simultaneous localization and mapping (SLAM) is a specific domain focused on obtaining an understanding of the environment and your position within it. These two often go hand in hand (but not always!).
@@ -79,11 +79,9 @@ Where $\lambda_{min}$ is a function that returns the smallest eigenvalue of the 
 When we use a quadratic loss function, the weights of outliers are exaggerated. Thus instead of fitting the correct data, we end up fitting to the incorrect ones. This is not an easy problem to overcome, because we do not know ahead of time which data points are the wrong ones, but a few outlier robust methods do exist.
 
 
-### Random Consensus Sampling (RANSAC)
+## Random Consensus Sampling (RANSAC)
 
-From consecutive image frames, one can perform feature matching, and calculate the change in camera position between frames. However, given a set of matched features (typically called correspondences), there are bound to be a few mis-identified matches. RANSAC provides a method for dealing with these outliers. 
-
-The basic idea is pretty simple. From the entire complete set of "matches", we take a random set, and calculate the resulting change in position. We then repeat with another random set, and another, and check to see if there is agreement.
+From consecutive image frames, one can perform feature matching, and calculate the change in camera position between frames. However, given a set of matched features (typically called correspondences), there are bound to be a few mis-identified matches. RANSAC provides a method for dealing with these outliers. The basic idea is pretty simple. From the entire complete set of "matches", we take a random set, and calculate the resulting change in position. We then repeat with another random set, and another, and check to see if there is agreement.
 
 
 # Image Segmentation

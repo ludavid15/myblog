@@ -4,10 +4,10 @@ topic: "Engineering"
 path: "mbse"
 author: "David Lu"
 date: "2022-12-09"
+preview: "With better computers, engineers have increasingly turned to model based systems engineering, or MBSE as a solution to the engineering process. After all, things like CAD, CFD, and FEM have enabled us to model complex physics, so why not model a project?"
 ---
 
 With better computers, engineers have increasingly turned to model based systems engineering, or MBSE as a solution to the engineering process. After all, things like CAD, CFD, and FEM have enabled us to model complex physics, so why not model a project? 
-
 
 # Introduction
 

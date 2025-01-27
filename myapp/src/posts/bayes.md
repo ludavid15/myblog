@@ -4,6 +4,7 @@ topic: "Math"
 path: "bayes"
 author: "David Lu"
 date: "2023-04-15"
+preview: "Although there are many interpretations of Bayes Theorem, let's start with this one: Bayes Theory gives us a way to update a prediction based on observation of new evidence. "
 ---
 
 Although there are many interpretations of Bayes Theorem, let's start with this one: Bayes Theory gives us a way to update a prediction based on observation of new evidence. 

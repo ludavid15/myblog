@@ -4,7 +4,7 @@ topic: "Computer Science"
 path: "into-to-docker"
 author: "David Lu"
 date: "2024-11-11"
-preview: "If you've ever struggled to manage a complex project with different dependencies, then Docker is the tool for you."
+preview: "If you've ever struggled with managing a complex project with different dependencies, then Docker is the tool for you. I've been hearing about Docker a lot recently, and wanted to learn the basics, which is what this article covers. "
 ---
 
 # Docker Image

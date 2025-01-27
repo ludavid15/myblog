@@ -4,7 +4,7 @@ topic: "Engineering"
 path: "communications"
 author: "David Lu"
 date: "2022-07-09"
-preview: "A random assortment of communications technology terms I've encountered over the years."
+preview: "A random assortment of communications technology terms I've encountered over the years. Most of these are things I've encountered at work, rather than anything I've formally studied."
 ---
 
 A random assortment of communications technology terms I've encountered over the years. Please keep in mind that electrical engineering and signal processing is *not* one of my subjects, so take everything here with a grain of salt. 

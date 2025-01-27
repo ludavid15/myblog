@@ -4,6 +4,7 @@ topic: "Dynamics and Controls"
 path: "dynamical-equations"
 author: "David Lu"
 date: "2021-05-11"
+preview: "In the last post, we talked about Kinematics, or the study of motion. Dynamics begins with we apply Newton's second law that relates forces with acceleration."
 ---
 
 We're almost ready to write down F = ma, but before that, we need to define what F is (a force), and what ma is (an inertial term).

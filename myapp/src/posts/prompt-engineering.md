@@ -4,7 +4,7 @@ topic: "Machine Learning"
 path: "prompt-engineering"
 author: "David Lu"
 date: "2024-06-26"
-preview: "This article provides tips and tricks for prompting large-language models."
+preview: "This article provides tips and tricks for prompting large-language models. My notes from DeepLearning.AI's short course. "
 ---
 
 # Guidelines for Prompting
@@ -48,3 +48,10 @@ To construct a ChatBot, you will need a clever data structure to track the conve
 3. **User** - the human or entity asking questions to the LLM.
 
 This dictionary will grow as the conversation continues, and is known as the "context". 
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* Fulford, Isa and Ng, Andrew. "ChatGPT Prompt Engineering for Developers". DeepLearning.AI. https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/
+

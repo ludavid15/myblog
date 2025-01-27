@@ -4,10 +4,10 @@ topic: "Machine Learning"
 path: "optimization"
 author: "David Lu"
 date: "2021-06-10"
-preview: "The underlying principle of an optimization is pretty straightfoward - find the best way to do something. But what does this mean and how do we do it efficiently?"
+preview: "The underlying principle of an optimization problem is pretty straightfoward - find the best way to do something. But what does this mean and how do we do it efficiently? This post has a lot of math, as it covers a few different graduate courses I took at Michigan. "
 ---
 
-The underlying principle of an optimization is pretty straightfoward - find the best way to do something. Best can mean fastest, safest, most efficient, shortest or thousands of other things, but the common denominator is that we are looking for the most (or least) of something. Mathematically then, this is pretty simple: we're solving for a maximum. 
+The underlying principle of an optimization problem is pretty straightfoward - find the best way to do something. Best can mean fastest, safest, most efficient, shortest or thousands of other things, but the common denominator is that we are looking for the most (or least) of something. Mathematically then, this is pretty simple: we're solving for a maximum. 
 
 Finding this maximum or minumum is pretty straightforward. However, optimization attempts often fail not because we couldn't find the correct min/max, but because our question was posed poorly in the first place. 
 

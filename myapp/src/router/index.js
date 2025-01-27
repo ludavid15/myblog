@@ -10,19 +10,19 @@ const routes = [
     path: "/",
     name: "Home",
     component: HomeView,
-    meta: { icon: "mdi-home", title: "Home" },
+    meta: { title: "Notes - Home" },
   },
   {
     path: "/about",
     name: "About",
     component: AboutView,
-    meta: { icon: "mdi-home", title: "About Me" },
+    meta: { title: "Notes - About Me" },
   },
   {
     path: "/timeline",
     name: "Timeline",
     component: TimelineView,
-    meta: { icon: "mdi-home", title: "Timeline" },
+    meta: { title: "Notes - Timeline" },
   },
   {
     path: '/posts/:slug', // Dynamic route for markdown posts

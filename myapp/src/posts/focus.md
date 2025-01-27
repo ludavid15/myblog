@@ -4,7 +4,7 @@ topic: "Miscellaneous"
 path: "focus"
 author: "David Lu"
 date: "2023-07-11"
-preview: "A collection of lessons I've learned about working effectively."
+preview: "In our hyper connected, information abundant world, your attention is your most valuable commodity. Everything is out to grab a piece of it (social media, the news, Netflix). Backed with a decade of big data, they've all become very *good* at it too. Sometimes it feels like your biology just wasn't built to keep up with it all."
 ---
 
 A collection of lessons I've learned about working effectively. Before going any further, let me establish that the notes here are for myself. I don't know if any of these tactics would work well for someone else. I think most people arrive at their own version of the truth in different ways. There are hundreds (thousands?) of "self-improvement" books out there, so it's not like the world needs a another one. I've gone through a few myself with mixed success. Sometimes there's no way to learn a lesson until an event really makes it sinks in, and a strategy you once thought was silly suddenly makes a lot more sense. 

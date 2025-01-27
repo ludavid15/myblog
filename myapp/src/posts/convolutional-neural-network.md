@@ -4,6 +4,7 @@ topic: "Machine Learning"
 path: "convolutional-neural-network"
 author: "David Lu"
 date: "2023-01-12"
+preview: "Convolutional neural networks are a very intuitive (and fast) type of network for image processing problems. It uses a mathematical operation called a convolution, to analyze/generalize different sections of the input."
 ---
 
 Convolutional neural networks are a very intuitive (and fast) type of network for image processing problems. It uses a mathematical operation called a convolution, to analyze/generalize different sections of the input.

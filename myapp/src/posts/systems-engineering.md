@@ -4,6 +4,7 @@ topic: "Engineering"
 path: "systems-engineering"
 author: "David Lu"
 date: "2024-05-16"
+preview: "I first started this article on Systems Engineering a few years ago. It's a topic I've been interested in since high school, but as I work and grow I keep returning to add more. Systems Engineering is one of those things that is easy to talk about but difficult to execute. When it's not done well, it adds very little to the overall project. But a good systems engineer can also be the reason why some teams end up being greater than the sum of their parts. "
 ---
 
 If you've ever tried to manage a highly complex project, you know that a certain amount of organization is required. This kind of big-picture planning helps to reduce risk. However, it's important to remember that this kind of oversight ultimately serves the product. There is such a thing as too much management.

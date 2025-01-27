@@ -15,9 +15,9 @@ The ground track of a satellite is its orbit projected into the surface. I'd rec
 
 To start, here are the three parameters which we can use to define an orbit in the Earth Centered Interial frame. These function like a set of rotation angles which relate the orbital/perifocal frame to the ECI frame. 
 
-* Inclination
-* Right Ascension of the Ascending Node
-* Argument of Periapsis
+* Inclination: Angle between the orbital plane and Earth's equatorial plane.
+* Right Ascension of the Ascending Node: Longitude of the ascending node relative to a reference direction (vernal equinox).
+* Argument of Periapsis: Orientation of the elliptical orbit within the orbital plane relative to the ascending node.
 
 And then within the perifocal frame, the position/radius along the orbit is defined as a function of the true anomaly as:
 
@@ -27,7 +27,7 @@ Let's also think about the position in the perifocal frame as a vector. In polar
 
 $$r_{perifocal} = \begin{bmatrix} r cos(\theta) \\ r sin(\theta) \\ 0 \end{bmatrix} $$
 
-At this point, we can write a couple of rotation matrices to get from the perifocal frame to the ECI frame. The order of rotations is going to be:
+Note that the z-component is zero because the perifocal frame lies entirely within the orbital plane. At this point, we can write a couple of rotation matrices to get from the perifocal frame to the ECI frame. The order of rotations is going to be:
 
 1. Rotate about Z by the argument of periapsis $(\omega)$.
 2. Rotate about X by the inclination $(i)$.

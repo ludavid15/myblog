@@ -4,7 +4,7 @@ topic: "Aerospace"
 path: "satellite-architecture"
 author: "David Lu"
 date: "2022-12-10"
-preview: "A high level overview of satellites and their subsystems."
+preview: "Finally we're getting to stuff that I work with. There's a lot to know when it comes to satellites, so in this post we're just going to stick to the basics. More specific posts might follow. "
 ---
 
 

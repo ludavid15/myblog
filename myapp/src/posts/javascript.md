@@ -4,6 +4,7 @@ topic: "Computer Science"
 path: "into-to-javascript"
 author: "David Lu"
 date: "2024-11-11"
+preview: "Just a few notes I took on the basics of Javascript as part of my process for building this website."
 ---
 
 

@@ -4,6 +4,7 @@ topic: "Fluid Mechanics"
 path: "continuum-mechanics"
 author: "David Lu"
 date: "2021-05-11"
+preview: "After writing a few sections on fluid mechanics, I decided to dedicate an entire section to Continuum mechanics. This is because one of the common assumptions we make when working with fluids is that it forms a continuum. The individual atoms of a fluid are assumed to be tightly packed enough that we can approximate the collective molecular interactions."
 ---
 
 One of the common assumptions we make when working with fluids is that it forms a continuum. The individual atoms of a fluid are assumed to be tightly packed enough that we can approximate the collective molecular interactions. What are these collective molecular interactions? Well, pretty standard stuff actually. We assume that applying a force causes an object to move, or a body to deform. (Technically speaking, that stress is related to strain). And honestly well, that's kinda it. 
@@ -32,15 +33,21 @@ $$d(h+\frac{1}{2}u^2)=0$$
 
 Also known as continuity. Time rate of change of mass in the control volume (CV) is equal to the mass flux through the boundary. Or, in differential form, partial derivative of density plus mass flux is zero.
 
-* Integral
+<v-card variant="tonal" class="mb-5">
+    <v-card-text>Integral</v-card-text>
+</v-card>
 
 $$\frac{\partial}{\partial t}\iiint\rho dV=- \iint \rho u \bullet \hat{n} dA$$
 
-* Conservative
+<v-card variant="tonal" class="mb-5">
+    <v-card-text>Conservative</v-card-text>
+</v-card>
 
 $$\frac{\partial\rho}{\partial t}+\nabla\bullet\left(\rho u \right)=0$$
 
-* Non-conservative
+<v-card variant="tonal" class="mb-5">
+    <v-card-text>Non-Conservative</v-card-text>
+</v-card>
 
 $$\frac{D\rho}{Dt}+\nabla\bullet\left(\rho u \right)=0$$
 
@@ -56,15 +63,21 @@ $$\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}=0$$
 
 Time rate of change of momentum in the CV is equal to the advection term plus forces. Or in differential form, partial of momentum with respect to time plus advection term is equal to forces acting on the fluid element. Note that the right side of the equation is the substantial derivative. You may recognize these as the Navier-Stokes equations. Or another way of thinking about it, the Navier-Stokes equations are just a statement momentum conservation.
 
-* Integral
+<v-card variant="tonal" class="mb-5">
+    <v-card-text>Integral</v-card-text>
+</v-card>
 
 $$\frac{\partial}{\partial t}\iiint\rho udV=- \iint u \left(\rho u\bullet\hat{n}\right)dA-\iint\left(P\hat{n}\right)dA$$
 
-* Conservative
+<v-card variant="tonal" class="mb-5">
+    <v-card-text>Conservative</v-card-text>
+</v-card>
 
 $$\frac{\partial\rho u}{\partial t}+\left(\nabla\bullet\rho u  \right) u=-\nabla P+\rho g+\nabla\tau+F_{body}$$
 
-* Non-conservative
+<v-card variant="tonal" class="mb-5">
+    <v-card-text>Non-Conservative</v-card-text>
+</v-card>
 
 $$\rho\frac{Du}{Dt}=-\nabla P+\rho g+\nabla\tau+F_{body}$$
 
@@ -72,15 +85,26 @@ $$\rho\frac{Du}{Dt}=-\nabla P+\rho g+\nabla\tau+F_{body}$$
 
 Time rate of change is equal to advection term plus heat (both volumetrically and through the surface). Note that work done is encapsulated in the P/rho term in the advection integral. Or, the substantial derivative of total enthalpy is equal to time rate of change of pressure (work) and flux of heat. This is also a statement of the 1st law of thermodynamics. (Conservation of Energy).
 
-* Integral
+<v-card variant="tonal" class="mb-5">
+    <v-card-text>Integral</v-card-text>
+</v-card>
 
-$$\frac{\partial}{\partial t}\iiint{\rho(e+\frac{1}{2}U^2)dV}=-\iint{\rho\left(e+\frac{P}{\rho}+\frac{1}{2}U^2\right)u\bullet\hat{n}dA}+\iiint{\rho\dot{q}dV}-\iint{\dot{q}^n\bullet\hat{n}dA}$$
+$$\begin{align*}
+\frac{\partial}{\partial t} \iiint \rho \left(e + \frac{1}{2} U^2 \right) dV 
+&= - \iint \rho \left( e + \frac{P}{\rho} + \frac{1}{2} U^2 \right) u \cdot \hat{n} \, dA \\
+&\quad + \iiint \rho \dot{q} \, dV \\
+&\quad - \iint \dot{q}^n \cdot \hat{n} \, dA
+\end{align*}$$
 
-* Conservative
+<v-card variant="tonal" class="mb-5">
+    <v-card-text>Conservative</v-card-text>
+</v-card>
 
 $$\frac{\partial\rho e}{\partial t}+\nabla\bullet\left(u(\rho e+P)\right)=0$$
 
-* Non-Conservative
+<v-card variant="tonal" class="mb-5">
+    <v-card-text>Non-Conservative</v-card-text>
+</v-card>
 
 $$\rho\frac{Dh_o}{Dt}=\frac{\partial P}{\partial t}+\rho\dot{q}$$
 
