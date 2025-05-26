@@ -360,3 +360,9 @@ $$T=\frac{f(\varepsilon )^2}{\rho (g_o Isp)^3}(\frac{\gamma K}{\varepsilon})4{V_
 Importantly, we find that that thrust scales with the square of voltage, but inversely with the cube of Isp. At high values of specific impulse, an extremely large voltage is required to produce even small amounts of thrust. Thus electrosprays must be built with multiple emission sites (typically on the order of 100-1000) to reach thrust levels comparable to gridded ion or hall thrusters. Luckily, this also means that we can just keep adding emission sites to increase the thrust (like increasing the number of thrusters). At this scale, doing so adds relatively little support equipment mass. 
 
 If you're interested, read all about electrospray scaling issues [here](https://docs.google.com/document/d/1sRX4AJxvLSF1PADZBpmdQWkueGrxS-LC/edit?usp=share_link&ouid=113710643301397614506&rtpof=true&sd=true)!
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* This post is a collection of my notes from graduate courses at the University of Michigan.

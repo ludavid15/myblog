@@ -95,4 +95,4 @@ On the topic of style, one way to develop yours is to write for yourself. Don't 
 <v-divider :thickness="5"></v-divider>
 
 * Zinsser, W. (2006). *On Writing Well* (30th ed.). HarperCollins.
-* McEnerney, L. *The Craft of Writing Effectively* (June 26, 2014). University of Chicago. Youtube. https://www.youtube.com/watch?v=vtIzMaLkCaM
+* McEnerney, L. [*The Craft of Writing Effectively*](https://www.youtube.com/watch?v=vtIzMaLkCaM) (June 26, 2014). University of Chicago. Youtube. 

@@ -74,3 +74,9 @@ We can also define the second coefficient of viscosity as λ.
 $$
 \xi=\lambda+\frac{2}{3}\mu
 $$
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* This post is a collection of my notes from graduate courses at the University of Michigan.

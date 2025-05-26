@@ -52,7 +52,7 @@ router.beforeEach((to, from, next) => {
   }
 
   // Update the document title
-  document.title = title || 'Default Website Title';
+  document.title = title || 'page';
 
   next();
 });

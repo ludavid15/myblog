@@ -139,7 +139,7 @@ $${}^AV^P={}^AV^{B_p}+{}^BV^P$$
 
 $${}^Aa^P={}^Aa^{B_p}+{}^Ba^P+2{}^A\omega^B\times{}^BV^P$$
 
-Where \\( B_p \\) is defined as a point of B coincident with P at some time, t*. This is convenient because we can define \\( B_p \\) to be stationary in B. 
+Where $B_p$ is defined as a point of B coincident with P at some time, t*. This is convenient because we can define $B_p$ to be stationary in B. 
 
 
 # Configuration Constraints
@@ -160,7 +160,7 @@ Instead of using configuration constraints, we can define a set of (n) generaliz
 
 $$n=3v+6\eta-m$$
 
-Where v is the number of points, $$\eta$$ is the number of rigid bodies, and m is the number of configuration constraints we have defined in the original problem. Generalized coordinates are usually defined with the letter q.
+Where v is the number of points, $\eta$ is the number of rigid bodies, and m is the number of configuration constraints we have defined in the original problem. Generalized coordinates are usually defined with the letter q.
 
 $$q_1,q_2,q_3,\ldots q_n$$
 

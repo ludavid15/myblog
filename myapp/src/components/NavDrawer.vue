@@ -76,7 +76,7 @@
     <!-- Chip at the Bottom -->
     <div class="version-note pa-4 text-left" :style="{ backgroundColor: 'transparent' }">
       <v-chip variant="elevated" elevation='7' :style="{ backgroundColor: '#bdbc9f', color:'black'}">
-        Website Version 2.05
+        Website Version 2.06
       </v-chip>
     </div>
 
@@ -134,9 +134,9 @@ const { smAndDown } = useDisplay();
 
 // Function to handle navigation link clicks
 const handleNavClick = () => {
-  if (smAndDown.value) {
-    drawer.value = false; // Close the drawer on small screens
-  }
+  drawer.value = false; // Close the drawer on click
+  //if (smAndDown.value) { 
+  //}
 };
 
 </script>

@@ -120,7 +120,7 @@ Another integrity check we can do is called a checksum. A checksum function tran
 Hashing is another way to *validate* the content of a message (different from protecting the content). A hashing function is a deterministic function which produces a unique output (often called the digest) for each possible input. A typical process might look like this:
 
 1. I put together a message and calculate the hash digest.
-2. I send you that message, and you indendently calculate the hash digest using the same hash function.
+2. I send you that message, and you independently calculate the hash digest using the same hash function.
 3. We compare hash digests. If they are the same, we know that we have the same message. 
 
 

@@ -34,7 +34,7 @@ This can take many forms depending on the task at hand. Maybe focus means paying
 
 ## Why Can't I Focus?
 
-Although we may understand the importance of focus, being able to focus is another matter. How often do we pick up the phone to scroll social media, procrastinate on a responsibility, or really struggle through a chore? When the moment comes when we must choose to focus, instead something seems to get in the way. 
+Although we may understand the importance of focus, being able to focus is another matter. How often do we pick up the phone to scroll social media, procrastinate on a responsibility, or really struggle through a chore? When the moment comes that we must choose to focus, something always seems to get in the way. 
 
 In most cases, I don't think general laziness is to blame, but rather any number of deeper reasons, including things like a lack of motivation, self-doubt, anxiety, fear, etc. Rather than reaching for that pomodoro timer, take a moment to consider if there are emotional reasons why we're not feeling motivated. 
 
@@ -43,7 +43,7 @@ In most cases, I don't think general laziness is to blame, but rather any number
 
 The first question to ask is whether or not the task at hand is something we should even do. Important here is the word *should* and not the word *want*. This could include things like going to the dentist, working out, or cooking for ourselves. We may not *want* to do these things, but we probably know that we *should*. 
 
-A better example might be working on a project at work that we don't think brings any value. Hence we don't feel motivated and the work doens't get done. In this situation, our lack of focus exists for a good reason. Maybe it's time to speak with our project manager and discuss the future direction of our project. 
+A better example might be working on a project at work that we don't think brings any value. Hence we don't feel motivated and the work doesn't get done. In this situation, our lack of focus exists for a good reason. Maybe it's time to speak with our project manager and discuss the future direction of our project. 
 
 
 ### Overwhelmed By Difficulty

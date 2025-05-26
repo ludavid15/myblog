@@ -29,7 +29,7 @@ Discipline is easier when you have a plan. If you goal is to "go the gym", set a
 
 ## Be Prepared
 
-Another way to make "discipline" easier is to know yourself and prepare ahead of time. For example, if your goal is to wake up at 7AM everyday, but you know you usually need 8 hours of sleep, make sure you go to bed by 11PM. If you're goal is to cook more, make sure you buy groceries and ingredients. The actual decision to work towards your objective does not stand alone - it exists in the context of all the small decisions you've already made. Make sure you keep organized and think things through. 
+Another way to make "discipline" easier is to know yourself and prepare ahead of time. For example, if your goal is to wake up at 7AM everyday, but you know you usually need 8 hours of sleep, make sure you go to bed by 11PM. If your goal is to cook more, make sure you buy groceries and ingredients. The actual decision to work towards your objective does not stand alone - it exists in the context of all the small decisions you've already made. Make sure you keep organized and think things through. 
 
 ## Understand Yourself
 

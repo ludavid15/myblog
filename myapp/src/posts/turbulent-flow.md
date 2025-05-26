@@ -121,3 +121,9 @@ $$\frac{\bar{u}}{U_e}\approx\left(\frac{y}{\delta}\right)^{1/7}$$
 $$C_f\approx0.020{Re}_\delta^{-1/6}$$
 
 $${Re}_\delta\approx0.16{Re}_x^{6/7}$$
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* This post is a collection of my notes from graduate courses at the University of Michigan.

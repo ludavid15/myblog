@@ -27,9 +27,12 @@
         </p>
 
         <v-alert
+          border="top"
           type="info"
           class="mb-6"
           closable
+          color="#3C4A37"
+          variant="tonal"
         >
          If you're reading this on Mobile, some features may not render correctly. I'm working on a fix
          but for now I recommend switching over to desktop. 

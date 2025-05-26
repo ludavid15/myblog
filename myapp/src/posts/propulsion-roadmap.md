@@ -9,10 +9,13 @@ preview: "When it comes to propulsion, it can be difficult to keep track of all 
 
 When it comes to propulsion, it can be difficult to keep track of all the different classifications floating around out there. Props, turboprops, turbojets, ramjets, chemical rockets, nuclear rockets, Hall thrusters, and ion thrusters, just to name a few. If anything, it's a testament to our joint creativity that we've come up with so many ways to *move*. To help clear up some confusion, this section presents a roadmap - a heirarchy of propulsion systems to help you navigate this broad topic. 
 
+# Introduction
+
+<v-divider></v-divider>
 
 To begin, all propulsion systems must achieve the same goal: generate forward momentum. And the only way to do this (that we know of ... ) is to make use of Newton's third law. 
 
-> For every action, there is an equal and opposite reaction.
+*For every action, there is an equal and opposite reaction.*
 
 So that's it. We have to push something back (or push against something), and the action of doing so pushes us forward. Naturally the next question becomes, well how do we push mass back? The three answers we have achieved are:
 
@@ -95,11 +98,11 @@ Things are heating up now as we subdivide nozzle based propulsion systems by the
 
 Thrusters of this variety convert power in the form of electricity into thermal energy by heating up the fluid. Your toaster oven at home does this. By passing current through a heating element, some of the electrical power is converted into heat, which radiates and convects to the air around it. This exact method is used in a resistojet. 
 
-> A **resistojet** is a nozzle based propulsion system which adds heat to a fluid by means of a resistor.
+* A **resistojet** is a nozzle based propulsion system which adds heat to a fluid by means of a resistor.
 
 Alternatively, if two conducting pieces are placed very close to one another and have a high potential difference between them, current can **arc** through the fluid in between. This action heats up the fluid, and thus we have discovered another type of thruster: the arcjet.
 
-> An **arcjet** is a nozzle based propulsion system which adds heat to a fluid by an electric discharge. 
+* An **arcjet** is a nozzle based propulsion system which adds heat to a fluid by an electric discharge. 
 
 ## Nuclear
 
@@ -107,9 +110,7 @@ Though the word "radiation" may invoke images of nuclear power plants and danger
 
 In the context of propulsion systems, this energy can be used to **directly** heat up a fluid. Note the important distinction here. We're not using nuclear power to generate electricity to power the engine - heat from the controlled fission reaction goes directly into the propellent. Thus we are firmly still in the word of *nozzle based* propulsion systems. 
 
-The main implementation of this idea takes the form of nuclear thermal rockets. 
-
-> A **nuclear thermal rocket** passes fluid over a nuclear reactor core, which gets heated and then accelerated with a nozzle. 
+The main implementation of this idea takes the form of nuclear thermal rockets. A **nuclear thermal rocket** passes fluid over a nuclear reactor core, which gets heated and then accelerated with a nozzle. 
 
 In rocket applications, nuclear thermal systems have an efficiency and thust in between chemical thrusters, and electromagnetic thrusters. While a few have been developed, this technology never caught on.
 
@@ -152,13 +153,13 @@ The basic jet engine consists of 5 stages.
 
 Jet engines that follow this model which includes a turbine are known as **Turbojets**
 
-> **Turbojet** - a nozzle based propulsion system, that uses deflagration combustion, where oyxgen for the combustion reaction is pulled from the environment. In order to pressurize air, a compressor is used.
+* **Turbojet** - a nozzle based propulsion system, that uses deflagration combustion, where oyxgen for the combustion reaction is pulled from the environment. In order to pressurize air, a compressor is used.
 
 At some point in our quest to move faster, we must cross over into supersonic speeds. In this realm of super fast fluid flow, shocks become an important problem. Luckily, we have a solution: ramjets and scramjets. 
 
-> **Ramjets** - these function like a turbojet, but rely on the incredibly fast forward speed of the vehicle to compress incoming air. Thus, ramjets do away with the compressor and turbine stages, but do not generate any thrust on their own unless the vehicle is already moving.
+* **Ramjets** - these function like a turbojet, but rely on the incredibly fast forward speed of the vehicle to compress incoming air. Thus, ramjets do away with the compressor and turbine stages, but do not generate any thrust on their own unless the vehicle is already moving.
 
-> **Scramjets** - short for supersonic combustion ramjet. Virtually identical in functionality to a ramjet but instead of slowing the flow down to supsonic speeds for combustion, scarmjets keep the flow supersonic. This makes combustion very complicated but at **very** high speeds, slowing incoming air down all the way just isn't very efficient.
+* **Scramjets** - short for supersonic combustion ramjet. Virtually identical in functionality to a ramjet but instead of slowing the flow down to supsonic speeds for combustion, scarmjets keep the flow supersonic. This makes combustion very complicated but at **very** high speeds, slowing incoming air down all the way just isn't very efficient.
 
 
 ## Rocket Engines
@@ -167,13 +168,11 @@ And last but not least, we have rockets. Rockets engines are a nozzle based prop
 
 So how do we subdivide rocket engines? Well how about by the way in which propellent is stored? If both fuel and oxidizer and mixed together in a solid, that's a solid rocket motor. 
 
-> **Solid rocket motor** - not all that different from an explosive, but simple, cheap, and reliable. These things are what you find in hobby rockets, but can be scaled up to power things like the space shuttle. 
+* **Solid rocket motor** - not all that different from an explosive, but simple, cheap, and reliable. These things are what you find in hobby rockets, but can be scaled up to power things like the space shuttle. If (fuel xor oxidizer == liquid), then we have a hybrid rocket engine
 
-If (fuel xor oxidizer == liquid), then we have a hybrid rocket engine
+* **Hybrid rocket motor** - these allow for more control than a solid rocket motor, but are a step up in complexity. 
 
-> **Hybrid rocket motor** - these allow for more control than a solid rocket motor, but are a step up in complexity. 
-
-Lastly, if both the fuel and oxidizer are liquid, then we have a liquid rocket. 
+* Lastly, if both the fuel and oxidizer are liquid, then we have a **liquid rocket**. 
 
 ### Liquid Rockets
 
@@ -181,17 +180,11 @@ If you've ever seen a big rocket launch, most likely it was a liquid rocket. The
 
 Liquid rockets are further classified by the way in which propellent is fed into the combustion chamber. 
 
-**Pumps** are a common way and provide a nice amount of control. 
+* **Pumps** are a common way and provide a nice amount of control. These are classified into open loop systems, and closed loop systems.
 
-> **Pump-fed systems** are classified into open loop systems, and closed loop systems.
+* **Pressure** can also be used to push propellent along the lines. These are classified based on the source of pressure. Some propellents automatically sublimate and create pressure. These systems are autogenous. Alternatively, a third gas (usually a non-reactive nobel gas) can be used. 
 
-**Pressure** can also be used to push propellent along the lines. 
-
-> **Pressure-fed systems** are classified based on the source of pressure. Some propellents automatically sublimate and create pressure. These systems are autogenous. Alternatively, a third gas (usually a non-reactive nobel gas) can be used. 
-
-A short addendum to the rockets category is **monopropellant** engines. 
-
-> **Monopropellant engine** - these do not technically use combustion, but instead rely on an incredibly exothermic chemical decomposition reaction. Hydrazine (NH4) is a popular choice. 
+Within the rockets category is also **monopropellant** engines. These do not technically use combustion, but instead rely on an incredibly exothermic chemical decomposition reaction. Hydrazine (NH4) is a popular choice. 
 
 # Summary
 

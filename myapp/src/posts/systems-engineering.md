@@ -174,5 +174,10 @@ In addition, I've also seen a number of areas which get grouped into systems eng
 5. Simulation (goes along with planning & operations)
 
 
+# References
 
+<v-divider :thickness="5"></v-divider>
+
+* [Systems Engineering Handbook](https://www.nasa.gov/reference/systems-engineering-handbook/). (2019). NASA.
+* Pennock, M. and Wade, J. (2015). [The Top 10 Illusions of Systems Engineering: A Research Agenda](https://www.sciencedirect.com/science/article/pii/S1877050915002690). Procedia Computer Science, 44, 147–154.
 

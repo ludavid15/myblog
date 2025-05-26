@@ -20,8 +20,9 @@
               </div>
               <v-divider :thickness="5"></v-divider>
               <div v-if="frontmatter.date" 
-                class="text-subtitle-1 text-medium-emphasis my-2">
+                class="text-subtitle-1 text-medium-emphasis my-2 d-flex ga-4 align-center">
                 Last Updated: {{ frontmatter.date }}
+                <LikeButton />
               </div>
             </div>
 
@@ -34,7 +35,7 @@
               </v-col>
 
               <!-- Table of Contents -->
-              <v-col cols="12" lg="3" class="d-none d-lg-block toc-container">
+              <v-col cols="0" lg="3" class="d-none d-lg-block toc-container">
                 <Contents :headings="headings" />
               </v-col>
             </v-row>
@@ -56,6 +57,7 @@ import { useRoute } from 'vue-router';
 import Contents from '@/components/Contents.vue';
 import headingsData from '@/data/headings.json';
 import BackToTopButton from '@/components/BackToTop.vue';
+import LikeButton from '@/components/LikeButton.vue';
 
 // Refs and route
 const route = useRoute();
@@ -161,11 +163,19 @@ onMounted(() => {
   font-weight: 500;
 }
 
+.markdown-content a {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
 /* Styling for Inline Code Blocks */
 .markdown-content code {
     background: #f5f2f0; /* Match your Prism theme background */
     padding: 0.2em 0.4em;
     border-radius: 4px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
 }
 
 /* Styling for Code Blocks */
