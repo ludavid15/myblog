@@ -20,7 +20,7 @@ A collection of writing tips. If you're serious about writing, I'd recommend rea
 
 <v-divider></v-divider>
 
-First, we should think about the function that writing serves. We write as a means to understand the world, so we may be tempted to think that writing is for ourselves, or that the purpose of writing is to clearly explain our perspective. And depending on the type of writing that you do, that's may be enough. But if you're writing something that's meant to be read by others (e.g. a journal paper, a novel, an email) then merely explaining is not enough. You have to convince the reader **why** they should listen to your ideas. 
+First, we should think about the function that writing serves. We write as a means to understand the world, so we may be tempted to think that writing is for ourselves, or that the purpose of writing is to clearly explain our perspective. And depending on the type of writing that you do, that may be enough. But if you're writing something that's meant to be read by others (e.g. a journal paper, a novel, an email) then merely explaining is not enough. You have to convince the reader **why** they should listen to your ideas. 
 
 
 # Tips and Tricks

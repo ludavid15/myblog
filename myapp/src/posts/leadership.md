@@ -17,16 +17,16 @@ Over the years, I've had the chance to lead a number of different teams. This po
 Taken from a University of Michigan paper on leadership archetypes. The following four competing forces all have their time and place, and it is up to leaders to recognize and balance all four. Learning should also reflect this, i.e. true learning occurs when you have to navigate the tension across these groups, and not within any 1 particular group. 
 
 ### Robust Results
-These actions drive performance under pressure. Results are delivered through a healthy sense of competition and good judgement.
+These actions drive performance under pressure. Results are delivered through a healthy sense of competition and good judgement. However, too much pressure erodes your community. The competition should not become extreme to the point that individuals subvert or sabotage one another. 
 
 ### Collaborative Communities
-This is all about building relationships, empowering people, and cultivating trust and cohesion.  However, too much comfort and a community can stop challenging each other to perform better. 
+This is all about building relationships, empowering people, and cultivating trust and cohesion. A cohesive team allows people to weather hard times. However, too much comfort and a community can stop challenging each other to perform better. 
 
 ### Strategic Structures
-Structures and processes establish accountability, ensure reliable processes, and optimize efficiency. These actions create the stability to execute. 
+Structures and processes establish accountability, ensure reliable processes, and optimize efficiency. These actions create the stability to execute. But too much structure and you stifle innovation and rob people of their individuality.
 
 ### Creative Change
-In contrast to stability is creativity. Creative change represents the actions to enable innovation and create new opportunities.
+In contrast to stability is creativity. Creative change represents the actions to enable innovation and create new opportunities. However, a system with no rules is chaotic, and even if good ideas are abound, you may lack the follow-through to execute them. 
 
 
 # How to Lead
@@ -39,13 +39,11 @@ Expectation is built on a two way street. You need to **communicate** your expec
 
 The amount that needs to be communicated can also depend on the individual. Someone with a lot of experience will need fewer check-ins, and too many might even be detrimental. On the other hand, someone who is new might need explicit guidelines. 
 
-Finally, as much as it might be bothersome to do, constantly reminding your team of what's expected is effective. For example, asking everyone at the daily standup to update the status of their cards in JIRA.  
+Finally, as much as it might be bothersome to do, constantly reminding your team of what's expected not just effective, it's necessary. For example, asking everyone at the daily standup to update the status of their cards in JIRA. This is a really important point that I cannot emphasize enough. For most people, ideas do not sink in unless it is repeated.  
 
 ### Teach by Asking
 
-Have you ever explained something to someone, only to repeat yourself a few weeks later? Moments like this make you realize that your original explanation never really sunk in. 
-
-A more effective solution that I've found is to teach not from my own understanding, but rather through the other person's understanding. This means frequently asking non-trivial questions like:
+Have you ever explained something to someone, only to repeat yourself a few weeks later? Moments like this make you realize your original explanation never sunk in. A more effective solution I've found is to teach not from my own understanding, but rather through the other person's understanding. This means frequently asking non-trivial questions like:
 
 * What do you think this means?
 * How would you explain this topic?
@@ -53,16 +51,22 @@ A more effective solution that I've found is to teach not from my own understand
 
 This way, you allow the other person to show you their perspective. Then that becomes the anchor for what you talk through next. This can be effective in one-on-one meetings, but also in group meetings, such as a backlog refinement. Instead of having the product owner ask "does this make sense?" have the dev team present their understanding of each user story. 
 
-All that said, this advice is depends on that individual having the desire to understand "why" in the first place. For those who aren't interested in learning, this probably wouldn't work. 
+All that said, this advice only works if individuals already want to know "why". Lacking the desire to learn or lacking the ability to learn results in the same thing - no progress. 
 
-### Patience & Teamwork
+
+### Patience
 
 There can be a lot of frustration when working on a team, but at the end of the day, I think the following quote holds true: 
 
 *"Go alone to go fast. Go together to go far"*
 
-In other words, it's worth taking the time to teach or communicate. Although the sentiment of this quote is nice, the real world is more complex. Factor in finances, and there's a limit to how much time and money you can actually spend on education. Importantly, how much education you can afford is a problem to figure out before hiring and setting project deadlines. 
+In other words, it's worth taking the time to teach or communicate. This doesn't mean dedicating yourself to mentoring every last person who walks through the door - but when you recognize someone who *is* talented and motivated to learn, it means taking the time to overcome the initial growing pains. To build a sustainable team, knowledge transfer is key. 
 
+<v-card variant = "tonal" class="mb-5">
+    <v-card-text>
+    Ok but just how important is sustainability? Well in reality it's context dependent. For established companies, it's absolutely critical. But for startups, sustainability isn't that important. The goal of a startup is to deliver a better/cheaper product on an accelerated schedule. By definition this implies they are un-sustainable endeavors. After the initial product has captured a market share, only then they can pivot towards long-term survival. 
+    </v-card-text>
+</v-card>
 
 ## Tradition
 
@@ -138,6 +142,12 @@ There's two perspectives on the distribution of talent in the world. The first i
 The latter view, perhaps a more pessimistic view, is that talent is a power function, with the majority of people towards the bottom, and exponentially fewer individuals who are truly "talented". In such a view, attention must be put on attracting and holding only the best individuals. 
 
 Perhaps the world is large enough that there's room for both. Whatever it is, we can use these views to help understand different strategies for attracting and retaining talent. At companies like SpaceX, the culture and environment is more geared towards the latter. By having the reputation that they do, talent self-selects before they even step through the door. The people who apply are prepared to compete and work long hours, even if the pay and benefits aren't as competitive. 
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* DeRue, D. Scott, Gretchen M. Spreitzer, Brian Flanagan, and Benjamin Allen. "[Developing Adaptive Leaders for Turbulent Times: The Michigan Model of Leadership](https://webuser.bus.umich.edu/spreitze/Pdfs/DevelopAdaptLeaders.pdf)." European Business Review, May–June 2013, 57–63.
 
 
 

@@ -40,10 +40,10 @@ $$\alpha_1V_1+a_2V_2\ldots+\alpha_kV_k=0$$
 Some properties of a normal matrix:
 
 1. The Frobenius norm can by computed by the eigenvalues
-2. [A] is normal if it commutes with its conjugate transpose
-3. [A] is diagonalizable by a unitary matrix
+2. $[A]$ is normal if it commutes with its conjugate transpose
+3. $[A]$ is diagonalizable by a unitary matrix
 4. There exists a set of eigenvectors of [A] which form an orthonormal basis for range([A])
-5. [A] can be decomposed into the product of its unitary eigenvector matrices and a diagonal matrix of eigenvalues
+5. $[A]$ can be decomposed into the product of its unitary eigenvector matrices and a diagonal matrix of eigenvalues
 
 $$AA^H=A^HA$$  
 
@@ -57,7 +57,7 @@ $$AQ[:,i]=λiQ[:,i]$$
 
 ## Unitary/Orthogonal Matrix
 
-1. [A] is unitary if it is normal and its product with its conjugate transpose equals the identity matrix
+1. $[A]$ is unitary if it is normal and its product with its conjugate transpose equals the identity matrix
 2. The product of a unitary matrix with a vector does not change the magnitude of the vector.
 
 $$AA^H=A^HA=I$$
@@ -66,7 +66,7 @@ $$\|x\|_2=\|Ax\|_2$$
 
 ## Symmetric/Hermitian Matrix
 
-1. [A] is symmetric if it is equal to its conjugate transpose
+1. $[A]$ is symmetric if it is equal to its conjugate transpose
 2. All symmetric matrices are also normal matrices
 3. Rectangular matrices are never normal matrices
 4. The eigenvalues of a symmetric (and thus normal) matrix are always real
@@ -77,7 +77,7 @@ $$A=A^T$$
 
 Properties of a Diagonalizable Matrix
 
-1. [A] is diagonalizable if it is similar to a diagonal matrix
+1. $[A]$ is diagonalizable if it is similar to a diagonal matrix
 
 $$A=Q\Lambda Q^H$$ 
 
@@ -86,23 +86,23 @@ $$A=Q\Lambda Q^H$$
 
 <v-divider></v-divider>
 
-The singular value decomposition of a matrix [A] yields the following expression, where  $U\in F^{m\times m}$ is the matrix of left singular vector, $V\in F^{n\times n}$ is the matrix of right singular vectors, and the strictly positive entries of $\Sigma\in F^{m\times n}$ are referred to singular values. The number of nonzero singular values equals the rank of [A]. Both U and V are unitary matrixes.
+The singular value decomposition of a matrix $[A]$ yields the following expression, where  $U\in F^{m\times m}$ is the matrix of left singular vector, $V\in F^{n\times n}$ is the matrix of right singular vectors, and the strictly positive entries of $\Sigma\in F^{m\times n}$ are referred to singular values. The number of nonzero singular values equals the rank of [A]. Both U and V are unitary matrixes.
 
 $$A\in F^{m\times n}=U\Sigma V^H$$
 
-Realizing that in some cases, the rank of A is less than either m or n, leaving a few zero entries along the singular values. These send corresponding vectors in U and V to zero, and thus A can be reassembled with only the vectors of U, V and singular values through $r$. 
+Realizing that in some cases, the rank of $A$ is less than either m or n, leaving a few zero entries along the singular values. These send corresponding vectors in $U$ and $V$ to zero, and thus $A$ can be reassembled with only the vectors of $U$, $V$ and singular values through $r$. 
 
 $$A=\ \sum_{i=1}^{r}{\sigma_iu_iv_i^H}$$
 
 
 ### Additional Properties of the SVD
 
-1. The right singular vectors of AH are the left singular vectors of A and vice-versa
-2. The dimension of the range of A is equal to the rank of A
-3. $u_1$, $u_2$, ... $u_R$ are orthogonal basis vectors for the range of A
-4. $u_{(r+1)}$, $u_{(r+2)}$, ... $u_M$ are orthogonal basis vectors for the orthocomplement of the range of A
-5. $v_{(r+1)}$, $v_{(r+2)}$, ... $v_N$ are orthogonal basis vectors for the nullspace of A
-6. $v1$, $v2$, ... $v_R$ are orthogonal basis vectors for the orthocomplement of the nullspace of A
+1. The right singular vectors of $AH$ are the left singular vectors of $A$ and vice-versa
+2. The dimension of the range of $A$ is equal to the rank of $A$
+3. $u_1$, $u_2$, ... $u_R$ are orthogonal basis vectors for the range of $A$
+4. $u_{(r+1)}$, $u_{(r+2)}$, ... $u_M$ are orthogonal basis vectors for the orthocomplement of the range of $A$
+5. $v_{(r+1)}$, $v_{(r+2)}$, ... $v_N$ are orthogonal basis vectors for the nullspace of $A$
+6. $v1$, $v2$, ... $v_R$ are orthogonal basis vectors for the orthocomplement of the nullspace of $A$
 
 
 $$Av_j=\sigma_ju_j  \ \ \ \ \ \ if\ j\in\left(1,r\right)$$
@@ -114,7 +114,7 @@ $$A^Hu_j=\sigma_jv_j\ \ \ \ \ \ if\ j\in(1,\ r)$$
 
 ### Orthogonal Projection Matrix 
 
-Consider a set of vectors $ v_1,\ v_2,\ \ldots v_k $ which form an orthonormal basis for the subspace of some range V. The orthogonal projection matrix of the subspace V as well as the orthocomplement of V is formed as:
+Consider a set of vectors $v_1,\ v_2,\ \ldots v_k$ which form an orthonormal basis for the subspace of some range V. The orthogonal projection matrix of the subspace V as well as the orthocomplement of V is formed as:
 
 $$P_v=Q_kQ_k^H$$
 
@@ -158,7 +158,7 @@ $$x=\ \left[c_1,\ c_2,c_3,\ldots,\ \alpha_1,\beta_1,\alpha_2,\beta_2,\ \ldots\ri
 
 $$A_j=[1,\ t_j,\ t_j^2, \ldots,\cos(t_j),\sin(t_j),\cos(t_j),\sin(t_j)]$$
 
-Thus, the dot product of x with Aj should yield Equation 1. Repeating the above for every data point will yield a full matrix for A. The coefficients for our model equation which best fit the data can be found now using least squares regression.
+Thus, the dot product of $x$ with $A_j$ should yield Equation 1. Repeating the above for every data point will yield a full matrix for $A$. The coefficients for our model equation which best fit the data can be found now using least squares regression.
 
 
 ## Regularized Least Squares
@@ -198,7 +198,7 @@ $$tr\left(A+B\right)=tr\left(A\right)+tr\left(B\right)$$
 
 ### Frobenius Norm
 
-The Frobenius norm of a matrix is the root of the sum of the square of all values. The frobenius norm is also equal to the square root of the trace, and the sum of square of singular values of A. 
+The Frobenius norm of a matrix is the root of the sum of the square of all values. The frobenius norm is also equal to the square root of the trace, and the sum of square of singular values of $A$. 
 
 $$\|A\|_F = a_{ij}^2$$
 
@@ -211,11 +211,11 @@ $$\|A\|_F^2=tr(AA^H)=tr(A^HA)=σ_i^2$$
 
 Consider a matrix whose columns represent different items in a dataset, and whose rows represent different parameters for each data item (i.e. x, y, z, coordinates). Principal Component Analysis, or PCA, finds an orthonormal basis of directions which best fit the data. These lines minimize the average squared distance of each point to the line. This orthonormal basis are also the left singular vectors obtained through SVD.
 
-The first principal component of a matrix A, associated with the first eigenvector/left singular vector of the eigen decomposition and SVD, can be found as the vector which maximizes the second norm of the product of A with x. 
+The first principal component of a matrix $A$, associated with the first eigenvector/left singular vector of the eigen decomposition and SVD, can be found as the vector which maximizes the second norm of the product of $A$ with x. 
 
 $$u_1=\ argmax\|Ax\|^2)$$
 
-The next largest principal component can be found by projecting A into the null space formed from the previously found vectors and repeating the previous calculation. (We are finding the next line of best fit that is orthonormal to any previously found lines).
+The next largest principal component can be found by projecting $A$ into the null space formed from the previously found vectors and repeating the previous calculation. (We are finding the next line of best fit that is orthonormal to any previously found lines).
 
 
 # Independent Component Analysis

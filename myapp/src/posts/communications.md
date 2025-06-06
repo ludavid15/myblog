@@ -9,16 +9,7 @@ preview: "A random assortment of communications technology terms I've encountere
 
 A random assortment of communications technology terms I've encountered over the years. Please keep in mind that electrical engineering and signal processing is *not* one of my subjects, so take everything here with a grain of salt. 
 
-
-### Synchronous vs Asynchronous
-
-When you are transmitting digital data, how does the reciever and transmitter agree on what constitutes a new byte? Well, one solution is to give both ends a clock set to the same frequency. Everytime a new "tic" occurs, the receiver looks at the status on the line (i.e. high or low) and records it. This is known as asynchonous communication, because the timing mechanism on the transmitter and receiver ends do not communicate with one another. 
-
-In the case of synchronous communication, we have the transmitter send a separate clock signal (e.g. a pulse) to the receiver. This pulse usually slightly leads the actual data so the receiver can "perk up its ears" after it receives the pulse. This adds a second interface, but it can be used when speed and high data rate is important.
-
-Returning to asynchronous for a moment, one failure mode that may arise is for the two communication points to fall out of sync. To mitigate this, we often add start/end of message bit patterns that the receiver can use to get back in phase with the transmitter (e.g. like in 1553B words). Unfortunately these sync patterns take up a portion of the total bandwidth. This means we have different *interface speeds* and *data transfer speeds*. 
-
-# Communication Systems
+# 1. Communication Systems
 
 <v-divider></v-divider>
 
@@ -76,7 +67,15 @@ This stands for low voltage differential signaling, and works the same as RS-422
 </v-card>
 
 
-# Hardware
+### Synchronous vs Asynchronous
+
+When you are transmitting digital data, how does the reciever and transmitter agree on what constitutes a new byte? Well, one solution is to give both ends a clock set to the same frequency. Everytime a new "tic" occurs, the receiver looks at the status on the line (i.e. high or low) and records it. This is known as asynchonous communication, because the timing mechanism on the transmitter and receiver ends do not communicate with one another. 
+
+In the case of synchronous communication, we have the transmitter send a separate clock signal (e.g. a pulse) to the receiver. This pulse usually slightly leads the actual data so the receiver can "perk up its ears" after it receives the pulse. This adds a second interface, but it can be used when speed and high data rate is important.
+
+Returning to asynchronous for a moment, one failure mode that may arise is for the two communication points to fall out of sync. To mitigate this, we often add start/end of message bit patterns that the receiver can use to get back in phase with the transmitter (e.g. like in 1553B words). Unfortunately these sync patterns take up a portion of the total bandwidth. This means we have different *interface speeds* and *data transfer speeds*. 
+
+# 2. Hardware
 
 <v-divider></v-divider>
 
@@ -103,7 +102,7 @@ A co-axial cable is another way to transmit an electrical signal. The signal pro
 3. An outer conductor (to block interference).
 4. An outer non-conductive sheath around the entire cable. 
 
-# Message Security/Integrity
+# 3. Message Security/Integrity
 
 <v-divider></v-divider>
 
@@ -123,5 +122,9 @@ Hashing is another way to *validate* the content of a message (different from pr
 2. I send you that message, and you independently calculate the hash digest using the same hash function.
 3. We compare hash digests. If they are the same, we know that we have the same message. 
 
+# References
 
+<v-divider :thickness="5"></v-divider>
+
+* de Boer, Pieter-Tjerk. "[How Does a Waveguide Work](https://www.pa3fwm.nl/technotes/tn21-how-does-a-waveguide-work.html)." PA3FWM's Amateur Radio Website, Jan. 2020.
 

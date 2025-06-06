@@ -36,7 +36,7 @@ The best results come from a well defined question. This means it should be:
 4. Relevant
 5. Time constrained
 
-And finally, it's also worth considering the type of problem. Which of these are you trying to do?
+Which you probably already recognize is the SMART goal system. And finally, it's also worth considering the type of problem. Which of these are you trying to do?
 
 1. Predict
 2. Categorize
@@ -78,10 +78,11 @@ These types of data modeling are actually pretty universal. The DoD Architecture
 Data integrity is something to keep in mind through the entire data analysis process. Data with integrity means that is accurate, complete, consistent, and trust-worthy. 
 
 One common pitfall is to have biased data. This can occur if you're using a survey to collect data and use leading or vague questions. Some examples:
+
 * Isn't it true that A had a negative effect on B?
 * What's going on with A?
 
-Other common pitfalls of the data cleaning process:
+Some other common pitfalls of the data cleaning process can include:
 
 1. Overlooking missing values
 2. Only looking at a subset
@@ -94,13 +95,13 @@ Other common pitfalls of the data cleaning process:
 9. Forgetting to document errors
 10. Not checking for misfielded values
 
-Speaking from personal experience, another easy to miss aspect of data integrity is redundancy. If you're managing a large and diverse set of tables, you'll want to do your best to map out the relationships and generally cleanup any overlap. For example, there should be a single point of truth which maps customer ID's to their emails. It'll help in the long run to have this single table which you query from, rather than a set of unlinked tables which all may duplicate the same information. 
+Speaking from personal experience, another easy to miss aspect of data integrity is redundancy. If you're managing a large and diverse set of tables, you'll want to do your best to map out the relationships and generally cleanup any overlap. For example, there should be a single point of truth which maps customer ID's to their emails. It'll help in the long run to have this single table which you query from, rather than a set of unlinked tables which all may duplicate the same information. This process is called *data normalization*. For additional info, go read up on **Normal Forms**. 
 
 # Analysis
 
 <v-divider></v-divider>
 
-This is a bit tough to describe, because the analysis you perform is going to be different depending on your application. But in general, you'll have a few toolsets you can use. For smaller databases, excel is perfectly sufficient. For anything larger, you'll want to look at SQL, R, or some other coding language such as Python. Personally, I like using Python with the Pandas library. 
+This is a big bucket, because the analysis you perform is going to be different depending on your application. But in general, you'll have a few toolsets you can use. For smaller databases, excel is perfectly sufficient. For anything larger, you'll want to look at SQL, R, or some other coding language such as Python. Personally, I like using Python with the Pandas library. 
 
 # Visualization
 
@@ -123,3 +124,8 @@ You can also review your presentation with these questions:
 
 Finally, make sure to consider the use case. For instance, if we need to monitor new data as it comes in, an interactive dashboard with the proper backend support would be best (e.g. Tableau). However, if we wanted historical data, a dashboard could be too complex and now worth the effort. 
 
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* Notes taken from Google's Data Analytics Certificate

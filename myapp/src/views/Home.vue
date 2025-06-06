@@ -6,12 +6,11 @@
         <p class="text-h6 mb-4">
           This is my blog where I write about things I've learned. Back in undergrad, I used to
           type up my notes from class and put them into Word documents. At the time, it was
-          mostly just a way to study, but by the time I graduated, I realized I had created a pretty 
-          solid collection of well-organized, digital notes. So I figured I might as well put 
-          them onto the internet. That way I could access them from anywhere. Nowadays, it serves as a 
-          sort of record of things I've done as time inevitably erodes my memory. It's also a 
-          handy reference in case I need to go back and review something. The content is mostly science 
-          and engineering, but there's a few other things on here as well such as music and philosophy.
+          mostly just a way to study, but after graduating, I realized I had created a pretty 
+          solid collection of well-organized, digital notes. The logical next step was to make it available on the internet.
+          Nowadays, it is a record of things I've done as time inevitably erodes my memory. It's also a 
+          handy reference when I need to review something. The content is mostly science 
+          and engineering, but there are other things on here as well such as music and philosophy.
           There aren't any hard and fast rules, really it's just anything I'm interested in.  
         </p>
         <p class="text-h6 mb-8">
@@ -19,7 +18,8 @@
           built using a Jekyll theme and hosted on Github. I built this website from scratch 
           using Vue and I'm currently hosting it on AWS in an S3 bucket. I manage development 
           and deployment locally using a Docker container. I use Route53 and 
-          CloudFront to serve this website to the internet. 
+          CloudFront to serve this website to the internet. Like buttons were added in a recent change
+          for me to experiment with DynamoDB and Lambda.
         </p>
         <p class="text-h6 mb-8">
           And finally, it goes without saying that any ideas expressed on this blog are my own

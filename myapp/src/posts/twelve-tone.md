@@ -112,5 +112,10 @@ This way, any pair of notes 12 half steps apart form a perfect octave. This allo
 
 As you can see, except for an octave which remains perfect, each 12-tone interval is very slightly off from the corresponding "just intonation" interval. In most cases, the variation is small enough that it very nearly sounds the same. 
 
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* Minute Physics. (2015, September 17). [Why It's Impossible to Tune a Piano](https://www.youtube.com/watch?v=1Hqm0dYKUx4). Youtube.
 
 

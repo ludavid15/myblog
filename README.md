@@ -290,3 +290,30 @@ I noticed that for especially long blogs with a lot of math, they would take a w
 ```
 
 This uses a reactive variable called `loading` which is immediately set to true when the slug changes, and only set back to false after the fetch operation has completed (or failed). (See the `loadMarkdown` function from earlier).
+
+
+### Like Button
+
+The like button was added so I could learn the basics of working with a database. On AWS, I have a dynamoDB table called "Likes". This tracks the number of likes for each blog post, based on the URL. To access this table, I created a Lambda function. The function is accessed/triggered using API Gateway (i.e. using a URL). The function itself is pretty simple and has this layout: 
+
+```
+export const handler = async (event) => {
+  const method = event.requestContext.http.method;
+  const pageId = event.queryStringParameters?.page;
+
+  if (method === 'OPTIONS') {
+    // Do some stuff
+  }
+  if (method === 'GET') {
+    // Do some stuff
+  }
+  if (method === 'POST') {
+    // Do some stuff
+  }
+```
+
+There are only two types of interactions with the database. You either want to to see the number of likes for a given page, or you want to increment the like counter when someone presses the like button. These are handled by the GET and POST respectively. My lambda function also handles new blog posts as well. If the function receives a GET request for a post that doesn't exist yet, it will create a new dynamoDB entry. This isn't the best solution - ideally there is a pipeline to create the new dynamoDB entry as soon as the new post is published. For now, given the way this website is architected without a full pipeline for publishing new articles, this solution is at least functional. 
+
+#### CORS
+
+Cross-Origin Resource Sharing is a security feature that controls how websites interact with a different origin. In my case, this needed to be setup so that my website (and only my website) was allowed to access the AWS API Gateway to trigger my lambda function. This is configured in the API Gateway, where I specify the allowed origins. You can also specify things like the allowed headers and methods (e.g. GET, POST, etc.).
