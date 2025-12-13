@@ -4,8 +4,7 @@
       <v-col cols="12" lg="10">
         <h1 class="text-h3 font-weight-light my-8">Timeline</h1>
         <p class="text-h6">
-        A timeline view of all the posts on this website. They are color coded
-        by the topic to which they belong.
+        Every post I've written to date.
         </p>
       </v-col>
     </v-row> 

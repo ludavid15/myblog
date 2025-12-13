@@ -41,12 +41,20 @@
           </p> 
 
       </v-col>
-    </v-row> 
+    </v-row>
   </v-container>
 </template>
 
 <script>
+import PostImage from "@/components/PostImage.vue";
+
+export default {
+  components: {
+    PostImage
+  }
+};
 </script>
+
 
 <style>
 .markdown-content ol,

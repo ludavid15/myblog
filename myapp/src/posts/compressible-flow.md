@@ -180,3 +180,9 @@ $$T_{aw}=T_e\left[1+\frac{\gamma-1}{2}\sqrt{Pr}M_e^2\right]$$
 ### Adiabatic Wall Temperature
 
 This is the wall temperature for a fluid flow such that there is no net heat transfer into or out of the wall. If a system is let to run until equilibrium, this is the steady state temperature the immersed object will reach. 
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* This post is a collection of my notes from graduate courses at the University of Michigan.

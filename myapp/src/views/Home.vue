@@ -2,7 +2,7 @@
   <v-container>
     <v-row justify="center">
       <v-col cols="12" md="10" >
-        <h1 class="text-h3 font-weight-light my-8">Welcome to my Website!</h1>
+        <h1 class="text-h3 font-weight-light my-8">Welcome!</h1>
         <p class="text-h6 mb-8">
         This is my blog where I write about things I've learned. Back in undergrad, I would type up my notes from class and put them into Word documents. At the time, it was my way to study, but after graduating, it gave me a sense of accomplishment to look back at all that I had written. Nowadays, I keep this also as record of things I've done as time inevitably erodes my memory. The content is mostly science and engineering, but there are also other things on here such as music and philosophy. Like any blog, it's really just anything I'm interested in.
         </p>

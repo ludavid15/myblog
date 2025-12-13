@@ -6,6 +6,7 @@ import anchor from 'markdown-it-anchor';
 import mathjax3 from 'markdown-it-mathjax3';
 import Prism from 'markdown-it-prism';
 
+
 export default defineConfig({
   plugins: [
     vue({ 

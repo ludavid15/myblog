@@ -7,3 +7,6 @@ myapp/dist/*
 # Specifically ignore assets and index.html within dist
 dist/assets/
 dist/index.html
+
+# Ignore all files in photos-src folder
+photos-src/
