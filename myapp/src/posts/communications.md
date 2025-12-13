@@ -9,7 +9,9 @@ preview: "A random assortment of communications technology terms I've encountere
 
 A random assortment of communications technology terms I've encountered over the years. Please keep in mind that electrical engineering and signal processing is *not* one of my subjects, so take everything here with a grain of salt. 
 
-# 1. Communication Systems
+*As of 2025, this post is out-dated. For a more structured article, check out my new post on [satellite communication systems](/posts/satellite-communications)*. 
+
+# 1. Physical Systems
 
 <v-divider></v-divider>
 
@@ -50,40 +52,6 @@ A point to point interface which transmits digital/bi-level information by chang
 
 This stands for low voltage differential signaling, and works the same as RS-422. But LVDS uses especially low voltages, on the order of 250 mV. 
 
-### Miscellaneous Definitions
-
-<v-card variant="tonal" class="mb-5 mt-5">
-    <v-card-title>Bi-Level Communication</v-card-title>
-    <v-card-text>
-    Consisting of two states (i.e. 0 and 1). In constrast to *analog*.
-    </v-card-text>
-</v-card>
-
-<v-card variant="tonal" class="mb-5">
-    <v-card-title>Serial Communication</v-card-title>
-    <v-card-text>
-    Commmunication that consists of sending data one bit at a time. 
-    </v-card-text>
-</v-card>
-
-
-### Synchronous vs Asynchronous
-
-When you are transmitting digital data, how does the reciever and transmitter agree on what constitutes a new byte? Well, one solution is to give both ends a clock set to the same frequency. Everytime a new "tic" occurs, the receiver looks at the status on the line (i.e. high or low) and records it. This is known as asynchonous communication, because the timing mechanism on the transmitter and receiver ends do not communicate with one another. 
-
-In the case of synchronous communication, we have the transmitter send a separate clock signal (e.g. a pulse) to the receiver. This pulse usually slightly leads the actual data so the receiver can "perk up its ears" after it receives the pulse. This adds a second interface, but it can be used when speed and high data rate is important.
-
-Returning to asynchronous for a moment, one failure mode that may arise is for the two communication points to fall out of sync. To mitigate this, we often add start/end of message bit patterns that the receiver can use to get back in phase with the transmitter (e.g. like in 1553B words). Unfortunately these sync patterns take up a portion of the total bandwidth. This means we have different *interface speeds* and *data transfer speeds*. 
-
-# 2. Hardware
-
-<v-divider></v-divider>
-
-## Traveling Wave Tube Amplifier
-
-Often abbreviated to just TWTA, this is a device used for amplifying radio signals. Satellites often need this since they communicate over large distances. 
-
-> Alternatively, you can also use solid state amplifiers. 
 
 ## Waveguide
 
@@ -102,6 +70,17 @@ A co-axial cable is another way to transmit an electrical signal. The signal pro
 3. An outer conductor (to block interference).
 4. An outer non-conductive sheath around the entire cable. 
 
+
+# 2. Synchronous vs Asynchronous
+
+<v-divider></v-divider>
+
+When you are transmitting digital data, how does the reciever and transmitter agree on what constitutes a new byte? Well, one solution is to give both ends a clock set to the same frequency. Everytime a new "tic" occurs, the receiver looks at the status on the line (i.e. high or low) and records it. This is known as asynchonous communication, because the timing mechanism on the transmitter and receiver ends do not communicate with one another. 
+
+In the case of synchronous communication, we have the transmitter send a separate clock signal (e.g. a pulse) to the receiver. This pulse usually slightly leads the actual data so the receiver can "perk up its ears" after it receives the pulse. This adds a second interface, but it can be used when speed and high data rate is important.
+
+Returning to asynchronous for a moment, one failure mode that may arise is for the two communication points to fall out of sync. To mitigate this, we often add start/end of message bit patterns that the receiver can use to get back in phase with the transmitter (e.g. like in 1553B words). Unfortunately these sync patterns take up a portion of the total bandwidth. This means we have different *interface speeds* and *data transfer speeds*. 
+
 # 3. Message Security/Integrity
 
 <v-divider></v-divider>
@@ -112,11 +91,11 @@ Integrity is a simple check to see if the data is complete, or it's accurate. Au
 
 An easy integrity check to start with is Parity. This is a single bit which tells you if there is an even or odd number of 1's in the transmitted signal. We can use this to check the integrity of a message.
 
-Another integrity check we can do is called a checksum. A checksum function transforms some input and calculates an output. Strong checksum functions will produce unique outputs, even for similar inputs. If a receiver and transmitter both know the checksum function, they can each calculate the checksum value and by comparing the outputs, verify that the sent and received message are the same, without revealing the message itself. 
+Another integrity check we can do is called a checksum. A checksum function transforms some input and calculates an output. Strong checksum functions will produce unique outputs, even for similar inputs. If a receiver and transmitter both know the checksum function, they can each calculate the checksum value and by comparing the outputs, verify that the sent and received message is the same, without revealing the message itself. 
 
 ## Hashing
 
-Hashing is another way to *validate* the content of a message (different from protecting the content). A hashing function is a deterministic function which produces a unique output (often called the digest) for each possible input. A typical process might look like this:
+Hashing is another way to *authenticate* the content of a message (different from protecting the content). A hashing function is a deterministic function which produces a unique output (often called the digest) for each possible input. A typical process might look like this:
 
 1. I put together a message and calculate the hash digest.
 2. I send you that message, and you independently calculate the hash digest using the same hash function.

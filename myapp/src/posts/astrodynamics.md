@@ -102,3 +102,9 @@ The argument of periapsis determines the orientation of the ellipse **within** t
 <v-divider></v-divider>
 
 A lagrange point is a stable orbit position where the gravitional pull and centrifugal force from two other bodies is at an equilibrium. In a three-body system, there are 5 lagrange points. The James Webb Space Telescope is at the Earth-Sun Lagrange point L2!
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* This post is a collection of my notes from undergraduate courses at UCLA.

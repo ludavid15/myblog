@@ -17,6 +17,9 @@ To begin, let's connect the physical properties of a trajectory, to the inputs o
 * There are equations of motion which govern the effect of the control input u to the state variables x. 
 
 # Problem Statement for Generic Optimization 
+
+<v-divider :thickness="5"></v-divider>
+
 The problem statement in flight trajectory optimization is a specialized version of the problem statement for a generic optimization problem:
 
 $$J=K\left(t_1,\ x_1\right)+\int_{t_0}^{t_1}L\left(t,x,u\right)dt$$
@@ -87,6 +90,9 @@ The optimal control problem where neither the terminal nor incremental cost are 
 $$J=K(t_1,\ x_1)+\int_{t_0}^{t_1}L(t,x,u)dt$$
  
 # Pontryagin Maximum Principle
+
+<v-divider :thickness="5"></v-divider>
+
 PMP provides a series of necessary conditions for continuous time optimal control problems. These principles bear a strong resemblance to the KKT necessary conditions. There are four components, outlined below:
 
 1. Expression of the Hamiltonian – where L is the incremental cost expression
@@ -127,6 +133,8 @@ Application of the PMP necessary conditions results in a two-point boundary valu
 
 # Dynamic Programming (Discrete Time)
 
+<v-divider :thickness="5"></v-divider>
+
 The central goal of dynamic programming is to determine a control policy, that is, the control u as a function of the state and time which will produce the optimal trajectory. This is achieved through construction of the cost-to-go function, otherwise known as the Bellman Function.
 
 $$V_N=K(x)$$
@@ -162,9 +170,13 @@ $$p\left(t\right)=\ \left(\frac{\partial V}{\partial x}\right)^T$$
 
 # Sufficient Conditions for Existence of Optimal Control in Continuous Time Problems
 
+<v-divider :thickness="5"></v-divider>
+
 If there exists an admissible control, i.e. u(t) exists within a set Ω where Ω is compact, that is a measurable function of time and it results in a state trajectory that satisfies the terminal condition, then there exists an optimal control. Assuming Lipshitz continuity holds for the equations of motion. 
 
 # Singular Arcs & Singular Control
+
+<v-divider :thickness="5"></v-divider>
 
 Singular arcs occur when minimization of the Hamiltonian with respect to the control does not provide any useful information about the control. This can occur for instance, if the adjoint variable in front of the control is equal to zero. Singular arcs must be defined over a real time interval and cannot simply occur at a time instance.
 
@@ -193,6 +205,8 @@ $$\left(-1\right)^{q+1}\frac{\partial}{\partial u}\frac{d^{2q}}{dt^{2q}}\rho\le0
 
 # Neighboring Extremal Optimal Control
 
+<v-divider :thickness="5"></v-divider>
+
 Assuming that the optimal control and trajectory have already been computed, this method provides a way to correct the optimal control without having to recompute it from scratch if the initial state is changed. It is a feedback law taking the following form:
 
 $$u\left(t\right)=u^\ast\left(t\right)+\Gamma\left(T\right)\left(x\left(t\right)-x^\ast\left(t\right)\right)$$
@@ -200,6 +214,9 @@ $$u\left(t\right)=u^\ast\left(t\right)+\Gamma\left(T\right)\left(x\left(t\right)
 Where $\Gamma\left(T\right)$ is a time varying gain $T=t_1-t$. Neighboring extremal optimal control maintains the PMP necessary conditions approximately to the first order.
 
 # Linear Quadratic Optimal Control Problems
+
+<v-divider :thickness="5"></v-divider>
+
 This is a special format of optimal control problem where the equations of motion can be represented as a linear time invariant system, and the objective function is represented as a quadratic equation. 
 
 $$\dot{x}=Ax+Bu$$
@@ -321,6 +338,8 @@ $$S=Q+A^TSA-A^TS\left(I+{BR^{-1}B}^TS\right)^{-1}A$$
 
 # Continuous Time, Minimum Time, Linear Time-Invariant Optimal Control Problems
 
+<v-divider :thickness="5"></v-divider>
+
 Take a time invariant system, with given initial and terminal conditions. The objective is to minimize the transfer time.
 
 $$\dot{x}=Ax+Bu$$
@@ -338,3 +357,9 @@ $$\dot{p}\left(t\right)=\ -\left(\frac{\partial H}{\partial x}\right)^T=-A^Tp(t)
 $$u_k^\ast=-sign(p^Tb_k)$$
 
 Where $b_k$ is an element in the B matrix. The optimal control assumes only the value of +1 and -1. The time instances at which the control switches from one to the other are called control switch points. Each component of the optimal control has a finite number of switch points. If all the eigenvalues of the matrix A are real-valued then the number of switch points of each component is at most n-1, where n is the dimension of A.
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+*This post is written primarily from notes I took during my graduate classes at the University of Michigan.*

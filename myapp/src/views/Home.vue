@@ -3,27 +3,18 @@
     <v-row justify="center">
       <v-col cols="12" md="10" >
         <h1 class="text-h3 font-weight-light my-8">Welcome to my Website!</h1>
-        <p class="text-h6 mb-4">
-          This is my blog where I write about things I've learned. Back in undergrad, I used to
-          type up my notes from class and put them into Word documents. At the time, it was
-          mostly just a way to study, but after graduating, I realized I had created a pretty 
-          solid collection of well-organized, digital notes. The logical next step was to make it available on the internet.
-          Nowadays, it is a record of things I've done as time inevitably erodes my memory. It's also a 
-          handy reference when I need to review something. The content is mostly science 
-          and engineering, but there are other things on here as well such as music and philosophy.
-          There aren't any hard and fast rules, really it's just anything I'm interested in.  
+        <p class="text-h6 mb-8">
+        This is my blog where I write about things I've learned. Back in undergrad, I would type up my notes from class and put them into Word documents. At the time, it was my way to study, but after graduating, it gave me a sense of accomplishment to look back at all that I had written. Nowadays, I keep this also as record of things I've done as time inevitably erodes my memory. The content is mostly science and engineering, but there are also other things on here such as music and philosophy. Like any blog, it's really just anything I'm interested in.
         </p>
         <p class="text-h6 mb-8">
-          What you're reading is version two of my website. It replaces the old site that was
-          built using a Jekyll theme and hosted on Github. I built this website from scratch 
-          using Vue and I'm currently hosting it on AWS in an S3 bucket. I manage development 
-          and deployment locally using a Docker container. I use Route53 and 
-          CloudFront to serve this website to the internet. Like buttons were added in a recent change
-          for me to experiment with DynamoDB and Lambda.
+        The website you are on is version two. It replaces the old site that was built using a Jekyll theme and hosted on Github. I built this website from scratch using Vue and I'm currently hosting it on AWS in an S3 bucket. I manage development and deployment locally using a Docker container. I use Route53 and CloudFront to serve this website to the internet. Like buttons were added in a recent change for me to experiment with DynamoDB and Lambda. 
         </p>
         <p class="text-h6 mb-8">
-          And finally, it goes without saying that any ideas expressed on this blog are my own
-          and do not reflect the official positions of any organizations I may be a part of. 
+        And finally, it goes without saying that any ideas expressed on this blog are my own and do not reflect the official positions of any organizations I may be a part of. 
+        </p>
+
+        <p class="text-h6 mb-8">
+          Total article count to date: <b>{{ totalArticles }}</b>
         </p>
 
         <v-alert
@@ -78,6 +69,10 @@ const posts = computed(() => {
     .filter((post) => post.date) // Ensure posts have valid dates
     .sort((a, b) => new Date(b.date) - new Date(a.date)) // Sort by date descending
     .slice(0, 3); // Get the 3 most recent posts
+});
+
+const totalArticles = computed(() => {
+  return blogFrontmatter.length;
 });
 
 </script>

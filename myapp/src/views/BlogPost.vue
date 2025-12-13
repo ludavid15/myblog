@@ -170,7 +170,7 @@ onMounted(() => {
 
 /* Styling for Inline Code Blocks */
 .markdown-content code {
-    background: #f5f2f0; /* Match your Prism theme background */
+    background: #f5f2f0;
     padding: 0.2em 0.4em;
     border-radius: 4px;
     white-space: pre-wrap;
@@ -187,8 +187,13 @@ pre {
 
 /* Styling for Tables */
 thead {
-  background-color: #6b7c64; /* Change to your desired color */
-  color: white; /* Optional: change text color */
+  background-color: #6b7c64; 
+  color: white; 
+}
+
+table td {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
 }
 </style>
 

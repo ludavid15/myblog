@@ -189,3 +189,9 @@ For a cylindrical pressure vessel of radius $$r$$ and a (thin) wall of thickness
 $$\sigma_{Hoop}=\frac{Pr}{t}$$
 
 $$\sigma_{Axial}=\frac{Pr}{2t}$$
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* This post is a collection of my notes from undergraduate courses at UCLA.

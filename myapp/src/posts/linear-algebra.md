@@ -21,23 +21,21 @@ Before getting into the more interesting/complicated math, let's start by defini
 
 $$R\left(A\right)={\alpha_1A_1+a_2A_2\ldots+\alpha_kA_k,\ for\ any\ \alpha_i\in F}$$
 
-**Nullspace/Kernel (of a matrix A)** - The set of all vectors $$\vec{x}$$ such that Ax = 0. In a geometric sense, these are vectors that are "orthogonal" to the matrix. 
+**Nullspace/Kernel (of a matrix A)** - The set of all vectors $\vec{x}$ such that Ax = 0. In a geometric sense, these are vectors that are "orthogonal" to the matrix. 
 
 $$N\left(A\right)={x\in F^n,\ Ax=0}$$
 
-**Ortho-complement (of a subspace)** -  The set of all vectors $$\vec{x}$$ that are orthogonal to all vectors in the subspace V.
+**Ortho-complement (of a subspace)** -  The set of all vectors $\vec{x}$ that are orthogonal to all vectors in the subspace V.
 
 $$V^\bot={x,\ x\bot y\ for\ all\ y\in V}$$
 
-**Linear Dependence** - A set of vectors are said to linearly dependent if there exist scalars $$\alpha$$ not all zero such that:
+**Linear Dependence** - A set of vectors are said to linearly dependent if there exist scalars $\alpha$ not all zero such that:
 
 $$\alpha_1V_1+a_2V_2\ldots+\alpha_kV_k=0$$
 
-**Rank** - The rank of a matrix is the is the number of linearly independent rows or columns. It is equal to the dimension of the span of the matrix. The rank cannot be greater than min(m, n) given $$A\in F^{m\times n}$$.
+**Rank** - The rank of a matrix is the is the number of linearly independent rows or columns. It is equal to the dimension of the span of the matrix. The rank cannot be greater than min(m, n) given $A\in F^{m\times n}$.
 
 ## Normal Matrix
-
-Some properties of a normal matrix:
 
 1. The Frobenius norm can by computed by the eigenvalues
 2. $[A]$ is normal if it commutes with its conjugate transpose
@@ -74,8 +72,6 @@ $$\|x\|_2=\|Ax\|_2$$
 $$A=A^T$$
 
 ## Diagonalizable Matrix
-
-Properties of a Diagonalizable Matrix
 
 1. $[A]$ is diagonalizable if it is similar to a diagonal matrix
 
@@ -246,3 +242,9 @@ A method for statistical analysis of shape distributions. An orthogonal Procrust
 <v-divider></v-divider>
 
 If I told you that there were 4 distinct points, and gave you the distance between every pair, you could determine the minimum dimensional space required to properly map these points. For instance, if all 6 distances are the same, there is no way to position these 4 points in a plane that makes this true. Instead, they must be arranged as a regular tetrahedron in 3D space. This is a useful concept for things like embedding vectors, used in sequence models, like natural language processing. 
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* This post is a collection of my notes from graduate courses at the University of Michigan.

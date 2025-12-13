@@ -366,3 +366,10 @@ $$Phase\ Margin=\ \angle L\left(j\omega_c\right)+180\cong100\zeta$$
 $$\omega_{c\ }\cong\frac{\omega_n}{1+\zeta^2}$$
 
 Where $\omega_c$ is defined as the gain crossover frequency and $\omega_p$ is defined to be the phase crossover frequency. On a Nyquist plot, gain crossover frequency is when the graph crosses a circle of radius 1, and phase crossover is when the it crosses the negative real axis. Gain margin is the maximum factor which gain can be increased without making CLS unstable. Phase margin is the maximum angle by which phase can be decreased without making CLS unstable.
+
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+*This post is written primarily from notes I took during my undergraduate classes at UCLA.*

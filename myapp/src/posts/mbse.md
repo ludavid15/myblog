@@ -162,7 +162,11 @@ A generalization is a weak relationship, meaning "is a type of". For example, a 
 An association is the weakest type of relationship. It simply means "related to". There is no sharing of properties and doesn't give you much in the way of definition either. I often use these to capture elements which interface with one another, but are otherwise separate. 
 
 
+# References
 
+<v-divider :thickness="5"></v-divider>
+
+* Friedenthal, Moore, and Steiner. (2015). *A Practical Guide to SysML* (3rd ed.).
 
 
 

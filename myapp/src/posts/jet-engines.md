@@ -91,7 +91,7 @@ $$\pi = {\tau_t}^{\gamma/(\gamma-1)}  \ \ \ \ \ \ \ \ \ \ \ \ \ \tau_t$$
 $$\pi = 1  \ \ \ \ \ \ \ \ \ \ \ \ \  \tau=1$$
 
 
-Where τ & π are defined as the ratio of stagnation temperatures and pressures across the stage. The relationship between pressure ratio and temperature ratio is established by assuming assumed isentropic processes. We also define a unique value called the recovery temperature/pressure ratio, which is the ratio of stagnation temperature/pressure to local temperature/pressure at station 0.
+Where $\tau$ & $\pi$ are defined as the ratio of stagnation temperatures and pressures across the stage. The relationship between pressure ratio and temperature ratio is established by assuming assumed isentropic processes. We also define a unique value called the recovery temperature/pressure ratio, which is the ratio of stagnation temperature/pressure to local temperature/pressure at station 0.
 
 $$\frac{T_{t0}}{T_0}=1+\frac{\gamma-1}{2}M^2=\ \tau_r$$
 
@@ -320,3 +320,9 @@ With the above equations, we can enforce the following constraints which allow u
 1. Turbine Angular Shaft Speed = Compressor Angular Shaft Speed
 2. Constant mass flow rate of air
 3. Work extracted by turbine = work done by compressor
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+*This post is written primarily from notes I took during my undergraduate classes at UCLA.*

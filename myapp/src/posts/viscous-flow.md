@@ -331,3 +331,10 @@ A class of problems involving a large unbounded region and either excess momentu
 <v-divider></v-divider>
 
 $$D = \int{\rho u (U_{\infty}-u)}dS$$
+
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* This post is a collection of my notes from graduate courses at the University of Michigan.

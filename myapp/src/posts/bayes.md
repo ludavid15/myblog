@@ -350,3 +350,9 @@ $$Y_i \sim B(\theta) \quad f(\theta) \propto \theta^{-1/2} (1 - \theta)^{-1/2} \
 The Fisher Information is a measure of how much information a random variable X carries about an unknown parameter θ of a statistical model. It quantifies the amount of information available in the observed data to estimate the parameter θ.
 
 $$I(\theta) = \mathbb{E} \left[ \left( \frac{d}{d\theta} \log f(X \mid \theta) \right)^2 \right]$$
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+*This post is written primarily from notes I took as part of an online course on Bayes Theorem. Accessed through Coursera.*

@@ -145,3 +145,9 @@ $$M=\ \rho\int{N^TNdV}$$
 ## Natural Frequency
 
 Eigenvalues of the Mass Matrix and Stiffness matrix when the forcing term is set to zero.
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* This post is a collection of my notes from graduate courses at the University of Michigan.

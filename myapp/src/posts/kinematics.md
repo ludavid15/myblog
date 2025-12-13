@@ -226,3 +226,10 @@ But why define partial angular velocities at well? Well, in a full dynamics prob
 ## Partial Acceleration and Partial Velocities
 
 This is basically the projection of accelerations into the partial velocities. Doing so, we'd see that it connects to the same result as in Lagrange’s Method. More info on this topic may come in the future.
+
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+*This post is written primarily from notes I took during my graduate classes at the University of Michigan.*

@@ -135,3 +135,8 @@ Not to be overlooked is the all important ground system. It's perhaps not as gla
 
 For a more in-depth discussion of satellites, you can check out SMAD (Space Mission Analysis and Design). It's known in the aerospace community as the bible of spacecraft design. 
 
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* Wertz, J. R., & Larson, W. J. (Eds.). (1999). *Space Mission Analysis and Design* (3rd ed.).

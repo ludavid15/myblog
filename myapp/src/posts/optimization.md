@@ -148,7 +148,7 @@ It is effectively a Newton’s method application to solving the unconstrained L
 
 $$\left[\begin{matrix}\nabla_{xx}^2\mathcal{L}&\left[\nabla h\right]^T\\\nabla h&0\\\end{matrix}\right]\bullet\delta X=\left[\begin{matrix}-\nabla_x\mathcal{L}\\-h\\\end{matrix}\right]$$
 
-Where $$\delta X$$ is a stack up of all the design variables and the Lagrange multipliers, and represents the update (i.e. it should be added to the previous set of X values). It is possible and sometimes necessary to perform a line search in this direction to enable better convergence. 
+Where $\delta X$ is a stack up of all the design variables and the Lagrange multipliers, and represents the update (i.e. it should be added to the previous set of X values). It is possible and sometimes necessary to perform a line search in this direction to enable better convergence. 
 
 ### Gradient Calculation
 

@@ -94,3 +94,9 @@ Where r is the position vector from body B to point P.
 <v-divider></v-divider>
 
 The dynamical equations are the equivalent of stating Newton’s second law, F = ma. These equations simply state that the generalized active forces plus the generalized inertia forces is equal to zero. These are generally integrated alongside the kinematic differential equations to find the state variables. 
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+*This post is written primarily from notes I took during my graduate classes at the University of Michigan.*

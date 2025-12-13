@@ -217,3 +217,9 @@ $$\nabla^2\phi=0$$
 In assuming incompressibility, mass continuity reduces into a volume continuity equation, where density has dropped out:
 
 $$Volume\ Continuity:\ \ \ \nabla\bullet V=\ \frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}=0$$
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* This post is a collection of my notes from graduate courses at the University of Michigan and undergraduate courses at UCLA.
