@@ -10,19 +10,22 @@
       <v-main class="d-flex justify-center">
         <v-container>
           <router-view />
+          <Footer />
         </v-container>
       </v-main>
-      
+
     </v-app>
 </template>
 
 <script>
 import NavDrawer from './components/NavDrawer.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
-    NavDrawer
+    NavDrawer,
+    Footer
   },
 };
 </script>

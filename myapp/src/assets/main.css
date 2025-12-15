@@ -1,0 +1,23 @@
+.v-application {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 18px;
+}
+
+.v-application h1,
+.v-application h2,
+.v-application h3,
+.v-application h4,
+.v-application h5,
+.v-application h6 {
+  font-family: "Source Serif 4", Georgia, serif;
+}
+
+
+.v-application .text-h1,
+.v-application .text-h2,
+.v-application .text-h3,
+.v-application .text-h4,
+.v-application .text-h5,
+.v-application .text-h6 {
+  font-family: "Source Serif 4", Georgia, serif;
+}

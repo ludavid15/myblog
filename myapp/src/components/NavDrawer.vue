@@ -10,31 +10,6 @@
     :width="$vuetify.display.mobile ? undefined : 350">
 
     <v-list v-model:opened="openedTopics" density="compact">
-
-      <!-- PermaLinks -->
-      <v-list-item
-      prepend-icon="mdi-home"
-      :to="{ name: 'Home'}"
-      @click="handleNavClick">
-        Home
-      </v-list-item>
-      <v-list-item 
-      prepend-icon="mdi-account"
-      :to="{ name: 'About'}"
-      @click="handleNavClick">
-        About Me
-      </v-list-item>
-      <v-list-item 
-      prepend-icon="mdi-calendar-clock"
-      :to="{ name: 'Timeline'}"
-      @click="handleNavClick">
-        Timeline
-      </v-list-item>
-
-      <!-- Divider -->
-      <v-divider class="my-2"></v-divider>
-      <v-list-subheader class="text-h6 text-white">Blog Posts</v-list-subheader>
-      <v-divider class="my-2"></v-divider>
       
       <!-- Blog Posts -->
       <v-list-group
@@ -73,28 +48,38 @@
       </v-list-group>
     </v-list>
 
-    <!-- Chip at the Bottom -->
-    <div class="version-note pa-4 text-left" :style="{ backgroundColor: 'transparent' }">
-      <v-chip variant="elevated" elevation='7' :style="{ backgroundColor: '#bdbc9f', color:'black'}">
-        Website Version 2.06
-      </v-chip>
-    </div>
-
   </v-navigation-drawer>
 
   <v-app-bar flat app :style="{ background: '#bdbc9f' }">
-    <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-    <a href="/" style="text-decoration: none; display: flex; align-items: center; min-width: 120px;">
-      <v-img 
-        src="/open-book.png" 
-        alt="App logo" 
-        max-width="30" 
-        max-height="30" 
-        style="margin-left: 12px;" 
-      ></v-img>
-      <v-app-bar-title class="custom-title">Notes</v-app-bar-title>
-    </a>
+
+    <!-- Left 
+    <template #prepend>
+      <v-app-bar-nav-icon @click="drawer = !drawer" />
+      <a href="/" style="text-decoration: none; display: flex; align-items: center;">
+        <v-img src="/open-book.png" max-width="30" />
+        <v-app-bar-title class="custom-title">Notes</v-app-bar-title>
+      </a>
+    </template>
+    -->
+
+    <template #prepend>
+      <v-app-bar-nav-icon @click="drawer = !drawer" />
+    </template>
+
+    <!-- True center -->
+    <div class="d-flex align-center ga-2 justify-center w-100">
+      <v-btn rounded="xl" text :to="{ name: 'Home' }">Home</v-btn>
+      <v-btn rounded="xl" text :to="{ name: 'About' }">About Me</v-btn>
+      <v-btn rounded="xl" text :to="{ name: 'Timeline' }">Blog</v-btn>
+    </div>
+
+    <!-- Right (empty, but balances prepend) -->
+    <template #append>
+      <div style="width: 48px"></div>
+    </template>
+
   </v-app-bar>
+
 </template>
 
 <script setup>
@@ -144,8 +129,8 @@ const handleNavClick = () => {
 
 <style>
 .custom-title {
-  font-family: 'Poppins', serif; /* Replace with your desired font */
-  color: #282923; /* Optional: customize color */
+  font-family: 'Poppins', serif;
+  color: #282923;
   padding-left: 12px;
 }
 .group-expanded  {

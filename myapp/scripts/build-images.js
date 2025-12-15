@@ -57,7 +57,7 @@ async function build() {
       .toFile(path.join(outputFolder, thumb));
 
     await img.clone()
-      .resize({ width: 2000, withoutEnlargement: true })
+      .resize({ width: 2400, withoutEnlargement: true })
       .webp({ quality: 82 })
       .toFile(path.join(outputFolder, display));
 

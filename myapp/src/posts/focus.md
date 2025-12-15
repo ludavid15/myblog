@@ -86,3 +86,9 @@ In order to learn, self-reflection is a must. However, the typical questions of 
 3. Explore "what if" scenarios that test alternative explanations for your performance
 4. Identify new behaviors thta would improve performance
 5. Commit to at least two behavior changes and milestones for those changes
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* Life

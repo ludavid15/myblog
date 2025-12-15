@@ -14,6 +14,8 @@ import App from './App.vue'
 import router from './router'
 import PostImage from './components/PostImage.vue'
 
+import './assets/main.css'
+
 
 const vuetify = createVuetify({
   components,
@@ -21,10 +23,40 @@ const vuetify = createVuetify({
   display: {
     mobileBreakpoint: 'md',
   },
+  defaults: {
+    VTypography: {
+      style: {
+        lineHeight: '1.7',
+        letterSpacing: '0.005em',
+      },
+    },
+
+    // Set default font for common components to sans-serif (Roboto)
+    VBtn: {style: {fontFamily: 'Roboto, system-ui, sans-serif',},},
+    VAppBar: {style: {fontFamily: 'Roboto, system-ui, sans-serif',},},
+    VNavigationDrawer: {style: {fontFamily: 'Roboto, system-ui, sans-serif',},},
+    VListItem: {style: {fontFamily: 'Roboto, system-ui, sans-serif',},},
+    VChip: {style: {fontFamily: 'Roboto, system-ui, sans-serif',},},
+
+    // Cards use bigger font for readability
+    VCardText: {style: {fontSize: '1.05rem',},},
+
+  },
   theme: {
     defaultTheme: 'myCustomTheme',
     themes: {
-      myCustomTheme,
+      myCustomTheme: {
+        ...myCustomTheme,
+        typography: {
+          // Headings = book headings
+          h1: { fontFamily: '"Source Serif 4", Georgia, serif' },
+          h2: { fontFamily: '"Source Serif 4", Georgia, serif' },
+          h3: { fontFamily: '"Source Serif 4", Georgia, serif' },
+          h4: { fontFamily: '"Source Serif 4", Georgia, serif' },
+          h5: { fontFamily: '"Source Serif 4", Georgia, serif' },
+          h6: { fontFamily: '"Source Serif 4", Georgia, serif' },
+        },
+      },
     }
   }
 })

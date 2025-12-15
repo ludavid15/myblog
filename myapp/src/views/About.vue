@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col cols="12" md="10" >
+      <v-col cols="12" lg="10" >
         <h1 class="text-h3 font-weight-light my-8">About Me</h1>
         <p class="text-h6 mb-4">
         Hi, I'm David - an aerospace engineer based in Los Angeles, California. I work on satellites, and these days I mostly support mission operations. I define procedures, write code, and help drive the design for both the satellite and ground systems so everything works together. It's a lot like planning a group vacation - figuring out what everyone wants, then making a cohesive plan to accommodate all of it in a way that's also flexible and efficient.  

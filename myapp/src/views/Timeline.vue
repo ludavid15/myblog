@@ -39,27 +39,34 @@
       <v-col cols="12" lg="10">
 
         <v-timeline 
-          direction="vertical" side="end">
+          align="start" direction="vertical" side="end" >
           <v-timeline-item 
             v-for="post in formattedPosts" :key="post.slug"
             :dot-color="getTopicColor(post.topic)"
             :icon="getTopicIcon(post.topic)"
             fill-dot
           >
+            <!--
             <template v-slot:opposite>
               <div class="timeline-date">{{ post.formattedDate }}</div>
-            </template>
+            </template>-->
 
               <v-card               
-                variant="tonal"
-                hover
-                :to="`/posts/${post.slug}`">
-                  <v-card-title>{{ post.title }}</v-card-title>
+                variant="text">
+                  <v-card-title class="pt-0 font-weight-semibold">{{ post.title }}</v-card-title>
+                  <v-card-subtitle>{{ post.formattedDate }}</v-card-subtitle>
                   <v-card-text>
                     {{ post.preview }}
                   </v-card-text>
+                  <v-card-actions>
+                    <v-btn :to="`/posts/${post.slug}`" text>Read More</v-btn>
+                  </v-card-actions>
               </v-card>
-
+                <v-divider
+                  v-if="index !== formattedPosts.length - 1"
+                  :thickness="2"
+                  class="timeline-divider"
+                />
           </v-timeline-item>
         </v-timeline>
 
@@ -156,9 +163,24 @@ const formattedPosts = computed(() => {
   width: 140px; /* Set a fixed width */
   text-align: right; /* Align dates to the right */
 }
+
 @media (max-width: 720px) {
   .timeline-date {
     width: 80px; /* Narrower width for smaller screens */
   }
 }
+
+.timeline-divider {
+  margin: 16px 0 8px 0;
+  max-width: 90%;
+}
+
+.timeline-card .v-card-title {
+  padding-top: 0;
+}
+
+.timeline-card .v-card-text {
+  padding-top: 4px;
+}
+
 </style>
