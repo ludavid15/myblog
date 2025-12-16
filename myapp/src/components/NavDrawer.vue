@@ -1,5 +1,4 @@
 <template>
-
   <v-navigation-drawer 
     app 
     v-model="drawer" 
@@ -8,6 +7,23 @@
     :location="$vuetify.display.mobile ? 'bottom' : 'left'"
     class="bg-secondary"
     :width="$vuetify.display.mobile ? undefined : 350">
+
+    <!-- Drawer header image -->
+     <template #prepend>
+        <div class="drawer-header pa-3 bg-secondary align-center">
+          <v-img
+            src="/temple.jpg"
+            cover
+            height="350"
+            class="rounded-lg"
+          />
+        </div>
+        <v-divider 
+          thickness="5" 
+          style="color: rgb(201, 178, 76);"
+          class="mx-6 mt-1"/>
+    </template>
+
 
     <v-list v-model:opened="openedTopics" density="compact">
       
@@ -51,16 +67,6 @@
   </v-navigation-drawer>
 
   <v-app-bar flat app :style="{ background: '#bdbc9f' }">
-
-    <!-- Left 
-    <template #prepend>
-      <v-app-bar-nav-icon @click="drawer = !drawer" />
-      <a href="/" style="text-decoration: none; display: flex; align-items: center;">
-        <v-img src="/open-book.png" max-width="30" />
-        <v-app-bar-title class="custom-title">Notes</v-app-bar-title>
-      </a>
-    </template>
-    -->
 
     <template #prepend>
       <v-app-bar-nav-icon @click="drawer = !drawer" />
@@ -128,6 +134,7 @@ const handleNavClick = () => {
 
 
 <style>
+  
 .custom-title {
   font-family: 'Poppins', serif;
   color: #282923;
@@ -143,4 +150,8 @@ const handleNavClick = () => {
   position: absolute;
   bottom: 0;
 }
+.drawer-header {
+  flex: 0 0 auto;
+}
+
 </style>

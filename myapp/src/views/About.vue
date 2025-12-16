@@ -8,11 +8,11 @@
         </p>
 
         <p class="text-h6 mb-4">
-        It may sound tedious (and sometimes it is), but this kind of work can also be extremely rewarding. I get to collaborate with experts across every subsystem, and I love that it simultaneously requires a big picture understanding of how the whole system works, and also an attention to detail because that's where even the best plans can fall apart. 
+        It may sound tedious (and sometimes it is), but this kind of work can also be extremely rewarding. I get to collaborate across every subsystem, and it requires both a big picture understanding of how the whole system works, and also an attention to detail because that's where even the best plans can fall apart. 
         </p>
 
         <p class="text-h6 mb-4">
-        Before starting my career, I studied aerospace engineering at UCLA and at the University of Michigan, where I focused on autonomous vehicles, optimization, and image processing. My master's research explored how algorithms could be used to analyze impact damage in composite structures. I'm a space nerd at heart, but in grad school I was surrounded by research on smart systems, AI, and robotics, and inspired my  appreciation for computers and automation. By the time I graduated, I was learning and writing less about rockets and more about algorithms.
+        Before starting my career, I studied aerospace engineering at UCLA and at the University of Michigan, where I focused on autonomous vehicles, optimization, and image processing. My master's research explored how algorithms could be used to analyze impact damage in composite structures. I love space, but in grad school I was surrounded by research on smart systems, AI, and robotics, and inspired my  appreciation for computers and automation. By the time I graduated, I was learning and writing less about rockets and more about algorithms.
         </p>
         
         <p class="text-h6 mb-4">
@@ -21,7 +21,7 @@
 
         <h1 class="text-h4 font-weight-light mt-8 mb-2">Fun Things</h1>
 
-        <v-divider></v-divider>
+        <v-divider :thickness="5"></v-divider>
 
         <p class="text-h6 my-4">
         Some of my favorite books from recent years. Give them a read when you are able!

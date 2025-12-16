@@ -122,3 +122,9 @@ SLAM is a process which covers the first two goals in computer vision - odometry
     An isomorphism between projected images. 
     </v-card-text>
 </v-card>
+
+# References
+
+<v-divider :thickness="5"></v-divider>
+
+* This post is a collection of my notes from graduate courses at the University of Michigan.

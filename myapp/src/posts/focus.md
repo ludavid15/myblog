@@ -91,4 +91,4 @@ In order to learn, self-reflection is a must. However, the typical questions of 
 
 <v-divider :thickness="5"></v-divider>
 
-* Life
+*Life*
