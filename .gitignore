@@ -10,3 +10,6 @@ dist/index.html
 
 # Ignore all files in photos-src folder
 photos-src/
+
+# Ignore AWS deployment script
+deploy.ps1

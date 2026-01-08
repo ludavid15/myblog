@@ -2,6 +2,30 @@
 
 Welcome! This is the root directory of my blog. This README file is a notepad where I can put down my ideas and things I've learned. As such, it will be very unstructured.
 
+## AWS Deployment
+
+Instead of managing everything via the console, deployment is now handled through the AWS CLI. Here's how to deploy this site. First, login to AWS through the CLI:
+
+```
+aws sso login --profile sso-blog-deploy
+```
+
+This opens up a browser for me to input credentials. Next, I can verify access and make some sanity checks:
+
+```
+aws sts get-caller-identity --profile sso-blog-deploy
+aws s3 ls --profile sso-blog-deploy
+
+\\ Dryrun deployment to see potential changes
+aws s3 sync myapp/dist/ s3://YOUR_BUCKET_NAME/ --delete --dryrun
+```
+
+For the actual deployment, there is a script to run which syncs the S3 bucket with files that's in the ```dist``` folder, and then also invalidates the CloudFront distribution so the new site updates immediately.
+
+```
+.\myapp\deploy.ps1
+```
+
 ## Architecture
 
 This website is a static single page Vue application. Docker provides the primary means of building the site, and also serving it for testing during development. Instead of running build or serve commands on my local machine, the only command I run is `docker-compose up --build`. Here is the approximate folder structure:

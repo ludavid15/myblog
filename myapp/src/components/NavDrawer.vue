@@ -125,7 +125,7 @@ const { smAndDown } = useDisplay();
 
 // Function to handle navigation link clicks
 const handleNavClick = () => {
-  drawer.value = false; // Close the drawer on click
+  // drawer.value = false; // Close the drawer on click
   //if (smAndDown.value) { 
   //}
 };
