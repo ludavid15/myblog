@@ -9,7 +9,7 @@
         </p>
         
         <p class="text-h6 mb-8">
-          Hi! Welcome to my blog. This started back in undergrad, from a collection of lecture notes I would type up into Word documents. At the time, it was just my way to study. Nowadays, I keep this as record of things I've learned as changing priorities and the slow march of time inevitably erode my memory. 
+          Hi! Welcome to my blog. This started back in undergrad, from a collection of lecture notes I typed up into Word documents. At the time, it was just my way to study. Nowadays, I keep this as a record of things I've learned as changing priorities and the slow march of time inevitably erode my memory. 
         </p>
         <p class="text-h6 mb-8">
           The website you are on is version two. It replaces the old site that was built using a Jekyll theme and hosted on Github. I built this website from scratch using Vue and I'm currently hosting it on AWS in an S3 bucket. I manage development and deployment locally using a Docker container. I use Route53 and CloudFront to serve this website to the internet. Like buttons were added in a recent change for me to experiment with DynamoDB and Lambda. 
