@@ -13,3 +13,6 @@ photos-src/
 
 # Ignore AWS deployment script
 deploy.ps1
+
+# Local-only AI reference notes
+AI_PLAYBOOK.md

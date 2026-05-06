@@ -3,60 +3,100 @@
     "name": "Aerospace",
     "path": "aerospace",
     "icon": "mdi-airplane",
-    "color": "#c7522a"
+    "color": "#c7522a",
+    "theme": {
+      "route": "/themes/space-systems",
+      "label": "Space Systems"
+    }
   },
   {
     "name": "Computer Science",
     "path": "computer-science",
     "icon": "mdi-laptop",
-    "color": "#c08097"
+    "color": "#c08097",
+    "theme": {
+      "route": "/themes/software-and-ai",
+      "label": "Software and AI"
+    }
   },
   {
     "name": "Dynamics and Controls",
     "path": "dynamics",
     "icon": "mdi-speedometer",
-    "color": "#e5c185"
+    "color": "#e5c185",
+    "theme": {
+      "route": "/themes/engineering",
+      "label": "Engineering"
+    }
   },
   {
     "name": "Engineering",
     "path": "engineering",
     "icon": "mdi-tools",
-    "color": "#b8cdab"
+    "color": "#b8cdab",
+    "theme": {
+      "route": "/themes/engineering",
+      "label": "Engineering"
+    }
   },
   {
     "name": "Fluid Mechanics",
     "path": "fluids",
     "icon": "mdi-water",
-    "color": "#74a892"
+    "color": "#74a892",
+    "theme": {
+      "route": "/themes/engineering",
+      "label": "Engineering"
+    }
   },
   {
     "name": "Machine Learning",
     "path": "machine-learning",
     "icon": "mdi-robot",
-    "color": "#4c9eb3"
+    "color": "#4c9eb3",
+    "theme": {
+      "route": "/themes/software-and-ai",
+      "label": "Software and AI"
+    }
   },
   {
     "name": "Math",
     "path": "math",
     "icon": "mdi-calculator",
-    "color": "#abbdec"      
+    "color": "#abbdec",
+    "theme": {
+      "route": "/themes/engineering",
+      "label": "Engineering"
+    }
   },
   {
     "name": "Music",
     "path": "music",
     "icon": "mdi-music",
-    "color": "#667899"
+    "color": "#667899",
+    "theme": {
+      "route": "/themes/life-and-learning",
+      "label": "Life and Learning"
+    }
   },
   {
     "name": "Structures",
     "path": "structures",
     "icon": "mdi-bridge",
-    "color": "#58508d"
+    "color": "#58508d",
+    "theme": {
+      "route": "/themes/engineering",
+      "label": "Engineering"
+    }
   },
   {
     "name": "Miscellaneous",
     "path": "misc",
     "icon": "mdi-folder",
-    "color": "grey"
+    "color": "grey",
+    "theme": {
+      "route": "/themes/life-and-learning",
+      "label": "Life and Learning"
+    }
   }
 ]

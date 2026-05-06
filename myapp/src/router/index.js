@@ -4,6 +4,10 @@ import HomeView from '../views/Home.vue'
 import AboutView from '../views/About.vue'
 import TimelineView from '../views/Timeline.vue'
 import BlogPost from '@/views/BlogPost.vue'
+import SpaceSystemsView from '../views/themes/SpaceSystems.vue'
+import EngineeringView from '../views/themes/Engineering.vue'
+import SoftwareAiView from '../views/themes/SoftwareAi.vue'
+import LifeAndLearningView from '../views/themes/LifeAndLearning.vue'
 
 const routes = [
   {
@@ -23,6 +27,30 @@ const routes = [
     name: "Timeline",
     component: TimelineView,
     meta: { title: "Notes - Timeline" },
+  },
+  {
+    path: '/themes/space-systems',
+    name: 'ThemeSpaceSystems',
+    component: SpaceSystemsView,
+    meta: { title: 'Notes - Space Systems' },
+  },
+  {
+    path: '/themes/engineering',
+    name: 'ThemeEngineering',
+    component: EngineeringView,
+    meta: { title: 'Notes - Engineering' },
+  },
+  {
+    path: '/themes/software-and-ai',
+    name: 'ThemeSoftwareAi',
+    component: SoftwareAiView,
+    meta: { title: 'Notes - Software and AI' },
+  },
+  {
+    path: '/themes/life-and-learning',
+    name: 'ThemeLifeAndLearning',
+    component: LifeAndLearningView,
+    meta: { title: 'Notes - Life and Learning' },
   },
   {
     path: '/posts/:slug', // Dynamic route for markdown posts

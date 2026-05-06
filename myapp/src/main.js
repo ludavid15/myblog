@@ -15,6 +15,7 @@ import router from './router'
 import PostImage from './components/PostImage.vue'
 
 import './assets/main.css'
+import './assets/page-shell.css'
 
 
 const vuetify = createVuetify({

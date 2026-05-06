@@ -3,7 +3,7 @@
     <v-list 
       variant="tonal"
       density="compact"
-      class="bg-background"
+      class="toc-title-list"
       :style="{ margin: '0' }">
       <v-list-item rounded="sm" :style="{ marginBottom: '0' }">
         Table of Contents
@@ -11,7 +11,7 @@
     </v-list>
     
     <div class="toc-list-container">
-      <v-list density="compact" class="bg-background">
+      <v-list density="compact" class="toc-body">
         <v-list-item
           v-for="heading in headings"
           :key="heading.text"
@@ -59,12 +59,21 @@ const scrollToHeading = (text) => {
 </script>
 
 <style scoped>
+/* Match v-app background in App.vue (#FCF8F3), not Vuetify theme `background` */
 .toc {
   width: 100%;
   position: sticky;
   top: 80px; /* Sticky positioning to remain visible when scrolling */
   align-self: flex-start;
   padding: 0; /* Remove any padding */
+  background-color: #FCF8F3;
+}
+.toc-body {
+  background-color: #FCF8F3;
+}
+/* v-list root defaults to theme surface (white); padding shows above/below the tonal row */
+.toc :deep(.toc-title-list.v-list) {
+  background-color: #FCF8F3 !important;
 }
 .toc-list-container {
   position: relative;

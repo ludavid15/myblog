@@ -2,7 +2,7 @@
   <v-footer class="footer-banner">
     <v-container class="d-flex justify-center">
       <div class="footer-inner">
-        <div class="footer-text">Thanks for reading!</div>
+        <div class="footer-text">Thanks for reading! All ideas are my own, and do not reflect the positions of my employer or affiliates.</div>
         <v-divider thickness="2" width="40" />
         <div class="footer-text">
           Version 2.09 · December 2025

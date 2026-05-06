@@ -1,17 +1,15 @@
 <template>
     <v-app 
       class="d-flex flex-column" 
-      style="min-height: 100vh; background-color: #EEE8D0;">
+      style="min-height: 100vh; background-color: #FCF8F3;">
 
       <!-- Sidebar (NavDrawer) -->
       <NavDrawer/>
 
       <!-- Main Content -->
-      <v-main class="d-flex justify-center">
-        <v-container>
-          <router-view />
-          <Footer />
-        </v-container>
+      <v-main class="app-main">
+        <router-view />
+        <Footer />
       </v-main>
 
     </v-app>

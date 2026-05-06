@@ -1,7 +1,7 @@
 const myCustomTheme = {
   dark: false,
   colors: {
-    background: '#EEE8D0',
+    background: '#FCF8F3',
     surface: '#FFFFFF',
     'surface-bright': '#FFFFFF',
     'surface-light': '#EEEEEE',

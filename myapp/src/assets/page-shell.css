@@ -1,0 +1,106 @@
+/**
+ * Shared page shell + hero: Timeline, BlogPost, and theme index pages.
+ * Keeps breadcrumb + title anchored from the top (no vertical centering in the hero).
+ */
+
+.page-shell {
+  --page-max-width: 1200px;
+  --page-gutter-x: clamp(1rem, 4vw, 2.5rem);
+  --page-gutter-y: clamp(1rem, 4vw, 2.5rem);
+  --page-space-xs: 0.5rem;
+  --page-space-sm: 1rem;
+  --page-space-md: 1.5rem;
+  --page-space-lg: 2rem;
+  --page-space-xl: 2.5rem;
+  --page-hero-padding-block-start: clamp(1.1rem, 3.75vw, 2.15rem);
+
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+  padding-inline: var(--page-gutter-x);
+  padding-block: var(--page-hero-padding-block-start) var(--page-gutter-y);
+  box-sizing: border-box;
+}
+
+.page-hero__grid {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  align-items: start;
+}
+
+@media (min-width: 960px) {
+  .page-hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.page-breadcrumb {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  color: rgba(40, 41, 35, 0.65);
+  margin-bottom: var(--page-space-sm);
+}
+
+.page-breadcrumb__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-breadcrumb__link:hover {
+  text-decoration: underline;
+}
+
+.page-breadcrumb__sep {
+  opacity: 0.7;
+}
+
+.page-breadcrumb__current {
+  color: rgba(40, 41, 35, 0.85);
+}
+
+.page-hero__title {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: clamp(2.5rem, 5.5vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #282923;
+  margin: 0 0 var(--page-space-sm) 0;
+}
+
+.page-hero__dash {
+  width: 3.25rem;
+  height: 5px;
+  border-radius: 999px;
+  background-color: #b8942e;
+  margin-bottom: var(--page-space-md);
+}
+
+/** Blog post hero: date + actions; gap above is from `.page-hero__dash` */
+.page-hero__dash:has(+ .page-hero__meta) {
+  margin-bottom: var(--page-space-xs);
+}
+
+.page-hero__meta {
+  margin: 0;
+}
+
+.page-hero__copy {
+  max-width: 56rem;
+}
+
+.page-hero__desc {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgba(40, 41, 35, 0.82);
+  max-width: 38rem;
+  margin: 0;
+}
+
+/** Primary column below hero (timeline, article list, post body) */
+.page-main {
+  margin-top: var(--page-space-xl);
+}

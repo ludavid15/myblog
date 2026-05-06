@@ -1,0 +1,20 @@
+---
+description: Avoid host npm; use docker-compose for dev/build
+alwaysApply: true
+---
+
+# Local dev/build: Docker Compose only (no host npm)
+
+Node is **not installed on this machine**. Do **not** run `npm`, `npx`, `pnpm`, `yarn`, or Vite commands on the host.
+
+## Run locally (dev server)
+
+- Use the repo root `compose.yaml`.
+- Start: `docker-compose up --build`
+- Stop: `docker-compose down`
+- Access: `http://localhost:5173`
+
+## Build artifacts
+
+- If a build is needed, it must run **in-container** via Docker Compose services (not on the host).
+- Treat `myapp/dist/` as build output (do not try to “fix” it by running host tooling).

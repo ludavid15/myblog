@@ -1,81 +1,85 @@
 <template>
-  <v-container>
-    <v-row justify="center">
-      <v-col cols="12" lg="10">
-        <h1 class="text-h3 font-weight-light my-8">Timeline</h1>
-        <p class="text-h6">
-        Every post I've written to date.
-        </p>
-      </v-col>
-    </v-row> 
+  <div class="page-shell">
+    <section class="page-hero" aria-label="Timeline overview">
+      <div class="page-hero__grid">
+        <div class="page-hero__copy">
+          <nav class="page-breadcrumb" aria-label="Breadcrumb">
+            <RouterLink class="page-breadcrumb__link" to="/">Home</RouterLink>
+            <span class="page-breadcrumb__sep" aria-hidden="true">/</span>
+            <span class="page-breadcrumb__current">Timeline</span>
+          </nav>
 
-    <v-row justify="center">
-      <v-col cols="12" lg="10">
-        <v-divider :thickness="3" class="mb-5"></v-divider>
+          <h1 class="page-hero__title">
+            Timeline
+          </h1>
 
-            <v-chip 
-              v-for="topic in topics"
-              :color="topic.color"
-              :variant="getChipVariant(topic.name)"
-              class="mr-2 mb-2"
-              @click="filterTopic(topic.name)"
-              :prepend-icon="getChipIcon(topic.name)"
-            >
-              {{ topic.name }}
-            </v-chip>
+          <div class="page-hero__dash" aria-hidden="true" />
 
-            <v-chip 
-              class="mr-2 mb-2" 
-              :variant="getToggleVariant()" 
-              @click="toggleAllTopics()">
-              Toggle All
-            </v-chip>
+          <p class="page-hero__desc">
+            Every post I've written to date.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <v-divider :thickness="3" class="my-3"></v-divider>
-      </v-col>
-    </v-row>
-        
-    <v-row justify="center">
-      <v-col cols="12" lg="10">
+    <section class="timeline-main page-main" aria-label="All posts">
+      <v-divider :thickness="3" class="mb-5" />
 
-        <v-timeline 
-          align="start" direction="vertical" side="end" >
-          <v-timeline-item 
-            v-for="post in formattedPosts" :key="post.slug"
-            :dot-color="getTopicColor(post.topic)"
-            :icon="getTopicIcon(post.topic)"
-            fill-dot
-          >
-            <!--
-            <template v-slot:opposite>
-              <div class="timeline-date">{{ post.formattedDate }}</div>
-            </template>-->
+      <v-chip
+        v-for="topic in topics"
+        :key="topic.name"
+        :color="topic.color"
+        :variant="getChipVariant(topic.name)"
+        class="mr-2 mb-2"
+        @click="filterTopic(topic.name)"
+        :prepend-icon="getChipIcon(topic.name)"
+      >
+        {{ topic.name }}
+      </v-chip>
 
-              <v-card               
-                variant="text">
-                  <v-card-title class="pt-0 font-weight-semibold">{{ post.title }}</v-card-title>
-                  <v-card-subtitle>{{ post.formattedDate }}</v-card-subtitle>
-                  <v-card-text>
-                    {{ post.preview }}
-                  </v-card-text>
-                  <v-card-actions>
-                    <v-btn :to="`/posts/${post.slug}`" text>Read More</v-btn>
-                  </v-card-actions>
-              </v-card>
-                <v-divider
-                  v-if="index !== formattedPosts.length - 1"
-                  :thickness="2"
-                  class="timeline-divider"
-                />
-          </v-timeline-item>
-        </v-timeline>
+      <v-chip
+        class="mr-2 mb-2"
+        :variant="getToggleVariant()"
+        @click="toggleAllTopics()"
+      >
+        Toggle All
+      </v-chip>
 
-      </v-col>
-    </v-row>
+      <v-divider :thickness="3" class="my-3" />
+
+      <v-timeline
+        align="start"
+        direction="vertical"
+        side="end"
+      >
+        <v-timeline-item
+          v-for="(post, index) in formattedPosts"
+          :key="post.slug"
+          :dot-color="getTopicColor(post.topic)"
+          :icon="getTopicIcon(post.topic)"
+          fill-dot
+        >
+          <v-card variant="text">
+            <v-card-title class="pt-0 font-weight-semibold">{{ post.title }}</v-card-title>
+            <v-card-subtitle>{{ post.formattedDate }}</v-card-subtitle>
+            <v-card-text>
+              {{ post.preview }}
+            </v-card-text>
+            <v-card-actions>
+              <v-btn :to="`/posts/${post.slug}`" text>Read More</v-btn>
+            </v-card-actions>
+          </v-card>
+          <v-divider
+            v-if="index !== formattedPosts.length - 1"
+            :thickness="2"
+            class="timeline-divider"
+          />
+        </v-timeline-item>
+      </v-timeline>
+    </section>
 
     <BackToTopButton />
-
-  </v-container>
+  </div>
 </template>
 
 <script setup>
@@ -114,7 +118,7 @@ function toggleAllTopics() {
 }
 
 const getToggleVariant = () => {
-  return boolAllTopics.value? 'outlined' : 'flat'; 
+  return boolAllTopics.value? 'outlined' : 'flat';
 }
 
 // Function to determine the prepend icon
@@ -123,7 +127,7 @@ const getChipIcon = (name) => {
 };
 
 const getChipVariant = (name) => {
-  return selectedTopics[name]?.selected ? 'flat' : 'tonal'; 
+  return selectedTopics[name]?.selected ? 'flat' : 'tonal';
 }
 
 // Function to get the color based on the topic
@@ -182,5 +186,4 @@ const formattedPosts = computed(() => {
 .timeline-card .v-card-text {
   padding-top: 4px;
 }
-
 </style>
