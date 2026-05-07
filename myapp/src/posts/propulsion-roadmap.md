@@ -194,3 +194,8 @@ And there you have it! If you've followed along all this way, we've gone over ab
 
 Personally, I think roadmaps like this are important for visualizing gaps (now there's a loaded systems engineering word for ya) in our research and development. A question like "what propulsive technologies are we missing?" is much more difficult to answer comprehensively than something like "how can we add heat to a fluid?". 
 
+# References 
+
+<v-divider></v-divider>
+
+* Written during my time at Michigan, after having taken a gamut of aerospace and propulsion classes.

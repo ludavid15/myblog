@@ -13,17 +13,24 @@ The ground track of a satellite is its orbit projected into the surface. I'd rec
 
 <v-divider></v-divider>
 
-To start, here are the three parameters which we can use to define an orbit in the Earth Centered Interial frame. These function like a set of rotation angles which relate the orbital/perifocal frame to the ECI frame. 
+To start, here are the three parameters which we can use to define an orbit in the Earth Centered Inertial (ECI) frame. These function like a set of rotation angles which relate the orbital/perifocal frame to the ECI frame. 
 
 * Inclination: Angle between the orbital plane and Earth's equatorial plane.
 * Right Ascension of the Ascending Node: Longitude of the ascending node relative to a reference direction (vernal equinox).
 * Argument of Periapsis: Orientation of the elliptical orbit within the orbital plane relative to the ascending node.
 
+<v-alert
+    border="start"
+    border-color="secondary"
+    elevation="2">
+    The ECI frame is approximately fixed with respect to the stars, and it's relevant here because it's an intertial frame, which simplifies the equations of motion. Earth Centered Earth Fixed (ECEF) on the other hand, rotates with the Earth, so fixed points on the ground have fixed coordinates in ECEF. Orbits are usually propagated in ECI, but ground tracks are tied to fixed points on the Earth's surface. So at some point, we'll need to transform between the two.
+</v-alert>
+
 And then within the perifocal frame, the position/radius along the orbit is defined as a function of the true anomaly as:
 
 $$ r = \frac{h^2}{\mu}\frac{1}{1+ecos(\theta)} $$
 
-Let's also think about the position in the perifocal frame as a vector. In polar coordinates, this is just $r$ and $\theta$, but what about in cartesian coordinates? Well, something like this:
+Let's also think about the position of a satellite in the perifocal frame as a vector. In polar coordinates, this is just $r$ and $\theta$, but what about in cartesian coordinates? Well, something like this:
 
 $$r_{perifocal} = \begin{bmatrix} r cos(\theta) \\ r sin(\theta) \\ 0 \end{bmatrix} $$
 
@@ -35,9 +42,9 @@ Note that the z-component is zero because the perifocal frame lies entirely with
 
 Mathematically, this is going to be written as:
 
-$$ r_{ECI} = R(\omega) \cdot R(i) \cdot R(\Omega) \cdot r_{perifocal}$$
+$$ r_{ECI} = R(\Omega) \cdot R(i) \cdot R(\omega) \cdot r_{perifocal}$$
 
-Finally, we'll want to convert from ECI to ECEF. This is going to be a rotation about the Z axis. The angle is going to vary depending on the time. 
+Note that matrix multiplication rules means the first rotation is actually the last (rightmost) matrix in the equation. Finally, we'll want to convert from ECI to ECEF. This is going to be a rotation about the Z axis. The angle is going to vary depending on the time. 
 
 $$ r_{ECEF} = R(GMST) \cdot r_{ECI} $$
 
@@ -73,3 +80,9 @@ There's a magical altitude at which the period of our orbit is exactly equal to 
 But what if the satellite is even further out? In this case, it is moving slower than the rotation of the Earth, and from an observer on the ground it's actually going to look like it's moving backwards (i.e.g East to West). This is also called apparent retrograde, where the satellite is still technically in a prograde orbit, it just appears to be in retrograde from the ground. 
 
 Now that you get the idea, I want to caveat that we don't *have* to be strictly higher than GEO altitudes for this to happen. We could be in a highly elliptical orbit, and around the apogee of that orbit, we could be orbiting slower than the rotation of the Earth. 
+
+# References
+
+<v-divider></v-divider>
+
+* Mostly derived from my undergrad notes from UCLA. Orbital equations are easily accessible on the internet.

@@ -16,7 +16,7 @@
           <div class="page-hero__dash" aria-hidden="true" />
 
           <p class="page-hero__desc">
-            This page collects notes across core engineering disciplines—structures, fluids, dynamics, and the
+            This page collects notes across core engineering disciplines: structures, fluids, dynamics, and the
             methods used to design and verify complex systems. Expect material on fundamentals, analysis, and how
             theory meets hardware in real programs.
           </p>
