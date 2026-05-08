@@ -6,6 +6,8 @@
       <!-- Sidebar (NavDrawer) -->
       <NavDrawer/>
 
+      <SearchOverlay />
+
       <!-- Main Content -->
       <v-main class="app-main">
         <router-view />
@@ -18,12 +20,14 @@
 <script>
 import NavDrawer from './components/NavDrawer.vue';
 import Footer from './components/Footer.vue';
+import SearchOverlay from './components/SearchOverlay.vue';
 
 export default {
   name: 'App',
   components: {
     NavDrawer,
-    Footer
+    Footer,
+    SearchOverlay,
   },
 };
 </script>

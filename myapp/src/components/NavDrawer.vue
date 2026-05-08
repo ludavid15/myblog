@@ -50,6 +50,11 @@
         prepend-icon="mdi-lightbulb-outline"
         title="LEARNING"
       />
+      <v-list-item
+        prepend-icon="mdi-magnify"
+        title="SEARCH"
+        @click="openSearchOverlay()"
+      />
     </v-list>
 
     <template #append>
@@ -92,6 +97,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useDisplay } from 'vuetify';
+import { openSearchOverlay } from '@/search/searchOverlayStore';
 
 const { mdAndUp } = useDisplay();
 
@@ -100,12 +106,44 @@ const drawer = ref(true);
 
 <style scoped>
 .nav-drawer-surface {
-  background-color: #f9f6f1 !important;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent !important;
   border-right: 1px solid rgba(40, 41, 35, 0.12);
 }
 
+.nav-drawer-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/bamboo.PNG");
+  background-size: cover;
+  background-position: 30% center;
+  filter: blur(4px) brightness(1.08) saturate(1.03);
+  transform: scale(1.08);
+  opacity: 0.75;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.nav-drawer-surface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(252, 249, 245, 0.70);
+  z-index: 1;
+  pointer-events: none;
+}
+
 .nav-drawer-surface :deep(.v-navigation-drawer__content) {
-  background-color: #f9f6f1 !important;
+  position: relative;
+  z-index: 2;
+  background-color: transparent !important;
+}
+
+.nav-drawer-surface :deep(.nav-drawer-list),
+.nav-drawer-surface :deep(.nav-drawer-list .v-list) {
+  background-color: transparent !important;
 }
 
 .brand {
@@ -113,6 +151,8 @@ const drawer = ref(true);
   align-items: center;
   gap: 10px;
   padding: 25px 25px 25px;
+  position: relative;
+  z-index: 2;
 }
 
 .brand-title {
@@ -125,6 +165,9 @@ const drawer = ref(true);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   line-height: 1.25;
+  text-shadow:
+    0 1px 0 rgba(249, 246, 241, 0.85),
+    0 0 10px rgba(249, 246, 241, 0.55);
 }
 
 .nav-drawer-surface :deep(.nav-drawer-list .v-list-item) {

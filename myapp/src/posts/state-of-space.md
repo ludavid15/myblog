@@ -148,6 +148,8 @@ So if the beam spreads to 40 or 50 m at 500km, the system just needs to stay wit
 
 Another exciting technology that's becoming more widely adopted is electric propulsion (specifically, Hall Thrusters and Gridded Ion Thrusters). Starlink satellites use electric propulsion for all their maneuvers, and NASA's recent Psyche mission is the first *interplanetary* mission to use Hall effect thrusters. The primary advantage of electric propulsion over traditional chemical thrusters remains their incredibly high efficiency, requiring much less propellant to be carried onboard. 
 
+Over long periods, electric propulsion can also reduce trip times. Although they produce only a little bit of thrust, when applied constantly for months, can accelerate satellites to much higher speeds than a regular combustion based engine.
+
 For an in-depth look at electric propulsion systems, you can check out my other post [here](/posts/electric-propulsion). Current research and development is incremental and is focused on a few challenges:
 
   1. Building systems that are either much lower power (10 W or less), or systems that are much higher power (100 kW or more).

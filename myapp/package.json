@@ -7,7 +7,10 @@
       "build": "vite build",
       "preview": "vite preview",
       "extract:headings":"node scripts/extract-headings.js",
-      "build:images": "node scripts/build-images.js"
+      "extract:frontmatter":"node scripts/extract-frontmatter.js",
+      "build:images": "node scripts/build-images.js",
+      "build:search-index": "node scripts/build-search-index.js",
+      "prebuild": "node scripts/extract-headings.js && node scripts/extract-frontmatter.js && node scripts/build-search-index.js && node scripts/build-images.js"
     },
     "dependencies": {
         "vue":"^3.5.13",

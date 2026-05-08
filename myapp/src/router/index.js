@@ -8,6 +8,7 @@ import SpaceSystemsView from '../views/themes/SpaceSystems.vue'
 import EngineeringView from '../views/themes/Engineering.vue'
 import SoftwareAiView from '../views/themes/SoftwareAi.vue'
 import LifeAndLearningView from '../views/themes/LifeAndLearning.vue'
+import SearchResultsView from '../views/SearchResults.vue'
 
 const routes = [
   {
@@ -58,6 +59,12 @@ const routes = [
     component: BlogPost,
     meta: { title: "Blog" },
     props: true,
+  },
+  {
+    path: "/search",
+    name: "Search",
+    component: SearchResultsView,
+    meta: { title: "Notes - Search" },
   },
 ]
 

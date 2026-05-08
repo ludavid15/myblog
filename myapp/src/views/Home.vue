@@ -48,7 +48,7 @@
         <div class="home__hero-visual">
           <div class="home-hero-image-wrap">
             <v-img
-              src="/temple.jpg"
+              src="/mountains.PNG"
               alt="Hero image"
               cover
               class="home-hero-image"
