@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "BackToTopButton",
+  name: 'BackToTopButton',
   data() {
     return {
       visible: false,
@@ -27,10 +27,10 @@ export default {
     },
   },
   mounted() {
-    window.addEventListener("scroll", this.checkScroll);
+    window.addEventListener('scroll', this.checkScroll);
   },
-  beforeDestroy() {
-    window.removeEventListener("scroll", this.checkScroll);
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.checkScroll);
   },
 };
 </script>

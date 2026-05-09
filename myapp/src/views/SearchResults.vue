@@ -25,14 +25,12 @@
 
     <div class="page-main">
       <v-container class="pa-0">
-        <v-alert
+        <p
           v-if="query && results.length === 0"
-          type="info"
-          variant="tonal"
-          class="mb-4"
+          class="search-empty text-body-1 text-medium-emphasis"
         >
           No results found.
-        </v-alert>
+        </p>
 
         <v-list
           v-if="results.length"
@@ -43,7 +41,7 @@
           <v-list-item
             v-for="r in results"
             :key="r.slug"
-            :to="{ name: 'BlogPost', params: { slug: r.slug } }"
+            :to="{ name: 'BlogPost', params: { theme: getThemeSegmentForTopic(r.topic), slug: r.slug } }"
             class="search-result"
           >
             <v-list-item-title class="search-result__title">
@@ -68,6 +66,7 @@
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { searchPosts } from "@/search/searchIndex";
+import { getThemeSegmentForTopic } from "@/utils/postPaths";
 
 const route = useRoute();
 
@@ -83,6 +82,12 @@ const results = computed(() => {
 </script>
 
 <style scoped>
+.search-empty {
+  max-width: 38rem;
+  line-height: 1.65;
+  margin: 0 0 1rem;
+}
+
 .search-query {
   font-weight: 600;
 }

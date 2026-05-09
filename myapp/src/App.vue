@@ -1,7 +1,7 @@
 <template>
     <v-app 
       class="d-flex flex-column" 
-      style="min-height: 100vh; background-color: #FCF8F3;">
+      style="min-height: 100vh; background-color: #F7F0E8;">
 
       <!-- Sidebar (NavDrawer) -->
       <NavDrawer/>
@@ -31,6 +31,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>

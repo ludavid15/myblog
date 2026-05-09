@@ -71,7 +71,7 @@
             {{ post.formattedDate }}
           </div>
 
-          <RouterLink class="theme-articles__title" :to="`/posts/${post.slug}`">
+          <RouterLink class="theme-articles__title" :to="blogPostLocation(post.slug, post.topic)">
             {{ post.title }}
           </RouterLink>
 
@@ -98,10 +98,12 @@
 </template>
 
 <script setup>
-import { computed, reactive } from 'vue'
+import { computed, reactive } from 'vue';
 import blogFrontmatter from '@/data/blog-frontmatter.json';
 import topics from '@/data/topics.json';
-import BackToTopButton from '@/components/BackToTop.vue';
+import BackToTopButton from '@/components/BackToTopButton.vue';
+import { formatPostDate } from '@/utils/formatPostDate';
+import { blogPostLocation } from '@/utils/postPaths';
 
 const topicByName = new Map(topics.map((t) => [t.name, t]));
 
@@ -143,22 +145,13 @@ function getTopicChipStyle(topic) {
   };
 }
 
-// Utility function to format dates
-function formatDate(date) {
-  return new Date(date).toLocaleDateString(undefined, {
-    year: 'numeric',
-    month: 'short',
-    day: '2-digit',
-  });
-}
-
 // Computed property to get and sort the recent blog posts
 const formattedPosts = computed(() => {
   return blogFrontmatter
     .filter((post) => post.date && (selectedTopics.size === 0 || selectedTopics.has(post.topic)))
     .map((post) => ({
       ...post,
-      formattedDate: formatDate(post.date),
+      formattedDate: formatPostDate(post.date),
     }))
     .sort((a, b) => new Date(b.date) - new Date(a.date)) // Sort by date descending
 });

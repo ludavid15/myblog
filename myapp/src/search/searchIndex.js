@@ -1,13 +1,6 @@
-import docs from "@/data/search-index.json";
-import { makeSnippetHtml } from "@/search/snippet";
-
-function normalizeQuery(q) {
-  return String(q || "")
-    .trim()
-    .toLowerCase()
-    .split(/\s+/)
-    .filter(Boolean);
-}
+import docs from '@/data/search-index.json';
+import { normalizeQuery } from '@/search/query';
+import { makeSnippetHtml } from '@/search/snippet';
 
 function scoreDoc(doc, tokens) {
   const title = String(doc.title || "").toLowerCase();

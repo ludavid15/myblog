@@ -47,7 +47,7 @@
               v-if="frontmatter.date"
               class="page-hero__meta text-subtitle-1 text-medium-emphasis d-flex ga-4 align-center flex-wrap"
             >
-              Last Updated: {{ frontmatter.date }}
+              Last Updated: {{ formattedPostDate }}
               <LikeButton />
             </div>
           </div>
@@ -82,14 +82,17 @@
 
 <script setup>
 import { ref, watch, markRaw, computed } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import Contents from '@/components/Contents.vue';
 import headingsData from '@/data/headings.json';
 import topics from '@/data/topics.json';
-import BackToTopButton from '@/components/BackToTop.vue';
+import BackToTopButton from '@/components/BackToTopButton.vue';
 import LikeButton from '@/components/LikeButton.vue';
+import { formatPostDate } from '@/utils/formatPostDate';
+import { getThemeSegmentForTopic } from '@/utils/postPaths';
 
 const route = useRoute();
+const router = useRouter();
 const postContent = ref(null);
 const frontmatter = ref(null);
 const headings = ref([]);
@@ -105,6 +108,10 @@ const breadcrumbCurrent = computed(() => {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 });
+
+const formattedPostDate = computed(() =>
+  frontmatter.value?.date ? formatPostDate(frontmatter.value.date) : '',
+);
 
 const themeNav = computed(() => {
   const topicName = frontmatter.value?.topic;
@@ -159,6 +166,21 @@ watch(
     if (newSlug) loadMarkdown(newSlug);
   },
   { immediate: true }
+);
+
+watch(
+  () => [frontmatter.value, route.params.theme, route.params.slug],
+  () => {
+    if (!frontmatter.value?.title || !route.params.slug) return;
+    const topic = frontmatter.value.topic ?? 'Miscellaneous';
+    const expected = getThemeSegmentForTopic(topic);
+    if (route.params.theme && route.params.theme !== expected) {
+      router.replace({
+        name: 'BlogPost',
+        params: { theme: expected, slug: route.params.slug },
+      });
+    }
+  }
 );
 
 </script>

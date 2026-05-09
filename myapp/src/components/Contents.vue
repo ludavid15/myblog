@@ -66,14 +66,14 @@ const scrollToHeading = (text) => {
   top: 80px; /* Sticky positioning to remain visible when scrolling */
   align-self: flex-start;
   padding: 0; /* Remove any padding */
-  background-color: #FCF8F3;
+  background-color: #F7F0E8;
 }
 .toc-body {
-  background-color: #FCF8F3;
+  background-color: #F7F0E8;
 }
 /* v-list root defaults to theme surface (white); padding shows above/below the tonal row */
 .toc :deep(.toc-title-list.v-list) {
-  background-color: #FCF8F3 !important;
+  background-color: #F7F0E8 !important;
 }
 .toc-list-container {
   position: relative;

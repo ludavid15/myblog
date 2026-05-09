@@ -130,7 +130,7 @@ const drawer = ref(true);
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(252, 249, 245, 0.70);
+  background: rgba(252, 249, 245, 0.65);
   z-index: 1;
   pointer-events: none;
 }

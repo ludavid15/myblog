@@ -1,24 +1,22 @@
 <template>
   <div class="page-shell">
-    <section class="page-hero" aria-label="Space Systems overview">
+    <section class="page-hero" :aria-label="themePage.heroAriaLabel">
       <div class="page-hero__grid">
         <div class="page-hero__copy">
           <nav class="page-breadcrumb" aria-label="Breadcrumb">
             <RouterLink class="page-breadcrumb__link" to="/">Home</RouterLink>
             <span class="page-breadcrumb__sep" aria-hidden="true">/</span>
-            <span class="page-breadcrumb__current">Space Systems</span>
+            <span class="page-breadcrumb__current">{{ themePage.heading }}</span>
           </nav>
 
           <h1 class="page-hero__title">
-            Space Systems
+            {{ themePage.heading }}
           </h1>
 
           <div class="page-hero__dash" aria-hidden="true" />
 
           <p class="page-hero__desc">
-            This page collects notes on the systems that make space missions possible—from spacecraft subsystems
-            and payloads to the ground segment that operates them. You’ll find topics spanning satellites, ground
-            systems, orbits, and mission operations.
+            {{ themePage.description }}
           </p>
         </div>
       </div>
@@ -37,9 +35,9 @@
           role="listitem"
         >
           <div class="theme-articles__date">
-            {{ formatDate(post.date) }}
+            {{ formatPostDate(post.date) }}
           </div>
-          <RouterLink class="theme-articles__title" :to="`/posts/${post.slug}`">
+          <RouterLink class="theme-articles__title" :to="`${route.path}/${post.slug}`">
             {{ post.title }}
           </RouterLink>
         </div>
@@ -54,30 +52,29 @@
 
 <script setup>
 import { computed } from 'vue';
+import { useRoute } from 'vue-router';
 import blogFrontmatter from '@/data/blog-frontmatter.json';
 import topics from '@/data/topics.json';
+import { formatPostDate } from '@/utils/formatPostDate';
 
-const THEME_ROUTE = '/themes/space-systems';
+const route = useRoute();
 
-const allowedTopics = new Set(
-  topics
-    .filter((t) => t.theme?.route === THEME_ROUTE)
-    .map((t) => t.name)
+const themePage = computed(() => route.meta.themePage);
+
+const allowedTopics = computed(
+  () =>
+    new Set(
+      topics
+        .filter((t) => t.theme?.route === route.path)
+        .map((t) => t.name),
+    ),
 );
 
 const posts = computed(() => {
   return blogFrontmatter
-    .filter((post) => post.date && allowedTopics.has(post.topic))
+    .filter((post) => post.date && allowedTopics.value.has(post.topic))
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 });
-
-function formatDate(date) {
-  return new Date(date).toLocaleDateString(undefined, {
-    year: 'numeric',
-    month: 'short',
-    day: '2-digit',
-  });
-}
 </script>
 
 <style scoped>
